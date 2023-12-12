@@ -1,0 +1,44 @@
+/** @define Progress; weak */
+
+.Progress {
+  height: 10px;
+  width: 100%;
+  overflow: hidden;
+  background-color: #ccc;
+  border-radius: 4px;
+}
+
+.Progress-bar {
+  float: left;
+  width: 0;
+  height: 100%;
+  box-sizing: border-box;
+  transition: width .6s ease;
+  background-image: linear-gradient(
+    45deg,
+    rgba(255, 255, 255, .15) 25%,
+    transparent 25%,
+    transparent 50%,
+    rgba(255, 255, 255, .15) 50%,
+    rgba(255, 255, 255, .15) 75%,
+    transparent 75%,
+    transparent
+  );
+  background-size: 10px 10px;
+}
+
+/**
+ * Modifiers
+ */
+
+.Progress-bar--success {
+  background-color: #279e3f;
+}
+
+.Progress-bar--warning {
+  background-color: #ffd15f;
+}
+
+.Progress-bar--danger {
+  background-color: #c33;
+}

@@ -1,0 +1,29 @@
+/** @define Media */
+
+.Media,
+.Media-body {
+  display: block;
+  overflow: hidden;
+  text-align: left;
+}
+
+.Media-image {
+  float: left;
+  margin-right: 1.5rem;
+}
+
+/**
+ * Modifiers
+ *
+ * --rev: invierte la posicion de la imagen
+ * --full: la imagen queda arriba y el cuerpo abajo (igual a o-block)
+ */
+
+.Media--full {
+  .Media-image {
+    float: none;
+    margin-right: 0;
+    margin-bottom: 2rem;
+    margin-left: 0;
+  }
+}

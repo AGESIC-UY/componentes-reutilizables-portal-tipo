@@ -1,0 +1,129 @@
+/* Contenedor de Atencion a la Ciudadania
+   ========================================================================== */
+
+.Box--atencionCiudadana {
+	
+	.Box-header {
+			margin-bottom: 1rem;
+	}
+	
+	.nav-tabs {
+		display: flex; 
+		flex-direction: row; 
+		justify-content: space-around;
+		border-bottom: solid 1px $gray-2;
+		margin-top: 1.5rem;
+		margin-bottom: 2rem;
+		
+		li > a {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			padding: .25rem .5rem;
+			position: relative;
+			
+			h4 {
+				color: $color-1;
+			}
+			
+			&:after {
+				content: "";
+				display: block;
+				width: 100%;
+				border-bottom: .2rem solid $gray-text;
+				position: absolute;
+				border-radius: .1rem;
+				bottom: -2px;
+				transform: scale(0,1) scaleZ(1);
+				transform-origin: center center;
+				transition: transform .2s ease-out;
+			}
+		}
+		
+		li.active > a {
+			text-decoration: none;
+			
+			h4 {
+				color: $gray-text;
+			}
+			
+			&:after {
+				transform: scale(1,1) scaleZ(1);
+			}
+		}
+	}
+	
+  h4 {
+    font-size: .825em;
+    color: $gray-text;
+    text-transform: uppercase;
+		margin-top: .75rem;
+		margin-bottom: 0.5rem;
+  }
+
+  h5 {
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: .625em;
+  }
+
+  a {
+    word-wrap: break-word;
+  }
+
+  .Flag {
+		margin-bottom: 2.5rem;
+  }
+
+  .Flag-image {
+    img {
+      max-width: 2.5rem;
+    }
+  }
+	
+	.Flag-body > div {
+		margin-bottom: .25rem;
+		
+		&:last-child {
+			margin-bottom: 0rem;
+		}
+	}
+
+  @include md {
+		
+		.nav.nav-tabs {
+			display: none;
+		}
+		
+		.tab-content .fade {
+			display: block;
+			opacity: 1;
+		}
+		
+		h4 {
+			font-size: .875em;
+			margin-bottom: 1em;
+		}
+		
+    .Box-items {
+      display: flex;
+      flex-wrap: wrap;
+			margin-top: 1.5rem;
+			gap: .25rem;
+    }
+
+    .Box-items > * {
+      flex: 1 1 auto;
+    }
+		
+		.Flag {
+    	margin-bottom: 1.5rem;
+		}
+		
+		.Flag-image {
+			img {
+				max-width: 3rem;
+			}
+		}
+  }
+}

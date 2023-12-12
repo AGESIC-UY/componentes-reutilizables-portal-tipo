@@ -1,0 +1,258 @@
+/** @define List; weak */
+
+.List {
+  list-style: none;
+  padding: 0;
+  margin-top: 0;
+}
+
+.List > li,
+.List .List-item {
+  padding: .75rem;
+  border-top: 1px solid $gray-3;
+  display: block;
+
+  &:first-child {
+    border-top: 0;
+  }
+}
+
+.List-subtitle {
+  text-transform: uppercase;
+  color: #555;
+  font-size: .85rem;
+  font-weight: 600;
+  display: block;
+  border-bottom: 1px solid $gray-3;
+  padding-bottom: .75rem;
+}
+
+.List--media {
+  .Media {
+		padding: 0;
+    padding-top: 2rem;
+    margin-top: 2rem;
+
+		//Cambios para nueva carpeta
+    //padding: 2rem 0.1875rem 0 0.1875rem;
+    //margin-top: 2rem;
+
+    &:first-child {
+      padding-top: 0;
+			margin-top: 0;
+    }
+  }
+	
+	.Media-subtitle {
+		color: $gray-text;
+		display: block;
+		font-size: 1.15em;
+		line-height: 1.15;
+		margin-bottom: .5rem;
+	}
+
+  .Media-title,
+  h3 {
+		margin: 0.1875em 0 1em;
+    line-height: 1.325;
+    font-size: 1.5rem;
+  }
+	
+	.Media-body {
+		.Media-title,
+  	h3 {
+			margin-bottom: .75rem;
+			
+			+ .Box-info {
+	  		margin-bottom: 0.75rem;
+			}
+		}
+
+		p,
+		.Media-text {
+			margin: .5rem 0;
+
+			+ .Button {
+				margin-top: 0.75rem;
+				margin-bottom: .5rem;
+			}
+		}
+	}
+	
+	.Media-image img, 
+	.Media-image video,
+	.Media-image iframe,
+	.Media-image .Video {
+		width: 250px;
+    border-radius: $Box-mf-border-radius-inner;
+	}
+	
+	.Media-image video,
+	.Media-image iframe {
+		 height: 167px;
+		 background: #000;
+	}
+}
+
+.List--medium {
+  > .Media {
+    padding: 0;
+    padding-top: 1rem;
+    margin-top: 1rem;
+
+    &:first-child {
+      padding-top: 0;
+    }
+  }
+
+  > .Media:first-child {
+    margin-top: 0;
+  }
+}
+
+.List--simple {
+  > .Media {
+    padding: 0;
+    padding-top: .5rem;
+    margin-top: .5rem;
+	  border-top: none;
+
+    &:first-child {
+      padding-top: 0;
+    }
+  }
+
+  > .Media:first-child {
+    margin-top: 0;
+  }
+}
+
+@include sm(down) {
+  .List--media {
+    .Media-image {
+      margin-bottom: .5rem;
+			max-width: 100% !important;
+			margin-right: 0rem;
+			float: none;
+		
+			&.Media-image--list {
+				text-align: center;
+				background-color: #dddddd;
+				margin-bottom: 1.5rem;
+				border-radius: $Box-mf-border-radius-inner;
+
+				img {
+					max-height: 340px;
+					width: auto !important;
+				}
+			}
+		}
+  }
+}
+
+// Ajustes de tamaño para listado nuevo en móvil
+@include sm(down) {
+	.List--media {
+		
+		.Media-subtitle {
+			font-size: 1rem;
+			margin-bottom: .75rem;
+		}
+		
+		.Media-title,
+		h3 {
+			font-size: 1.375rem;
+		}
+		
+		.Media-image {
+			width: 100%;
+      overflow: hidden;
+			margin-bottom: 1rem;
+			
+			img,
+			video,
+			iframe,
+			.Video {
+				width: 100%;
+				height: 100%;
+			}
+			
+			// Por ahora solo en móvil para listados de contenidos
+			&.Media-image--cover {
+				position: relative;
+				width: 100%;
+				padding-top: 66.66%;
+				float: none;
+				margin-bottom: 1rem;
+				margin-right: 0;
+
+				img,
+				.Video {
+					margin-bottom: 0;
+					border-radius: $Box-mf-border-radius-inner;
+					-o-object-fit: cover;
+					object-fit: cover;
+					max-width: 100%;
+					width: 100%;
+					height: 100%;
+					position: absolute;
+					top: 0;
+				}
+			}
+		}  
+	}
+}
+
+
+.List--media {
+	
+	.Download {
+		margin: 0.1875rem;
+		margin-top: 1.5em;
+		
+		&:first-child {
+			margin-top: .1875rem;
+		}
+		
+		&.Download--media {
+			margin-top: .5rem;
+			
+			.Download-title {
+				font-size: 1.5rem;
+				margin-bottom: .5rem;
+				padding-top: 0;
+				
+				&:last-child {
+					margin-bottom: .25rem;
+				}
+				
+				@include sm(down) {
+					font-size: 1.375rem;
+				}
+			}
+		}
+		.Download-title {
+			font-size: 1.25em;
+			
+			//Cambios para nueva carpeta
+			//font-size: 1.125rem;
+		}
+	}
+	
+	.Download-more {
+		margin: 0.1875rem;
+		margin-top: 1em;
+		margin-bottom: .5em;
+		font-size: .85em;
+		display: inline-block;
+	}	
+	
+	.Media {
+		.Media-body {
+			.Download {
+				// Descargas dentro de otros elementos se ven más chicas
+				font-size: .9em;
+			}
+		}
+	}
+}

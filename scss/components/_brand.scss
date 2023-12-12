@@ -1,0 +1,100 @@
+
+.Brand {
+  font-family: $brand-font-stack;
+  color: $color-1;
+  display: inline-flex;
+  align-items: center;
+  font-size: 1rem;
+  line-height: 1;
+  font-weight: 700;
+
+  @include md(down) {
+    font-size: .75rem;
+  }
+}
+
+.Brand-image {
+  margin-right: 2em;
+  height: auto;
+  width: 6.25em;
+
+  @include md(down) {
+    margin-right: 1.5em;
+  }
+}
+
+.Brand-text {
+  font-size: 2.75em;
+}
+
+.Brand-role {
+  font-weight: 300;
+}
+
+.Brand-name {
+  font-weight: bold;
+}
+
+.Brand--white {
+  color: #fff;
+}
+
+.Brand--lg {
+  font-size: .75em;
+
+  @include md(down) {
+    font-size: .625em;
+  }
+}
+
+.Brand--md {
+  font-size: .625em;
+
+  @include md(down) {
+    font-size: .5625em;
+  }
+}
+
+.Brand--sm {
+  font-size: .5em;
+
+  @include md(down) {
+    font-size: .4375em;
+  }
+}
+
+.Brand--org {
+  line-height: 1.05;
+
+  .Brand-image {
+    width: 5.625em;
+
+    @include md(down) {
+      width: 8.5em;
+    }
+  }
+
+  .Brand-text {
+    font-size: 1.5em;
+
+    @include md(down) {
+      font-size: 1.325em;
+    }
+  }
+
+  .Brand-role {
+    display: block;
+  }
+
+  .Brand-name {
+    font-weight: 900;
+  }
+}
+
+.Brand--org.Brand--md {
+  font-size: .875em;
+}
+
+.Brand--org.Brand--sm {
+  font-size: .725em;
+}

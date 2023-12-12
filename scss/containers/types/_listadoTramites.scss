@@ -1,0 +1,75 @@
+/* Listado de Tramites
+   ========================================================================== */
+
+/**
+ * @dependencies Button
+ */
+
+/*
+  <div class="Box Box--mf Box--listadoTramites">
+	<div class="Box-header">
+		<h3 class="Box-name">Trámites destacados</h3>
+	</div>
+	<div class="Box-body">
+		<ul class="Box-gridList Grid">
+			<li class="Grid-item">
+				<div class="Box-item">
+					<h4 class="Box-title"><a href="#">Solicitud de partida de nacimiento</a></h4>
+					<p class="Box-info">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ornare elit quis ullamcorper elementum.</p>
+					<a href="#" class="Button Button--inverse Button--small">Iniciar trámite en línea <span class="u-hideVisually">: Solicitud de partida de nacimiento</span></a>
+				</div>
+			</li>
+			<li class="Grid-item">
+				<div class="Box-item">
+					<h4 class="Box-title"><a href="#">Duplicado de Factura de UTE</a></h4>
+					<p class="Box-info">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ornare elit quis ullamcorper elementum.</p>
+					<a href="#" class="Button Button--inverse Button--small">Iniciar trámite en línea <span class="u-hideVisually">: Duplicado de Factura de UTE</span></a>
+				</div>
+			</li>
+		</ul>
+	</div>	
+	<div class="Box-footer">
+		<a href="#" class="Box-more">Ver más trámites</a>
+	</div>
+</div>
+ */
+
+.Box--listadoTramites {
+  .Box-item {
+    margin-bottom: 2.5em;
+  }
+
+  .Box-title {
+    font-size: 1.125em;
+    margin-bottom: .5rem;
+		
+		+ a {
+			margin-top: .5rem;
+		}
+  }
+	
+	.Box-info {
+		margin-bottom: 1rem;
+	}
+	
+	a {
+    display: inline-block;
+	}
+	
+	&.Box--mf {
+		
+		.Box-item {
+			margin-bottom: 0;
+		}
+		
+		.Box-gridList {
+			li {
+    		margin-bottom: 2.25em;
+			}
+		}
+		
+		.Box-body:last-child > .Box-gridList li:last-child {
+			margin-bottom: 1.25rem;
+		}
+	}
+}

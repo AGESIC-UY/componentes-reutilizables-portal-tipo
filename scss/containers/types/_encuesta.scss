@@ -1,0 +1,47 @@
+/* Resultados encuesta */
+
+.Poll {
+  margin-bottom: 1.5rem;
+}
+
+.Poll-bar {
+  float: left;
+  height: 45px;
+  width: 100%;
+  padding: 4px 0;
+}
+
+.Poll-track {
+  position: relative;
+  width: 100%;
+  height: 15px;
+  background: #ebebeb;
+}
+
+.Poll-fill {
+  position: relative;
+  background: #0b4697;
+  height: 15px;
+  width: 50%;
+  color: #fff;
+  text-align: center;
+  font-size: .75em;
+  line-height: 26px;
+}
+
+.Poll-total {
+  text-align: right;
+}
+
+.Poll-text {
+  margin: 0;
+
+  span {
+    float: right;
+    display: inline-block;
+  }
+}
+
+.Poll-item {
+  margin-bottom: 2rem;
+}

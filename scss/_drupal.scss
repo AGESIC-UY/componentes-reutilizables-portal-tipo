@@ -1,0 +1,48 @@
+[id^="edit-archivo-upload"] .description,
+[data-drupal-selector="edit-archivo-upload-button"] {
+  display: none !important;
+}
+
+.youtube-container {
+  margin-bottom: 1.5rem;
+}
+
+.Module-item .contextual-region,
+.Module-item [region="content_bottom_left"],
+.Module-item [region="content_bottom_right"] {
+  height: 100%;
+}
+
+/* Se crea .Form-option-color para visualización en formularios nuevos */
+.muestra-color {
+  display: inline-block;
+  height: 21px;
+  width: 21px;
+  border-radius: 2px;
+  margin-right: .35rem;
+  margin-bottom: 4px;
+}
+
+.muestra-color--blanco {
+  background-color: #fff;
+  border: 1px solid #bebebe;
+}
+
+.move-fieldset {
+  background: #fff url(../assets/icons/icon-move.svg) no-repeat center;
+  height: 15px;
+  margin-left: -30px;
+  top: -3px;
+  cursor: move;
+}
+
+.tablesaw-cell-label {
+  display: none !important;
+}
+
+// Ajuste sobre Drupal en columna derecha de creación de contenedores y secciones - Actualizado versión 9 y 10
+#drupal-off-canvas:not(.drupal-off-canvas-reset),
+#drupal-off-canvas-wrapper {
+    color: #000000;
+    background: none !important;
+}

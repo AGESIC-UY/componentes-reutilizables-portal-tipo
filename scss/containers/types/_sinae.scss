@@ -1,0 +1,48 @@
+/* Contenedor de Alertas de SINAE
+   ========================================================================== */
+
+.Box--sinae {
+  h4 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-bottom: .25em;
+  }
+
+  p {
+    font-size: .875em;
+    margin-bottom: 0;
+  }
+
+  a {
+    word-wrap: break-word;
+  }
+
+  .Box-header {
+    margin-bottom: 2rem;
+    .Flag {
+      margin-bottom: 0;
+    }
+
+    .Flag-image img {
+      width: 100px;
+      height: 100px;
+    }
+  }
+
+  .Flag {
+    margin-bottom: 2rem;
+  }
+
+  @include md {
+    .Box-items {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      grid-column-gap: 30px;
+    }
+
+    .Flag-image img {
+      width: 60px;
+      height: 60px;
+    }
+  }
+}

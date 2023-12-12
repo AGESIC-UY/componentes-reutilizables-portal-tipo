@@ -1,0 +1,169 @@
+/** @define Index */
+
+.Index {
+  z-index: 9999;
+  right: 0;
+  top: 2rem;
+  transition: all .5s ease-in-out;
+  margin-bottom: 2rem;
+  border: 1px solid #eee;
+  border-radius: 6px;
+
+  &.is-visible {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &.is-fixed.is-open {
+    overflow-y: scroll;
+    height: calc(100vh - 4rem);
+    width: 90%;
+    max-width: 30em;
+  }
+}
+
+.Index.is-open .Index-body {
+  display: block;
+}
+
+.Index-trigger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 700;
+}
+
+// Para Documento Libro que siempre tiene visible el Indice
+// @include md(down) {
+  .Index.is-clone .Index-trigger {
+    font-size: 1rem !important;
+  }
+// }
+
+.Index-close {
+  font-size: .9375rem;
+  font-weight: 400;
+  display: none;
+}
+
+.Index.is-open .Index-close {
+  display: inline-block;
+}
+
+.Index-header {
+  top: 0;
+  z-index: 9999;
+  padding: 1rem;
+}
+
+.Index .Index-header,
+.Index.is-open .Index-header {
+  border-bottom: 1px solid #e2e9f1;
+  padding-bottom: .75rem;
+  margin-bottom: .5em;
+}
+
+.Index-search {
+  display: none;
+  padding: .5rem 1rem;
+}
+
+.Index ul {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.Index-nav {
+  font-size: .9375rem;
+
+  li {
+    border-bottom: 1px solid #eee;
+
+    &:last-child {
+      border-bottom: 0;
+    }
+
+    a {
+      display: flex;
+      padding: .75rem 1.5rem;
+      transition: color .25s;
+    }
+  }
+}
+
+.Index-nav li.is-active a {
+  border-right: 0;
+}
+
+.Index-subnav {
+  margin-left: 1.5rem;
+  font-size: .85rem;
+
+  li a {
+    padding: .75rem 1rem;
+  }
+}
+
+.Index.is-fixed {
+  position: fixed;
+  margin-bottom: 0;
+  background-color: lighten(#e2e9f1, 6%);
+  border-top-left-radius: $Box-border-radius;
+  border-bottom-left-radius: $Box-border-radius;
+  box-shadow: $Box-shadow;
+
+  .Index-body {
+    display: none;
+  }
+
+  &.is-open .Index-body {
+    display: block;
+  }
+
+  .Index-header {
+    background-color: #f7f9fb;
+    box-shadow: 0 1px 12px rgba(0, 0, 0, .05);
+    position: sticky;
+    margin-bottom: 0;
+    border-bottom: 0;
+  }
+
+  .Index-search {
+    display: block;
+  }
+
+  .Index-nav {
+    li {
+      border-bottom: 1px solid #eee;
+
+      &.is-active {
+        border-left: 4px solid #bbb;
+      }
+
+      a {
+        display: block;
+      }
+    }
+  }
+}
+
+.Index-nav li.is-active {
+  border-left: 4px solid #bbb;
+
+  > a {
+    color: #000;
+    // font-weight: 600;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+// @include md {
+//   .js-pageIndexMobile.is-fixed {
+//     display: none;
+//   }
+// }

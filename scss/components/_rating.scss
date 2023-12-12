@@ -1,0 +1,79 @@
+
+/* Rating */
+
+.Rating {
+  display: flex;
+  font-size: 20px;
+  color: #eee;
+  position: relative;
+}
+
+.Rating-control {
+  position: absolute;
+  left: -9999px;
+}
+
+.Rating-control:nth-of-type(1):focus ~ .Rating-item:nth-of-type(1):before,
+.Rating-control:nth-of-type(2):focus ~ .Rating-item:nth-of-type(2):before,
+.Rating-control:nth-of-type(3):focus ~ .Rating-item:nth-of-type(3):before,
+.Rating-control:nth-of-type(4):focus ~ .Rating-item:nth-of-type(4):before,
+.Rating-control:nth-of-type(5):focus ~ .Rating-item:nth-of-type(5):before {
+  content: "";
+  outline: 3px solid #ffc107;
+  outline-offset: 0.08rem;
+  position: absolute;
+  top: -.15em;
+  right: 0;
+  bottom: -.15em;
+  left: 0;
+}
+
+.Rating-item {
+  -webkit-tap-highlight-color: transparent;
+  cursor: pointer;
+  position: relative;
+  padding-left: .1em;
+  padding-right: .1em;
+}
+
+.Rating-star {
+  display: block;
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+  stroke: #222;
+  stroke-width: 1px;
+}
+
+.Rating-label {
+  position: absolute;
+  top: 0;
+  left: -9999px;
+}
+
+.Rating:hover,
+.Rating-control:nth-of-type(1):checked ~ .Rating-item:nth-of-type(1),
+.Rating-control:nth-of-type(2):checked ~ .Rating-item:nth-of-type(-n+2),
+.Rating-control:nth-of-type(3):checked ~ .Rating-item:nth-of-type(-n+3),
+.Rating-control:nth-of-type(4):checked ~ .Rating-item:nth-of-type(-n+4),
+.Rating-control:nth-of-type(5):checked ~ .Rating-item:nth-of-type(-n+5) {
+  color: #ffc107;
+}
+
+.Rating-item:hover ~ .Rating-item {
+  color: #eee;
+}
+
+.Rating {
+  margin-top: 10px;
+}
+
+.Rating label {
+  position: relative;
+  display: inline-block;
+  max-width: 100%;
+  width: 24px !important;
+  text-align: right;
+  margin-right: 0px;
+  line-height: 1.2em;
+}

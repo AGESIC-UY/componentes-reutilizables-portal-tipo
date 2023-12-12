@@ -1,0 +1,98 @@
+/** @define Tags */
+
+.Tags {
+  margin: 1rem 0;
+}
+
+.Tags-item {
+  display: inline-block;
+  margin-right: .5rem;
+  margin-bottom: .5rem;
+  padding: .2rem .625rem;
+  background-color: #f3f3f3;
+  border-radius: 2px;
+  font-size: .9rem;
+  color: $gray-text;
+  transition: box-shadow .35s, color .35s;
+
+  &:hover {
+    box-shadow: 1px 1px 1px #ddd, 0 0 1px #ddd;
+    color: #000;
+    text-decoration: none;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.Tags-item--json,
+.Tags-item--csv,
+.Tags-item--html,
+.Tags-item--xls,
+.Tags-item--pdf,
+.Tags-item--zip,
+.Tags-item--rar,
+.Tags-item--xml,
+.Tags-item--txt,
+.Tags-item--undefined {
+  color: #fff;
+
+  &:hover {
+    color: #fff;
+    text-decoration: underline;
+  }
+}
+
+.Tags-item--json {
+  background-color: #7A4910;
+}
+
+.Tags-item--csv {
+  background-color: #635522;
+}
+
+.Tags-item--html {
+  background-color: #215C86;
+}
+
+.Tags-item--xls {
+  background-color: #11671C;
+}
+
+.Tags-item--pdf {
+  background-color: #B00F0D;
+}
+
+.Tags-item--zip,
+.Tags-item--rar {
+  background-color: #556080;
+}
+
+.Tags-item--xml {
+  background-color: #455D02;
+}
+
+.Tags-item--txt {
+  background-color: #4B5858;
+}
+
+.Tags-item--undefined {
+  background-color: #686868;
+}
+
+/* Modificador para agregar icono de cerrar */
+.Tags-item--close {
+  position: relative;
+  padding-right: 1.75rem;
+
+  &:after {
+    content: "×";
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 0;
+    position: absolute;
+    top: .875rem;
+    right: .625rem;
+  }
+}

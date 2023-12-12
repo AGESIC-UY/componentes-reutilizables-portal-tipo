@@ -1,0 +1,174 @@
+@include md(up) {
+  .Module {
+    margin-bottom: $Grid-gutter-size * 2;
+
+    .Grid,
+    .Grid-item {
+      height: 100%;
+    }
+  }
+
+  .Module--120  { height: 120px; }
+  .Module--240  { height: 240px; }
+  .Module--xs   { height: 282px; }
+  .Module--sm,
+  .Module--360  { height: 360px; }
+  .Module--450  { height: 450px; }
+  .Module--md,
+  .Module--510  { height: 510px; }
+  .Module--lg,
+  .Module--615  { height: 615px; }
+  .Module--xl,
+  .Module--720  { height: 720px; }
+  .Module--xxl,
+  .Module--840  { height: 840px; }
+  .Module--960  { height: 960px; }
+  .Module--1200 { height: 1200px; }
+  .Module--1440 { height: 1440px; }
+  .Module--1680 { height: 1680px; }
+  .Module--1920 { height: 1920px; }
+  .Module--2400 { height: 2400px; }
+
+  .Module-item {
+    height: 100%;
+    padding-bottom: $Grid-gutter-size;
+    padding-top: $Grid-gutter-size;
+  }
+
+  .Module-item--1of2 {
+    height: 50%;
+  }
+
+  .Module-item--1of3 {
+    height: 33.333333%;
+  }
+
+  .Module-item--2of3 {
+    height: 66.666666%;
+  }
+
+  .Grid-item .Module-item:last-child {
+    padding-bottom: 0 !important;
+  }
+
+  .Grid-item .Module-item:first-child {
+    padding-top: 0 !important;
+  }
+
+  /**
+   * Variaciones de contenedores dentro de modulos
+   * Estas definiciones evitan agregar las clases:
+   * .Box--fit y .Box--alignMiddle a contenedores.
+   */
+
+  .Module {
+    .Box {
+      height: 100%;
+      width: 100%;
+    }
+
+    .Box-footer {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      margin: 0;
+    }
+
+    .Box--acceso {
+      display: table;
+      width: 100%;
+
+      .Flag {
+        width: 100%;
+        display: table-cell;
+        vertical-align: middle;
+      }
+    }
+
+    .Box--destacado4 {
+      display: table;
+      width: 100%;
+
+      > * {
+        width: 100%;
+        display: table-cell;
+        vertical-align: middle;
+      }
+
+      @include md(down) {
+        padding-top: .5rem;
+        padding-bottom: .5rem;
+      }
+    }
+
+    .Box--destacado2,
+    .Box--destacado1 {
+      padding: 0;
+
+      .Box-image {
+        height: 100%;
+      }
+
+      .Box-cover {
+        margin: 0;
+        height: 100%;
+      }
+    }
+  }
+}
+
+@include md(up) {
+	.Module .Box--suscribe {
+		display: table;
+		width: 100%;
+  }
+
+	.Module .Box--suscribe .Flag {
+		width: 100%;
+		display: table-cell;
+		vertical-align: middle;
+  }
+
+	.Module .Box--suscribe .Flag .Flag-body {
+		display: block;
+  }
+
+  .Module .Box--video {
+    .Box-video {
+      height: calc(100% - 260px);
+      min-height: 180px;
+
+      > div,
+      video,
+      iframe {
+        background-color: #000;
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .Box-video--full {
+      height: calc(100% - 140px);
+    }
+		
+		&.Box--videoLive .Box-video {
+			height: calc(100% - 300px);
+		}
+		
+		&.Box--videoOnly .Box-video {
+			height: calc(100% - 180px);
+		}
+  }
+
+  .Module {
+    .Hero {
+      height: 100%;
+    }
+
+    .Hero-image {
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}

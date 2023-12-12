@@ -1,0 +1,175 @@
+/* Listado horizontal
+   ========================================================================== */
+
+/**
+ * @dependencies Grid
+ * @utilities sizes
+ *
+ * 1. El texto e info son opcionales.
+ */
+
+/*
+  <div class="Box Box--mf Box--listadoHorizontal">
+		<div class="Box-header">
+				<h3 class="Box-name">Novedades</h3>
+		</div>
+		<div class="Box-body">
+				<ul class="Box-gridList Grid Grid--rowSize3">
+						<li class="Grid-item u-md-size1of3">
+								<a href="#">
+										<div class="Image-cover">
+											<img class="Box-image" src="./img/ruta.jpg" alt="">
+										</div>
+										<span class="Box-info Box-info--absolute">DD/MM/AAAA</span>
+										<span class="Box-title">Lorem ipsum dolor consectetur adipiscing</span>
+										<p class="Box-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla architecto quaerat molestias aliquam.</p>
+								</a>
+						</li>
+						<li class="Grid-item u-md-size1of3">
+								<a href="#">
+										<div class="Image-cover">
+											<img class="Box-image" src="./img/hole.jpg" alt="">
+										</div>
+										<span class="Box-info Box-info--absolute">DD/MM/AAAA</span>
+										<span class="Box-title">Lorem ipsum dolor consectetur adipiscing</span>
+										<p class="Box-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla architecto quaerat molestias aliquam.</p>
+								</a>
+						</li>
+						<li class="Grid-item u-md-size1of3">
+								<a href="#">
+										<div class="Image-cover">
+											<img class="Box-image" src="./img/uruguay.jpg" alt="">
+										</div>
+										<span class="Box-info Box-info--absolute">DD/MM/AAAA</span>
+										<span class="Box-title">Lorem ipsum dolor consectetur adipiscing</span>
+										<p class="Box-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla architecto quaerat molestias aliquam.</p>
+								</a>
+						</li>
+				</ul>
+		</div>
+		<div class="Box-footer">
+				<a href="#" class="Box-more">Ver más novedades</a>
+		</div>
+</div>
+ */
+
+.Box--listadoHorizontal {
+  .Box-image {
+    margin-bottom: .5em;
+    border-radius: $Box-mf-border-radius-inner;
+  }
+
+  .Box-info {
+    margin-bottom: .5em;
+  }
+
+  .Box-title {
+    font-size: 1.25em;
+  }
+	
+	.Image-cover {
+		margin: 0;
+		margin-bottom: .5rem;
+		position: relative;
+		overflow: hidden;
+		padding-top: 66.66%;
+		border-radius: $Box-mf-border-radius-inner;
+		background: #f1f1f1;
+		
+		img,
+		.Box-image {
+			margin-bottom: 0;
+			border-radius: $Box-mf-border-radius-inner;
+			-o-object-fit: cover;
+			object-fit: cover;
+			height: 100%;
+			position: absolute;
+			top: 0;
+		}
+		
+		 + .Box-title {
+			margin-top: 1rem;
+		}
+	}
+}
+
+/**
+ * Convertir listados horizontales en carousel (con scroll horizontal)
+ * en dispositivos moviles
+ */
+
+@include md(down) {
+	
+	.Box--listadoHorizontal:not(.Box--stats) {
+		margin-right: -12px;
+    margin-left: -12px;
+		border-radius: 0;
+		
+		.Box-body {
+			margin-left: -24px;
+			margin-right: -24px;
+			
+			.Box-gridList {
+				scroll-snap-type: x mandatory;
+				display: flex;
+				overflow: auto;
+				margin: 0;
+				
+				a {
+					position: relative;
+					width: 40vw;
+					
+					@include sm(down) {
+						width: 70vw;
+					}
+				}
+				
+				li {
+					margin-top: 3px;
+					margin-bottom: 3rem;
+					padding: 0 1.5rem;
+					padding-right: 0;
+					
+					+ li {
+						padding-right: 0rem;
+						
+						&:last-child {
+							padding-right: 1.5rem;
+						}
+						
+					}
+				}
+				
+				.Grid-item {
+					scroll-snap-align: start;
+					
+					.Image-cover {
+						margin-bottom: .75rem;
+					}
+					
+					.Box-info {
+						// Eliminar - Se estandariza con Box-info--absolute
+						margin: 0.5rem;
+						position: absolute;
+						top: 0;
+						right: 0;
+						padding: 0.25rem 0.5rem 0.25rem;
+						padding: 0.2rem 0.4rem 0.2rem;
+						background: rgba(255,255,255, 0.85);
+						border-radius: 3px;
+						font-size: .6875em;
+					}
+					
+					.Box-title {
+						font-size: 1.125em;
+					}
+					
+					.Box-text {
+						 font-size: .9375em;
+					}
+				}
+				
+			}		
+		}
+	}
+}

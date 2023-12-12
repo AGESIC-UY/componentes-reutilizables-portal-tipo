@@ -1,0 +1,788 @@
+/** @define Header; weak */
+
+.Header {
+  background-color: #fff;
+	
+	@include md(down) {
+		box-shadow: 0px 0px 6px rgba(0,0,0,.08);
+		position: relative;
+    z-index: 1;
+		border-bottom: 1px solid #eee;
+	}
+}
+
+/* top */
+
+.Header-top {
+  border-bottom: 1px solid $gray-3;
+  padding-top: .75em;
+  padding-bottom: .75em;
+
+  @include clearfix;
+
+  @include md(down) {
+		background: $blue;
+    border-bottom: none;
+    padding-top: 0.625em;
+    padding-bottom: 0.625em;	
+  }
+}
+
+.Header-site {
+  float: left;
+  display: flex;
+  align-items: center;
+
+  .Header-mainLink {
+    display: table-cell;
+    
+		&:hover {
+			text-decoration: none;
+    }
+    &:focus {
+			text-decoration: none;
+    }  
+		
+		@include md(down) {
+			.Brand {
+				color: #FFF;
+			}
+		}
+  }
+	
+	@include md(down) {
+		.Header-arrow:after {
+			top: -4px;
+		}
+	}
+
+  img {
+    vertical-align: bottom;
+    max-width: 80px;
+
+    @include md(down) {
+      max-width: 70px;
+    }
+  }
+
+}
+
+.Header-parent {
+  display: inline-block;
+  margin-left: 1.5em;
+  font-weight: 400;
+  top: -1px;
+  position: relative;
+  border-left: 1px solid #ccc;
+  padding-left: 1.5em;
+	
+	@include md(down) {
+		top: 0;
+		border-color: #FFFFFF;
+	}
+	
+  a {
+    color: $gray-text;
+		
+		@include md(down) {
+			color: #FFFFFF;
+			font-size: .9375rem;
+		}
+  }
+	
+	.Header-arrow:after {
+		left: 0px;
+    top: 0px;
+    transform: rotate(90deg);
+	}
+	
+	&.open .Header-arrow:after {
+    top: -5px;
+    transform: rotate(-90deg);
+	}
+
+  @media screen and (max-width: 520px) {
+    display: none;
+  }
+}
+
+.Header-explore {
+  display: table-cell;
+  vertical-align: bottom;
+  width: 1.825em;
+  height: 1.825em;
+  border-radius: 3px;
+  border: 1px solid #666;
+  color: #666;
+  overflow: hidden;
+  margin-left: .75em;
+	
+	@include md(down) {
+		width: 1.5em;
+    height: 1.5em;
+    border: 1px solid #FFFFFF;
+    color: #FFFFFF;
+	}
+}
+
+.Header-login {
+  float: right;
+  margin-top: 0.1825em;
+  display: flex;
+	
+	@include md(down) {
+		margin-top: 1px;
+    font-size: .9375rem;
+		
+		a {
+			color: #FFF;
+		}
+	}
+	
+}
+
+/* body */
+
+.Header-body {
+  @include clearfix;
+
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
+
+  @include md(down) {
+    padding-top: 0.75em;
+    padding-bottom: 0.75em;
+	}
+}
+
+.Header-logo {
+  font-size: 1rem;
+  float: left;
+  margin-bottom: 0;
+
+  @include md(down) {
+    img {
+      // width: 100%;
+      height: auto;
+      /*max-width: 5.5em;*/
+			max-width: 2.5395rem !important;
+    }
+		
+		.Logo-text {
+			padding-top: 3px;
+		}
+		
+		.Logo-title {
+			font-size: .9375rem;
+			line-height: 1.1875rem;
+		}
+		
+		.Logo-role {
+			margin-bottom: 1px;
+		}
+
+  }
+
+  a {
+    color: $blue;
+  }
+}
+
+.Header-search {
+  float: right;
+  margin-top: 1.4em;
+  width: 100%;
+  max-width: 30em;
+	
+	.Search-input {
+		padding-right: 9.5em;
+	}
+	
+	.Search-input:focus {
+		outline: $focus-ring;
+    outline-offset: 3px;
+	}
+
+  @include md(down) {
+		font-size: .9175rem;
+    margin-top: 1rem;
+    max-width: unset;
+
+    .Search-checkboxLabel {
+			font-size: .825em;
+			line-height: 48px;
+			margin: -3px -1px -3px 0;
+		  padding: 0 4.5em 0 .75em;
+    }
+
+    .Search-checkbox,
+    #Search-checkbox {
+      position: relative;
+      top: 3px;
+    }
+  }
+}
+
+$arrow-size: .2825em;
+
+.Header-arrow {
+  &:after {
+    content: "";
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: $arrow-size $arrow-size $arrow-size;
+    border-color: transparent;
+    border-left-color: inherit;
+    position: relative;
+    left: 3px;
+    top: -2px;
+    display: inline-block;
+    margin-top: $arrow-size * 2.2825;
+    transform: rotate(0deg);
+  }
+}
+
+.Header-menuTrigger {
+  float: right;
+  color: $blue;
+  border: 1px solid $blue;
+  padding: 0.5em 0.75em;
+  border-radius: 4px;
+  text-transform: uppercase;
+  font-size: .75em;
+  display: flex;
+  align-items: center;
+  margin-top: 0.75em;
+	margin-right: 1px;
+
+  > svg {
+    margin-right: 0.25em;
+		margin-left: -0.15em;
+    fill: $blue;
+  }
+	
+	> span {
+		font-weight: 600;
+		padding-top: 1px;
+	}
+
+  @include md(down) {
+	 // No incluye estilos acá porque solo se muestra en móvil
+  }
+}
+
+.Header-lang {
+  .Dropdown:hover,
+  .Dropdown:focus {
+    .Dropdown-menu {
+      display: none;
+    }
+  }
+
+  .Dropdown-trigger {
+    cursor: pointer;
+  }
+
+  .Dropdown-menu {
+    top: calc(100% + 14px);
+    left: unset;
+    right: 0;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: -9px;
+      left: calc(100% - 34px);
+      display: inline-block;
+      height: 0;
+      width: 0;
+      border-left: 9px solid transparent;
+      border-right: 9px solid transparent;
+      border-bottom: 9px solid #ccc;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: -8px;
+      left: calc(100% - 33px);
+      display: inline-block;
+      height: 0;
+      width: 0;
+      border-left: 8px solid transparent;
+      border-right: 8px solid transparent;
+      border-bottom: 8px solid #fff;
+    }
+  }
+
+  .isActive {
+    font-weight: bold;
+    color: #000;
+  }
+}
+
+.Header-langLink {
+  color: $color-1;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &:after  {
+    content: "";
+    width: 0;
+    height: 0;
+    border: .2825em solid transparent;
+    border-left-color: inherit;
+    position: relative;
+    top: 0;
+    display: inline-block;
+    margin-top: .64481em;
+    transform: rotate(90deg);
+    margin-left: .5rem;
+  }
+}
+
+.Header-langBody {
+  display: flex;
+  align-items: center;
+}
+
+.User {
+  position: relative;
+	
+	+ .User {
+		margin-left: 2rem;
+	}
+
+  .User-name {
+    cursor: pointer;
+    color: $blue;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+		
+		@include md(down) {
+			color: #FFF;
+			
+			.arrow-down {
+				border-top-color: #FFF;
+			}
+			
+			> svg {
+				fill: #FFF;
+			}
+		}
+  }
+}
+
+.User-alert {
+  width: 16px;
+  height: 16px;
+  background-color: tomato;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: .75em;
+  font-weight: 700;
+}
+
+.User-dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 100%;
+  min-width: 19rem;
+  background-color: #fff;
+  border-radius: 3px;
+  box-shadow: $Box-mf-shadow-upper;
+  border: 1px solid #ccc;
+  font-family: $base-font-stack;
+  z-index: 1000;
+  font-size: .95em;
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  ul > li:first-child > * {
+    border-top: 0;
+  }
+
+  ul li > span,
+  a {
+    color: #000 !important;
+    display: block;
+    padding: 1em;
+    border-top: 1px solid #eee;
+    line-height: 1.5;
+  }
+
+  li:first-child a {
+    border-top: 0;
+  }
+	
+	@include md(down) {
+		min-width: 16rem;
+		top: 120%;
+		
+		ul {
+			width: 100%;
+		}
+		
+		a {
+			color: #000;
+			display: flex;
+			
+			span {
+				line-height: 1.4;
+    		padding-bottom: 1px;
+			}
+		}	
+	}
+	
+	/* Nuevo menú de usuario */
+	&.js-userDropdown {
+    top: 0;
+	}
+
+	.close-dropdown-user {
+    position: absolute;
+    right: 4px;
+    top: 4px;
+    padding: .5rem;
+    display: block;
+    line-height: 1;
+		border-top: none;
+		border-radius: 3px;
+		transition: background-color .35s;
+		
+		&:hover {
+    	cursor: pointer;
+			background-color: #f3f3f3;
+		}
+		
+		img {
+			display: block;
+			width: 1rem;
+			height: 1rem;
+		}
+	}
+
+	.User-data {
+    padding: 20px 24px 25px 24px;
+    border-bottom: 1px solid #EFEFEF;
+		
+		span.User-name {
+			font-size: 1rem;
+			line-height: 1.25em;
+			font-weight: 600;
+			margin-bottom: 1rem;
+			display: block;
+			color: #000;
+		}
+		
+		.Login-method {
+			display: flex;
+			margin-bottom: 1.25rem;
+			justify-content: flex-start;
+			align-items: center;
+			
+			.Login-method-logo {
+				margin-right: .75rem;
+			}
+			
+			.Login-method-name {
+				font-size: 1rem;
+				display: block;
+				margin-top: .25rem;
+				margin-bottom: .25rem;
+				line-height: 1.1;
+			}
+			
+			.Login-method-level {
+				display: flex;
+				font-size: .875rem;
+				justify-content: flex-start;
+				align-items: center;
+				color: $gray-text;
+				
+				img {
+					display: block;
+					margin-right: .25rem;
+					width: 1.125rem;
+					height: 1.125rem;
+				}	
+			}
+		}
+	}
+	
+	.Dropdown-links {
+		padding: 1rem;
+		
+		a {
+			display: flex;
+			border: none;
+			padding: .75rem;
+			text-decoration: none;
+			transition: background-color .35s;
+			border-radius: $Box-border-radius;
+			
+			&:hover {
+				text-decoration: underline;
+				background-color: #f3f3f3;
+			}
+			
+			img {
+				display: block;
+				margin-right: .625rem;
+			}
+		}
+	}
+}
+
+.User-dropdown.is-open {
+  display: block;
+  animation: dropIn .35s ease-in-out;
+}
+
+@keyframes dropIn {
+  from {
+    opacity: 0;
+    transform: translateY(-1rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.User-name.is-open .arrow-down {
+  transform: rotate(180deg);
+  transition: transform .35s ease-in-out;
+}
+
+.arrow-down {
+	border-left: 4px solid transparent;
+	border-right: 4px solid transparent;
+	border-top: 4px solid black;
+}
+
+@include md(down) {
+	.Nav.is-open {
+			display: block;
+			animation: dropIn .35s ease-in-out;
+		}
+}
+
+
+/* Modificador para header de Minisitios */
+
+.Header--minisitio {
+	
+	@include md(down) {
+		#menu-padre .Nav-subnav {
+			padding: 0 1em;
+		}
+
+	  .Header-parent--mobile {
+			border-left: none;
+			margin-left: 0;
+			padding-left: 0;
+			padding-right: 0;
+			padding-top: 0.5em;
+			margin-top: 0.5em;
+			display: flex;
+			border-top: 1px solid hsla(0,0%,100%,.15);
+			
+			&.open {
+				margin-top: 0.5em !important;
+				margin-bottom: 0em;
+				padding: 0.5em 0.75em !important;
+				margin-left: -.75em;
+				margin-right: -.75em;
+				border-color: transparent;
+			}
+		}
+		
+		.Header-site .Header-parent {
+    	display: none;
+		}
+	}
+	
+	.Header-top {
+		background-color: $blue;
+		border-bottom: none;
+	}
+	
+	.Header-top + .Nav {
+		background-color: #042f62;
+	}
+	
+	.js-mainNav {
+		display: none;
+		
+		&.is-open {
+			display: block;
+			z-index: 4;
+			-webkit-animation: a .25s ease-in-out;
+   	  animation: a .25s ease-in-out;
+			
+			@include md(down) {
+				padding-top: 1rem;
+			}	
+		}
+	}
+	
+	.Header-explore {
+		color: #FFFFFF;
+		border-color: #FFFFFF;
+	}
+	
+	.Header-parent {
+		top: 0;
+		line-height: 28px;
+		
+		@include md(down) {
+			line-height: 22px;
+		}
+		
+		&.open {
+			background: #042f62;
+			margin-top: -.75em;
+			margin-bottom: -.75em;
+			padding-top: 0.75em;
+			padding-bottom: 0.75em;
+			padding-right: 1.5em;
+			border-color: transparent;
+		}
+		
+		a {
+			color: #FFFFFF;
+		}
+	}
+	
+	.Header-login a {
+		color: #FFFFFF;
+	}
+	
+	.User {	
+		
+		.js-lang svg {
+			fill: #FFF;
+		} 
+
+		.User-name {
+			color: #FFFFFF;
+		
+			.arrow-down {
+				border-top-color: #FFFFFF;
+			}
+		}
+	}
+
+	@include md {
+		.Header-top + .Nav .Nav-list {
+			margin-left: 165px;
+		}
+	}
+}
+
+/* Modificador para header de Catálogos (Base de Minisitios) */
+
+.Header--catalogo {
+	background: $blue;
+	
+	.Header-top {
+		background: #042F62;
+	}
+	
+	.Header-top .Brand,
+	.User > .User-name,
+	.Header-top a,
+	.Logo-text {
+		color: #FFF;
+	}
+	
+	.Header-explore {
+		color: #FFF;
+		border-color: #FFF;	
+	}
+	
+	.Header-menuTrigger {
+		color: #FFF;
+		border-color: #FFF;	
+		margin-top: .5em;
+		
+		> svg {
+			fill: #FFF;
+		}
+	}
+	
+	.Header-logo a:hover .Logo-text {
+		text-decoration: underline;
+	}
+	
+	.Header-search .Search-input {
+    padding-right: 3.75em;
+	}
+	
+	@include md {
+		.Header-body {
+			padding-top: 1.75em;
+			padding-bottom: .75em;
+		}
+		
+		.Logo {
+			height: 98px;
+		}
+		
+		.Logo-title {
+			font-size: 1.375rem;
+			line-height: 1.35;
+		}
+		
+		.Search {
+			font-size: 1.125em;
+		}
+		
+		.Header-search {
+			max-width: 40em;
+			margin-top: 1.25em;
+		}
+	}
+	
+	@include md(down) {
+		border-bottom: none;
+		
+		+ .Nav {
+			padding-top: 1em;
+		}
+		 .Header-logo .Logo-title {
+			font-size: 1rem;
+			line-height: 1.35rem;
+		}
+	}
+	
+	// Modificador de cabezal sin menú
+	&.Header--noNav {
+		+ .Nav,
+		.Header-menuTrigger {
+			display: none;
+		}
+		
+		@include md {
+			.Header-body {
+				padding-top: 2em;
+				padding-bottom: 2em;
+			}
+		}
+	}
+}

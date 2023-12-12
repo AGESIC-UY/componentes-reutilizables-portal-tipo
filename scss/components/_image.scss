@@ -1,0 +1,23 @@
+/** @define Image; weak */
+
+.Image {
+  img {
+    border-radius: 2px;
+  }
+
+  figcaption,
+  .Image-caption {
+    font-size: .85em;
+    font-style: italic;
+  }
+}
+
+/**
+ * Modifiers
+ */
+
+.Image--left {
+  float: left;
+  margin-right: 1rem;
+  margin-bottom: 1.5rem;
+}

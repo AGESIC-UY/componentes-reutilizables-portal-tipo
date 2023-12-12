@@ -1,0 +1,158 @@
+/** @define Date */
+
+/**
+  <div class="Date">
+    <span class="Date-month">Nov</span>
+    <span class="Date-day">28</span>
+  </div>
+ */
+
+.Date {
+  width: 4.5em;
+  display: inline-block
+}
+
+.Date-month {
+  display: block;
+  background-color: $color-1;
+  color: #fff;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: .875em;
+  padding-top: .15em;
+  padding-bottom: .15em;
+}
+
+.Date-day {
+  background-color: #fff;
+  text-align: center;
+  padding-top: .45em;
+  padding-bottom: .45em;
+  font-size: 1.375em;
+  font-weight: 700;
+  color: #555;
+  display: block;
+  border: solid 1px #ddd;
+  border-top: none;
+
+  @include border-bottom-radius(3px);
+}
+
+.Date--small {
+  font-size: .75rem;
+  width: 3.75em;
+
+  .Date-day {
+    padding-top: .15em;
+    padding-bottom: .15em;
+  }
+}
+
+.Date-day--double {
+  font-size: .95em;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+/** @define Fecha */
+
+/**
+  <div class="Fecha">
+		<div class="Fecha-anio">2022</div>
+		<div class="Fecha-pack">
+			<div class="Fecha-dia">24</div>
+			<div class="Fecha-mes">Nov</div>
+		</div>
+	</div>
+ */
+
+
+.Fecha {
+    width: 4em;
+		border-radius: 3px;
+		display: flex;
+    flex-direction: column;
+	
+	.Fecha-anio,
+	.Fecha-pack {
+			display: block;
+			text-align: center;
+	}
+	
+	.Fecha-anio {
+		border: 1px solid $color-1;
+		background-color: $color-1;
+    color: #fff;
+    text-transform: uppercase;
+    padding-top: 0.1em;
+    padding-bottom: 0.1em;
+		line-height: 1.25;
+    font-size: .725em;
+    letter-spacing: 1px;
+    font-weight: 600;
+		
+		@include border-top-radius(3px);
+		
+	}
+	
+	.Fecha-pack {
+		background-color: #fff;
+    padding-top: 0.35em;
+    padding-bottom: 0.4em;
+    color: $gray-text-soft;
+    border: 1px solid #ddd;
+    border-top: none;
+		line-height: 1.125;
+    font-size: 1.125em;
+		font-weight: 700;
+		
+		@include border-bottom-radius(3px);
+	}
+	
+	.Fecha-mes {
+		font-size: .65em;
+		text-transform: uppercase;
+	}
+	
+	// Modificador .Fecha--doble
+	&.Fecha--doble {
+		.Fecha-anio {
+			letter-spacing: .5px;
+		}
+		
+		.Fecha-pack {
+			padding-bottom: 0.425em;
+		}
+		
+		.Fecha-dia {
+			font-size: .825em;
+			line-height: 1.365;
+			letter-spacing: -.25px;
+		}
+		
+		.Fecha-mes {
+			font-size: .625em;
+			letter-spacing: -.5px;
+		}
+	}
+	
+	// Modificador .Fecha--pasada
+	&.Fecha--pasada {
+		
+		.Fecha-anio {
+			background-color: $gray-text-soft;
+			border-color: $gray-text-soft;
+		}
+	}
+	
+	// Modificador .Fecha--chico
+	&.Fecha--chico {
+		font-size: .75rem;
+		width: 3.75em;
+		
+		.Fecha-dia {
+			padding-bottom: .15em;
+		}
+	}
+}

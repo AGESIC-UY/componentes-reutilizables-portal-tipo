@@ -1,0 +1,129 @@
+/** @define Tabs; weak */
+
+$nav-link-padding-y: .625em;
+$nav-link-padding-x: 1.25em;
+$nav-link-disabled-color: #555;
+
+$nav-tabs-border-width: 1px;
+$nav-tabs-border-color: #dee2e6;
+$nav-tabs-border-radius: 3px;
+$nav-link-disabled-color: #eee;
+$nav-tabs-link-active-color: #000;
+$nav-tabs-link-active-bg: #fff;
+$nav-tabs-link-active-border-color: #dee2e6 #dee2e6 #fff;
+
+.Tabs-nav {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+
+.Tabs-link {
+  display: block;
+  padding: $nav-link-padding-y $nav-link-padding-x;
+
+  // Disabled state lightens text
+  &.disabled {
+    color: $nav-link-disabled-color;
+    pointer-events: none;
+    cursor: default;
+  }
+}
+
+.Tabs-nav {
+  border-bottom: $nav-tabs-border-width solid $nav-tabs-border-color;
+
+  .Tabs-item {
+    margin-bottom: -$nav-tabs-border-width;
+  }
+
+  .Tabs-link {
+    text-decoration: none;
+    border: $nav-tabs-border-width solid transparent;
+    @include border-top-radius($nav-tabs-border-radius);
+
+    &.disabled {
+      color: $nav-link-disabled-color;
+      background-color: transparent;
+      border-color: transparent;
+    }
+  }
+
+  .Tabs-item.active .Tabs-link,
+  .Tabs-link.active,
+  .Tabs-item.show .Tabs-link {
+    color: #495057;
+    background-color: $nav-tabs-link-active-bg;
+    border-color: $nav-tabs-link-active-border-color;
+  }
+}
+
+@include md(down) {
+  .Tabs {
+    position: relative;
+
+    &:before {
+      content: '';
+      display: block;
+      height: 100%;
+      width: 2.5rem;
+      background: linear-gradient(to left, #fff, transparent);
+      position: absolute;
+      top: 0;
+      right: 0;
+      margin-top: -2px;
+    }
+
+    .Tabs-nav .Tabs-item:last-child {
+      padding-right: 3rem;
+    }
+  }
+
+  .Tabs-nav {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    flex-wrap: nowrap;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    .Tabs-item {
+      flex: 0 0 auto;
+    }
+  }
+}
+
+// Tabbable tabs
+// Hide tabbable panes to start, show them when `.active`
+
+.Tabs-content {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+
+  > .Tabs-pane {
+    display: none;
+  }
+
+  > .active {
+    display: block;
+  }
+}
+
+@media print {
+  .Tabs-nav {
+    display: none;
+  }
+
+  .Tabs-pane {
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    margin-bottom: 40px !important;
+  }
+}

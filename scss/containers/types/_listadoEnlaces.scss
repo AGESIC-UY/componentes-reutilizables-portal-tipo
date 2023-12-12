@@ -1,0 +1,73 @@
+/* Listado de Enlaces
+   ========================================================================== */
+
+/*
+  <div class="Box Box--mf Box--listadoEnlaces">
+		<div class="Box-header">
+				<h3 class="Box-name">Lista de enlaces</h3>
+		</div>
+		<div class="Box-body">
+				<p class="Box-text">Lorem ipsum dolor sit amet, consectetur aicing elit eos eveniet, repellat, vero rerum hic reiciendis recusandae debitis est fugit tempore.</p>
+				<ul class="u-bullet">
+						<li><a href="#">Lorem ipsum dolor sit.</a></li>
+						<li><a href="#">Deleniti adipisci, consequuntur libero.</a></li>
+						<li><a href="#">Vero aperiam illum consequatur Lorem ipsum dolor sit amet.</a></li>
+						<li><a href="#">Architecto corrupti, maxime qui.</a></li>
+						<li><a href="#">Quos officia, aliquam accusantium!</a></li>
+				</ul>
+		</div>
+		<div class="Box-footer">
+				<a class="Box-footerLink" href="#">Ver más</a>
+		</div>
+</div>
+*/
+
+.Box--listadoEnlaces {
+  .Box-title {
+    font-size: 1.25em;
+    margin-bottom: .125em;
+  }
+
+  .Box-body {
+    margin-bottom: 1.5rem;
+  }
+
+  .Box-gridList {
+    li {
+      margin-bottom: 1.5rem;
+    }
+
+    img {
+      width: 60px;
+    }
+  }
+}
+
+/* Versión MF */
+.Box--mf.Box--listadoEnlaces {
+	
+	@include md(down) {
+		.Box-body {
+			margin-bottom: 1rem;
+
+			+ .Box-footer {
+				margin-top: 2rem;
+			}
+		}
+	}
+	
+	.u-bullet {
+		margin-top: 1.5em;
+		
+		li:before {
+				width: 0.5em;
+				height: 0.5em;
+				content: "";
+				border: 0.2em solid $gray-text-soft;
+				border-width: 0 0.2em 0.2em 0;
+				transform: rotateZ(-45deg);
+				top: 0.6em;
+				left: -1.625em;
+		}
+	}
+}

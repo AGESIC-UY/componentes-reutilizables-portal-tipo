@@ -1,0 +1,158 @@
+/* Listado Vertical
+   ========================================================================== */
+
+/**
+ * @dependencies Media, Download, Icon, List
+ */
+
+/*
+
+	<div class="Box Box--mf Box--listadoVertical">
+		<div class="Box-header">
+				<h3 class="Box-name">Listado vertical</h3>
+		</div>
+
+		<div class="Box-body">
+			<ul class="Box-mediaList List">
+				<li>
+					<span class="Box-subtitle">Información adicional</span>
+					<a href="#" class="Media-title">Imagen vertical se muestra al ancho total y centrada en ambos ejes</a>
+					<div class="Media">
+						<div class="Media-image Media-image--cover">
+							<img src="./img/ruta.jpg" alt="">
+						</div>
+						<div class="Media-body">
+							<span class="Box-info Box-info--absolute">DD/MM/AAAA</span>
+							<p class="Box-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, totam! Velit quam esse itaque eum maxime laboriosam atque ut.</p>
+							<a class="Download Download--small" href="#" title="Descargar: Formulario para inscripción (.pdf 354 KB)">
+								<div class="Media">
+									<div class="Media-image">
+										<span class="Download-icon">
+											<span class="Icon Icon--download"></span>
+										</span>
+									</div>
+									<div class="Media-body">
+										<div class="Download-title">Formulario para inscripción (.pdf 354 KB)</div>
+										<div class="Download-description">Lorem ipsum dolor sit amet consectetur</div>
+									</div>
+								</div>
+							</a>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+
+		<div class="Box-footer">
+				<a class="Box-more" href="#">Link adicional</a>
+		</div>
+	</div>
+ */
+
+.Box--listadoVertical {
+	.Media-title {
+		@include md(down) {
+			font-size: 1.25em;
+		}
+  }
+
+  // .Media-image img {
+  //   border-radius: 2px;
+  // }
+
+  .Download {
+    font-size: .9em; // Eliminar luego de MF
+    margin: 0.1875rem;
+		margin-left: 0;
+		margin-top: 1.25em;	
+  }
+
+  p,
+  .Box-text {
+    margin-bottom: 0;
+  }
+
+  .Box-subtitle {
+		font-size: 1em;
+    margin-bottom: .5rem;
+		
+		@include md(down) {
+			font-size: .9375rem;
+		}
+  }
+
+  .Media-image img {
+    border-radius: $Box-mf-border-radius-inner;
+    max-width: 250px;
+  }
+
+  .Media-image video {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+		
+		@include sm(down) {
+			max-width: unset;
+		}
+  }
+	
+	.Media-image video,
+  .Media-image iframe {
+		height: 100%;
+		width: 100%;
+		background-color: #000000;
+	}
+	
+	.Media-image--cover {
+		width: 250px;
+		padding-top: 166px; /* Mantiene proporción 3:2 */
+		float: left;
+		margin-right: 1.5rem;
+		position: relative;
+		overflow: hidden;
+		border-radius: $Box-mf-border-radius-inner;
+		background: #f1f1f1;
+		
+		@include sm(down) {
+			width: 100%;
+			padding-top: 66.66%; /* Mantiene proporción 3:2 */
+			float: none;
+			margin-bottom: 1rem;
+			margin-right: 0;
+		}
+		
+		.Video, 
+		img {
+			margin-bottom: 0;
+			border-radius: $Box-mf-border-radius-inner;
+			-o-object-fit: cover;
+			object-fit: cover;
+			max-width: 100%;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+		}
+	}
+	
+	@include sm(down) {
+		.List .List-item,
+		.List>li {
+			padding-left: 0;
+			padding-right: 0;
+		} 
+	}
+	
+	&.Box--mf {
+		
+		@include md(down) {
+			.Box-mediaList .Media {
+    		position: relative;
+			}	
+		}
+	}
+}
+
+// .Box--articles {
+
+// }

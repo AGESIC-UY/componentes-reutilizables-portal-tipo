@@ -1,0 +1,58 @@
+.Feedback {
+  padding: 1em 0;
+  background-color: #fff;
+  border-top: 1px solid #eee;
+}
+
+.Feedback-list {
+  @include md {
+    float: left;
+  }
+
+  @include md(down) {
+    text-align: center;
+
+    li:first-child {
+      display: block;
+    }
+  }
+
+  li {
+    display: inline-block;
+
+    a {
+      padding-left: .5em;
+      padding-right: .5em;
+    }
+  }
+}
+
+.Feedback-error {
+  margin-top: .5em;
+  display: block;
+  text-align: center;
+  float: inherit;
+
+  a + a {
+    margin-left: 1.5em;
+  }
+
+  @include md(down) {
+    margin-bottom: .5em;
+
+    a {
+      display: block;
+      margin-top: .5em;
+    }
+  }
+
+  @include md {
+    text-align: left;
+    margin-top: 0;
+    float: right;
+
+    a {
+      margin-left: 1.5em;
+    }
+  }
+}

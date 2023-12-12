@@ -1,0 +1,118 @@
+/** @define utilities */
+// stylelint-disable
+
+$scale: .5;
+
+.u-p0 { padding: 0             !important; }
+.u-p1 { padding: $scale * 1rem !important; }
+.u-p2 { padding: $scale * 2rem !important; }
+.u-p3 { padding: $scale * 3rem !important; }
+.u-p4 { padding: $scale * 4rem !important; }
+.u-p5 { padding: $scale * 5rem !important; }
+.u-p6 { padding: $scale * 6rem !important; }
+
+.u-px0 { padding-left: 0             !important; padding-right: 0             !important; }
+.u-px1 { padding-left: $scale * 1rem !important; padding-right: $scale * 1rem !important; }
+.u-px2 { padding-left: $scale * 2rem !important; padding-right: $scale * 2rem !important; }
+.u-px3 { padding-left: $scale * 3rem !important; padding-right: $scale * 3rem !important; }
+.u-px4 { padding-left: $scale * 4rem !important; padding-right: $scale * 4rem !important; }
+.u-px5 { padding-left: $scale * 5rem !important; padding-right: $scale * 5rem !important; }
+.u-px6 { padding-left: $scale * 6rem !important; padding-right: $scale * 6rem !important; }
+
+.u-py0 { padding-top: 0             !important; padding-bottom: 0             !important; }
+.u-py1 { padding-top: $scale * 1rem !important; padding-bottom: $scale * 1rem !important; }
+.u-py2 { padding-top: $scale * 2rem !important; padding-bottom: $scale * 2rem !important; }
+.u-py3 { padding-top: $scale * 3rem !important; padding-bottom: $scale * 3rem !important; }
+.u-py4 { padding-top: $scale * 4rem !important; padding-bottom: $scale * 4rem !important; }
+.u-py5 { padding-top: $scale * 5rem !important; padding-bottom: $scale * 5rem !important; }
+.u-py6 { padding-top: $scale * 6rem !important; padding-bottom: $scale * 6rem !important; }
+
+.u-pt0 { padding-top: 0             !important; }
+.u-pt1 { padding-top: $scale * 1rem !important; }
+.u-pt2 { padding-top: $scale * 2rem !important; }
+.u-pt3 { padding-top: $scale * 3rem !important; }
+.u-pt4 { padding-top: $scale * 4rem !important; }
+.u-pt5 { padding-top: $scale * 5rem !important; }
+.u-pt6 { padding-top: $scale * 6rem !important; }
+
+.u-pr0 { padding-right: 0             !important; }
+.u-pr1 { padding-right: $scale * 1rem !important; }
+.u-pr2 { padding-right: $scale * 2rem !important; }
+.u-pr3 { padding-right: $scale * 3rem !important; }
+.u-pr4 { padding-right: $scale * 4rem !important; }
+.u-pr5 { padding-right: $scale * 5rem !important; }
+.u-pr6 { padding-right: $scale * 6rem !important; }
+
+.u-pb0 { padding-bottom: 0             !important; }
+.u-pb1 { padding-bottom: $scale * 1rem !important; }
+.u-pb2 { padding-bottom: $scale * 2rem !important; }
+.u-pb3 { padding-bottom: $scale * 3rem !important; }
+.u-pb4 { padding-bottom: $scale * 4rem !important; }
+.u-pb5 { padding-bottom: $scale * 5rem !important; }
+.u-pb6 { padding-bottom: $scale * 6rem !important; }
+
+.u-pl0 { padding-left: 0             !important; }
+.u-pl1 { padding-left: $scale * 1rem !important; }
+.u-pl2 { padding-left: $scale * 2rem !important; }
+.u-pl3 { padding-left: $scale * 3rem !important; }
+.u-pl4 { padding-left: $scale * 4rem !important; }
+.u-pl5 { padding-left: $scale * 5rem !important; }
+.u-pl6 { padding-left: $scale * 6rem !important; }
+
+@include md {
+  .u-md-p0 { padding: 0             !important; }
+  .u-md-p1 { padding: $scale * 1rem !important; }
+  .u-md-p2 { padding: $scale * 2rem !important; }
+  .u-md-p3 { padding: $scale * 3rem !important; }
+  .u-md-p4 { padding: $scale * 4rem !important; }
+  .u-md-p5 { padding: $scale * 5rem !important; }
+  .u-md-p6 { padding: $scale * 6rem !important; }
+
+  .u-md-px0 { padding-left: 0             !important; padding-right: 0             !important; }
+  .u-md-px1 { padding-left: $scale * 1rem !important; padding-right: $scale * 1rem !important; }
+  .u-md-px2 { padding-left: $scale * 2rem !important; padding-right: $scale * 2rem !important; }
+  .u-md-px3 { padding-left: $scale * 3rem !important; padding-right: $scale * 3rem !important; }
+  .u-md-px4 { padding-left: $scale * 4rem !important; padding-right: $scale * 4rem !important; }
+  .u-md-px5 { padding-left: $scale * 5rem !important; padding-right: $scale * 5rem !important; }
+  .u-md-px6 { padding-left: $scale * 6rem !important; padding-right: $scale * 6rem !important; }
+
+  .u-md-py0 { padding-top: 0             !important; padding-bottom: 0             !important; }
+  .u-md-py1 { padding-top: $scale * 1rem !important; padding-bottom: $scale * 1rem !important; }
+  .u-md-py2 { padding-top: $scale * 2rem !important; padding-bottom: $scale * 2rem !important; }
+  .u-md-py3 { padding-top: $scale * 3rem !important; padding-bottom: $scale * 3rem !important; }
+  .u-md-py4 { padding-top: $scale * 4rem !important; padding-bottom: $scale * 4rem !important; }
+  .u-md-py5 { padding-top: $scale * 5rem !important; padding-bottom: $scale * 5rem !important; }
+  .u-md-py6 { padding-top: $scale * 6rem !important; padding-bottom: $scale * 6rem !important; }
+
+  .u-md-pt0 { padding-top: 0             !important; }
+  .u-md-pt1 { padding-top: $scale * 1rem !important; }
+  .u-md-pt2 { padding-top: $scale * 2rem !important; }
+  .u-md-pt3 { padding-top: $scale * 3rem !important; }
+  .u-md-pt4 { padding-top: $scale * 4rem !important; }
+  .u-md-pt5 { padding-top: $scale * 5rem !important; }
+  .u-md-pt6 { padding-top: $scale * 6rem !important; }
+
+  .u-md-pr0 { padding-right: 0             !important; }
+  .u-md-pr1 { padding-right: $scale * 1rem !important; }
+  .u-md-pr2 { padding-right: $scale * 2rem !important; }
+  .u-md-pr3 { padding-right: $scale * 3rem !important; }
+  .u-md-pr4 { padding-right: $scale * 4rem !important; }
+  .u-md-pr5 { padding-right: $scale * 5rem !important; }
+  .u-md-pr6 { padding-right: $scale * 6rem !important; }
+
+  .u-md-pb0 { padding-bottom: 0             !important; }
+  .u-md-pb1 { padding-bottom: $scale * 1rem !important; }
+  .u-md-pb2 { padding-bottom: $scale * 2rem !important; }
+  .u-md-pb3 { padding-bottom: $scale * 3rem !important; }
+  .u-md-pb4 { padding-bottom: $scale * 4rem !important; }
+  .u-md-pb5 { padding-bottom: $scale * 5rem !important; }
+  .u-md-pb6 { padding-bottom: $scale * 6rem !important; }
+
+  .u-md-pl0 { padding-left: 0             !important; }
+  .u-md-pl1 { padding-left: $scale * 1rem !important; }
+  .u-md-pl2 { padding-left: $scale * 2rem !important; }
+  .u-md-pl3 { padding-left: $scale * 3rem !important; }
+  .u-md-pl4 { padding-left: $scale * 4rem !important; }
+  .u-md-pl5 { padding-left: $scale * 5rem !important; }
+  .u-md-pl6 { padding-left: $scale * 6rem !important; }
+}

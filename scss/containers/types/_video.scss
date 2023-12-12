@@ -1,0 +1,95 @@
+/* Video
+   ========================================================================== */
+
+/**
+ * @dependencies FlexEmbed
+ *
+ * 1. Se puede especificar la relacion de aspecto del video (FlexEmbed--16by9).
+ * 2. En la URL de videos de YouTube agregar parametros: ?rel=0&amp;showinfo=0
+ * 3. Definir titulo del iframe del video.
+ */
+
+/*
+  <div class="Box Box--video">
+    <div class="Box-header">
+      <h3 class="Box-name">Lorem ipsum</h3>
+    </div>
+
+    <div class="Box-video">
+      <div class="FlexEmbed FlexEmbed--16by9">
+        <iframe
+          src="https://www.youtube.com/embed/C-EZa_Palj0?rel=0&amp;showinfo=0"
+          title="Titulo del Video"
+        >
+        </iframe>
+      </div>
+    </div>
+  </div>
+ */
+
+.Box--video {
+  .Box-video {
+    margin-bottom: 0;
+    margin-right: -2.25rem;
+    margin-left: -2.25rem;
+    padding-left: .75rem;
+    padding-right: .75rem;
+  }
+	
+	@include md(down) {
+		iframe {
+			height: 260px;
+			display: block;
+		}
+		
+		video {
+			height: 260px; 
+			width: 100%;
+			background: #000;
+		}
+		
+	}
+	
+}
+
+/*  Contenedor de video - Transmisión en vivo (video y audio) 
+		Tiene modificadores:
+		 .Box--videoLive: Muestra la etiqueta de "Transmisión en vivo" que se encuentra oculta y ajusta las alturas del video para que entre el audio.
+		 .Box--videoOnly: Ajusta la altura del video y aprovecha mejor el espacio cuando la transmisión no tiene formato de audio aparte
+*/
+/*
+<div class="Box Box--video">
+	<div class="Box-header">
+		<h3 class="Box-name">Lorem ipsum</h3>
+		<span href="#" class="Live Live--now"><span class="Live-icon Icon Icon--live"></span>Transmisión en vivo</span>
+	</div>
+	<div class="Box-video">
+		<div class="Video">
+			<iframe class="u-sizeFull" src="https://www.youtube.com/embed/7Mpa0zATEfM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		</div>
+	</div>
+	<div class="Audio">
+		<div id="audioTitle1" class="Audio-title">Solo audio</div>
+		<audio aria-labelledby="audioTitle1" src="https://archive.org/download/testmp3testfile/mpthreetest.mp3" preload="none" controls>
+			Su navegador no permite reproducir este archivo de audio.
+		</audio>
+	</div>
+</div>
+*/
+
+.Box--video { 
+	
+	.Audio {
+		margin: 1.5rem 0;
+	}
+	
+	.Live {
+		display: none;
+	}
+	
+	&.Box--videoLive .Live {
+		display: inline-block;
+		margin-top: 1.25rem;
+	}
+	
+}

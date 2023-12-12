@@ -1,0 +1,180 @@
+.Filtros {
+  padding: 1.5rem;
+  overflow: hidden;
+
+  @include md(down) {
+    border-right: 0;
+	  padding-top: 1rem;
+    padding-bottom: 0rem;
+  }
+}
+
+.Filtros-title {
+  font-size: 1.25rem;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 1rem;
+  margin-bottom: 1.5rem;
+
+  @include md(down) {
+    color: $color-1;
+  }
+}
+
+.Filtros-subtitle {
+  font-size: 1.125rem;
+  margin-bottom: .75rem;
+}
+
+.Filtros-title.collapsed .Filtros-status {
+  transform: rotate(0);
+}
+
+.Filtros-status {
+  transform: rotate(45deg);
+  float: right;
+  transition: transform .25s ease-in-out;
+}
+
+@include md {
+  .Filtros #filtros-target {
+    height: auto !important;
+  }
+}
+
+/* Filtros nuevos 
+  (Una vez actualizados, se puede borrar lo de arriba) */
+
+.Filters {
+  padding: 0 !important;
+  overflow: hidden;
+
+  @include md(down) {
+    border-right: 0;
+	padding-top: 1rem;
+	padding-bottom: 0;
+  }
+}
+
+.Filters-title {
+  font-size: 1.25rem;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 1rem;
+  margin: 1rem 1.5rem;
+
+  @include md(down) {
+    color: $color-1;
+  }
+}
+
+.Filters-title.collapsed .Filters-status {
+  transform: rotate(0);
+}
+
+.Filters-status {
+  transform: rotate(45deg);
+  float: right;
+  transition: transform .25s ease-in-out;
+}
+
+@include md {
+  .Filters #filters-target {
+    height: auto !important;
+  }
+}
+
+
+.Filters {
+	
+	/* Estilos de form móvil a escritorio - Agregar en form. y ajustar */ 
+	.Form-legend:before, 
+	.Form legend:before {
+		display: block;
+		height: 1px;
+		width: 100%;
+		background-color: #eee;
+		content: "";
+		top: 50%;
+		position: absolute;
+		z-index: 1;
+	}
+	.Form legend {
+		position: relative;
+		overflow: hidden;
+		padding-left: 0;
+		width: 100%;
+	}
+	.Form fieldset {
+		border: 0;
+		padding: 0;
+	}
+	.Form-legend>*, 
+	.Form legend>* {
+		display: inline-block;
+		background-color: #fff;
+		position: relative;
+		z-index: 2;
+		padding-right: 1em;
+	}
+	/* --- */
+	
+	&.Filters--mf {
+		.Form--filters {
+			/*padding: 2rem 1.5rem;*/
+			padding: 1rem 1.5rem;
+
+			fieldset,
+			.Form-fieldset {
+				margin-bottom: 0rem;
+				border: 0;
+				padding: 0;
+			}
+
+			legend {
+				margin-bottom: .75rem;
+			}
+			
+			@include md(down) {
+				padding: 3rem 2rem 2.5rem 2rem;
+			}
+		}
+		
+		@include md(down) {
+			.Filters-title {
+				font-size: .95rem;
+				border-bottom: none;
+				padding: 1rem;
+				margin: 0;
+				font-weight: 700;
+				line-height: 1.5;
+			}
+			.modal-dialog {
+				max-width: 360px;
+			}
+		}	
+	}
+}
+
+.Button--filters {
+	border-left: solid 1px #eee;
+	padding: 1rem 1.35rem 1rem 1.25rem;
+	font-size: .95rem;
+	box-shadow: none;
+	min-width: 116px;
+	color: $blue;
+	background: none;
+	
+	.Icon--filtros {
+		width: 1.125rem;
+		height: 1.125rem;
+		top: -2px;
+		margin-right: 2px;
+	}
+	
+	@include md(down) {
+		border-radius: 0;
+		
+		&:hover {
+			background-color: #f1f1f1;
+		}
+	}
+}

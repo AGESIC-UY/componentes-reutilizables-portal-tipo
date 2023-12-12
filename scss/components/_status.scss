@@ -1,0 +1,51 @@
+/** @define Status */
+// <span class="Status Status--block Status--verde">0 errores</span>
+
+.Status {
+		display: inline-block;
+}
+
+.Status--block {
+		display: block;
+}
+
+@include md(down) {
+	.Status--block-sm {
+		display: block;
+	}
+}
+
+.Status:before {
+		content: " ";
+		display: inline-block;
+		border-radius: 50%;
+		background-color: #bbb;
+		width: 10px;
+		height: 10px;
+		margin-bottom: 1px;
+		margin-right: .4em;
+}
+
+.Status--verde:before,
+.Status--activo:before {
+		background-color: #279e3f;
+}
+.Status--amarillo:before,
+.Status-desactualizado:before {
+		background-color: #ffd15f;
+}
+.Status--rojo:before,
+.Status--discontinuado:before {
+		background-color: #c33;
+}
+.Status--enlaceRoto:before {
+		background: url(../assets/forms/icn-plus-sm.png);
+		width: 11px;
+		height: 11px;
+		background-size: cover;
+		-webkit-transform: rotate(-45deg);
+		 -moz-transform: rotate(-45deg);
+		 -ms-transform: rotate(-45deg);
+		 transform: rotate(-45deg);
+		margin-bottom: 0px;
+}

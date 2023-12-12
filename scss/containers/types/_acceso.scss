@@ -1,0 +1,125 @@
+/* Acceso
+   ========================================================================== */
+
+/**
+  <a href="#" class="Box Box--mf Box--acceso">
+		<div class="Flag">
+				<div class="Flag-image">
+						<img src="./img/60x60.png" alt="">
+				</div>
+				<div class="Flag-body">
+						<span class="Box-title">Título del acceso destacado</span>
+						<span class="Box-info">Información adicional del acceso destacado</span>
+				</div>
+		</div>
+	</a>
+
+	* Clases modificadoras
+	 - De diseño: Box--acceso + Box--accesoCentrado
+	 - De color: Box--color1, Box--color2, Box--color3, Box--color4, Box--color5, Box--color6, Box--color7, Box--color8 
+ */
+
+.Box--acceso {
+  .Box-title {
+    font-size: 1.25em;
+    margin-bottom: .125em;
+  }
+  
+  .Box-info {
+    margin-bottom: 0;
+    line-height: 1.25;
+  }
+
+  &:hover,
+	&:focus {
+    text-decoration: none;
+		
+		.Box-info {
+			text-decoration: none;
+		}
+
+    .Box-title {
+      text-decoration: underline;
+    }
+  }
+}
+
+.Module {
+  .Box--acceso.Box--center {
+    .Flag-body {
+      display: block;
+    }
+	
+		.Box-info {
+			margin-bottom: .35em;
+		}
+  }
+}
+
+/* Márgenes automáticos para los elementos juntos */
+
+.Box--acceso {
+	
+	.Box-info + .Box-title {
+		margin-top: .375rem;
+		margin-bottom: 0.125em;
+	}
+	
+	.Box-title + .Box-info {
+		margin-top: 0.3125rem;
+		margin-bottom: 0.125em;
+	}
+}
+
+/* MOBILE FIRST */
+.Box--mf.Box--acceso {
+	
+	.Flag-image > img {
+		display: block;
+		max-width: none;
+		height: 60px;
+		border-radius: $Box-mf-border-radius-inner;	
+	}
+	
+	.Box-title {
+		&:last-child {
+			margin-bottom: 0;	
+		}
+		
+		@include md(down) {
+			font-size: 1.125em;	
+		}
+	}
+	
+	.Box-info {
+		color: #444;
+		margin-bottom: 0;
+	}
+	
+	// Modificador para variante sin imagen y texto centrado
+	&.Box--accesoCentrado {
+	
+		.Flag-image {
+			display: none;
+		}
+		
+		.Flag-body {
+			display: flex;
+			flex-direction: column-reverse;
+			align-items: center;
+			text-align: center;
+		}
+
+		.Box-info {
+			margin-top: 0;
+		}
+		
+	 	.Box-title {
+			margin-top: 0.375rem;
+			
+			&:last-child {
+				margin-top: 0;	
+			}
+		}
+	}
+}

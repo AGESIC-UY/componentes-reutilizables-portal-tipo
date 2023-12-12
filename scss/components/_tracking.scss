@@ -1,0 +1,196 @@
+/** Trazabilidad: Listado **/
+
+.Tracking-info {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-left: 2rem;
+  font-size: .95em;
+
+  li {
+    margin-bottom: .25rem;
+  }
+
+  li span {
+    max-width: 6rem;
+    display: inline-block;
+    width: 100%;
+  }
+}
+
+.Tracking {
+  .List-item {
+    padding-top: 1.5rem;
+    margin-top: 1.5rem;
+  }
+}
+
+.Tracking-title {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-top: .25em;
+  margin-bottom: .5em;
+}
+
+.Tracking-code {
+  margin-top: .5em;
+  display: block;
+}
+
+.en-proceso {
+    background-image: url(../assets/icons/icon-en-proceso.png);
+    background-repeat: no-repeat;
+    padding-left: 2.25rem;
+    background-position: left center;
+}
+
+/** Trazabilidad: Resultado tramite expandido **/
+
+.Seguimiento {
+  padding: 1rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  background-color: #f3f3f3;
+  color: #000000;
+}
+
+.Seguimiento-wrap {
+  display: table;
+  padding: .5rem;
+  width: 100%;
+  height: 100%;
+}
+
+.Seguimiento-wrap--nivel1 {
+	padding: 1rem .615rem 1rem 1rem;
+	margin-left: 2%;
+	width: 98%;
+}
+
+.Seguimiento-wrap--nivel2 {
+	padding: 1rem .615rem 1rem 1rem;
+	margin-left: 5%;
+	width: 95%;
+}
+
+.Seguimiento--warning {
+  background-color: #fff6dc;
+}
+
+.Seguimiento--info {
+  background-color: #eaf2ff;
+}
+
+.Seguimiento--success {
+  background-color: #ecf6e8;
+}
+
+.Seguimiento--danger {
+  background-color: #ffe5e5;
+}
+
+.Seguimiento-numero,
+.Seguimiento-recibido,
+.Seguimiento-referencia,
+.Seguimiento-estado {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.Seguimiento-numero {
+  font-size: 2.5rem;
+  text-align: center;
+  font-weight: 500;
+  padding-bottom: 3px;
+}
+
+.Seguimiento-wrap--nivel1 .Seguimiento-numero,
+.Seguimiento-wrap--nivel2 .Seguimiento-numero {
+  font-size: 1.25rem;
+}
+
+.Seguimiento-recibido {
+  padding: 0rem 2rem 0rem .5rem;
+  text-align: center;
+}
+.Seguimiento-recibido span {
+	display: block;
+}
+
+.Seguimiento-estado {
+  text-align: center;
+}
+
+.Seguimiento-estado span {
+  display: block;
+}
+
+.Seguimiento-enviado-img {
+  height: 18px;
+  background-image: url(../assets/icons/icon-success.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.Seguimiento-en-proceso-img {
+  height: 25px;
+  background-image: url(../assets/icons/icon-en-proceso.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+@include md(down) {
+  .Seguimiento {
+    padding: 1rem;
+  }
+  .Seguimiento-wrap--nivel1,
+  .Seguimiento-wrap--nivel2 {
+	padding: 1.75rem .615rem 1.75rem 1rem;
+  }
+  .Seguimiento-numero,
+  .Seguimiento-recibido,
+  .Seguimiento-referencia,
+  .Seguimiento-estado {
+    display: block !important;
+  }
+  .Seguimiento-numero {
+    float: left;
+	line-height: 2.25rem;
+  }
+  .Seguimiento-wrap--nivel1 .Seguimiento-numero,
+  .Seguimiento-wrap--nivel2 .Seguimiento-numero {
+	line-height: 1.15rem;
+	padding-bottom: 0;
+  }
+  .Seguimiento-recibido {
+    padding-right: .25rem;
+    text-align: right;
+  }
+  .Seguimiento-referencia {
+    padding: 1rem 0;
+  }
+  .Seguimiento-estado {
+    width: 100%;
+    padding-top: .75rem;
+    border-top: solid 1px #ddd;
+    text-align: left;
+  }
+  .Seguimiento-estado span {
+    display: unset;
+    padding-right: 1.15rem;
+  }
+  .Seguimiento-enviado-img {
+	  margin-right: 1.5rem;
+  }
+  .Seguimiento-en-proceso-img {
+	padding-right: 1.25rem !important;
+    background-position: left bottom;
+    background-size: 20px;
+  }
+}
+
+@include md(down) {
+	.Bar--mdBlocks .Bar-cell {
+		display: block !important;
+	}
+}

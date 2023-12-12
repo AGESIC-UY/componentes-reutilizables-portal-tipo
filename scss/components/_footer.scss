@@ -1,0 +1,342 @@
+.Footer {
+  // margin-top: 2.5em; // NOTE: El margen lo agrega el componente de Feedback
+  background-color: $blue;
+  color: #fff;
+  font-size: 1em;
+
+  a {
+    color: #fff;
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  address {
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+
+    p {
+      margin-bottom: .5em;
+      line-height: 1.25;
+
+      span {
+        color: $light-blue;
+      }
+    }
+  }
+}
+
+.Footer-body {
+  padding-top: 3.5em;
+  padding-bottom: 3.5em;
+}
+
+.Footer-title {
+  font-size: 1.625em;
+  font-weight: bold;
+  line-height: 1.15;
+}
+
+.Footer-bottom {
+  padding-top: 1.25em;
+  padding-bottom: 1.25em;
+  text-align: center;
+
+  ul {
+    padding: 0;
+    margin: 0;
+    margin-top: 1em;
+
+    li {
+      display: inline-block;
+    }
+
+    li + li {
+      margin-left: 1.5em;
+			
+			@include xs(down) {
+				margin-left: 1.25em;
+			}
+    }
+  }
+}
+
+.Footer-list {
+  line-height: 1.35;
+
+  h3 {
+    font-size: 1.5em;
+    font-weight: 500;
+    margin-top: 1em;
+  }
+}
+
+.Footer-tagline {
+  font-weight: 300;
+  font-size: .875rem;
+  // margin-bottom: 6px;
+  opacity: .85;
+}
+
+@include md {
+  .Footer {
+    font-size: 1em;
+    text-align: left;
+  }
+
+  .Footer-bottom {
+    text-align: left;
+    font-size: .825em;
+    border-color: #fff;
+    border-top: 1px solid rgba(255, 255, 255, .15);
+
+    @include clearfix;
+
+    ul {
+      margin-top: 0;
+    }
+  }
+
+  .Footer-social {
+    float: left;
+  }
+
+  .Footer-links {
+    float: right;
+  }
+
+  .Footer-list {
+    h3 {
+      font-size: 1.25em;
+      margin-top: 0;
+    }
+  }
+
+  .Footer-info {
+    border-right: 1px solid rgba(255, 255, 255, .15);
+  }
+}
+.Footer-logo a{
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+  }
+}
+.Footer-logo img {
+  max-width: 8em;
+}
+
+.Footer-logos {
+  margin-top: 2rem;
+
+  @include md {
+    display: table;
+    float: right;
+
+    .Footer-logo {
+      display: table-cell;
+      vertical-align: middle;
+    }
+
+    .Footer-logo + .Footer-logo {
+      padding-left: 2rem;
+    }
+  }
+
+  @include md(down) {
+    .Footer-logo {
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+  }
+}
+
+.Footer-links ul li {
+  color: $light-blue;
+
+  a {
+    color: #fff;
+  }
+}
+
+@include md(down) {
+  .Footer-body {
+    padding-bottom: 1.5em;
+  }
+
+  .Footer-links {
+    margin-top: 2em;
+
+    ul {
+      li {
+        margin: 1em 0 !important;
+        display: block;
+        font-size: .825em;
+
+        a {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}
+
+.FooterLogo {
+  font-size: 1.3rem;
+  line-height: 1.3rem;
+  display: block;
+  color: #fff;
+  margin: 0 0 2em 0;
+}
+
+.FooterLogo-role {
+  font-family: $brand-font-stack;
+  font-weight: 300;
+  display: block;
+  font-size: 1.3rem;
+}
+
+.FooterLogo-name {
+  font-family: $brand-font-stack;
+  font-weight: 900;
+}
+
+
+/* Modificador para footer de Minisitios */
+
+.Footer--minisitio {
+	
+	.Relacionados {
+		
+		a {
+			display: inline-block;
+			padding: .5em;
+			
+			@include md(down) {
+				display: block;
+				padding: 1em .5em;
+			}
+		}
+		
+		a > img {
+			height: 60px;
+		}
+		
+		a+a {
+			margin-left: 2em;
+			
+			@include md(down) {
+				margin-left: 0em;
+			}
+		}
+	}
+	
+	
+	@include md(down) {
+	
+		.Footer-info {
+			margin-bottom: 2em;
+		}
+		
+		.Footer-logos {
+			float: none;
+			
+			.Footer-logo {
+				text-align: left;
+			}
+		}
+		
+		.Footer-body .Footer-social ul {
+			padding-bottom: .75em;
+		}
+	}
+	
+	.Footer-top {
+		background: #FFFFFF;
+		padding: 1.5em 0;
+		border-top: 1px solid #eee;
+		border-bottom: 1px solid #eee;
+		text-align: center;
+	}
+	
+	.Footer-body,
+	.Footer-body a {
+		background: #ededed;
+		color: #000000;
+	}
+	
+	address p span {
+		color: $gray-text;
+	}
+	
+	.Footer-body {
+		
+		.Footer-social ul {
+			padding: 0;
+			font-size: .825em;
+			margin: 0;
+			padding-top: .75em;
+			padding-bottom: 1.5em;
+		}
+		
+		.Footer-social ul li {
+			display: inline-block;
+		}
+		
+		.Footer-social ul li+li {
+				margin-left: 1.5em;
+		}
+	}
+	
+	.Footer-bottom {
+		background: $blue;
+		padding-top: 1.25em;
+    padding-bottom: 1.25em;
+	}
+	
+	.Footer-links {
+		line-height: 24px;
+	}
+	
+	@include md {
+		.Footer-info {
+			border-right: 1px solid rgba(0,0,0,.15);
+		}
+		.Footer-social { 
+			float: none;
+		}
+	}
+}
+
+/* Modificador para footer de Catálogos (Base de Minisitios) */
+.Footer--catalogo {	
+	.Footer-body, 
+	.Footer-body a {
+    background: $blue;
+    color: #FFF;
+	}
+	
+		address p span {
+			color: $light-blue;
+	}
+	
+	.Footer-info {
+		border-right: 1px solid rgba(255, 255, 255, .15);
+	}
+	
+	.Footer-bottom {
+    background: $dark-blue;
+	  border-top-color: transparent;
+	}
+	
+	.Logo-text {
+    color: #FFF;
+	}
+}
+
+/* Ajuste accesibilidad */
+.Footer .Suscribe form > label {
+	color: $gray-text;
+}

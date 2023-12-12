@@ -1,0 +1,125 @@
+/* Destacado 4
+   ========================================================================== */
+
+/*
+  <a href="#" class="Box Box--mf Box--destacado4">
+		<div class="Box-body">
+			<span class="Box-image">
+				<img src="./img/150x150.png" alt="Descripción de la imagen">
+			</span>
+			<span class="Box-title">Título del contenedor destacado 4</span>
+			<span class="Box-subtitle">Subtítulo adicional soluta deserunt saepe quasi enim obcaecati</span>
+		</div>
+	</a>
+*/
+
+/*
+ * Clases modificadoras
+	 - De diseño: Box--destacado4-left
+*/
+
+.Box--destacado4 {
+  a {
+    display: block;
+    text-decoration: none !important;
+		
+		&:hover .Box-title,
+		&:focus .Box-title {
+			text-decoration: underline;
+		}
+  }
+	
+  text-align: center;
+	
+	@include md(down) {
+		padding-bottom: 2.5rem;
+  	padding-top: 2.5rem;
+	}
+	
+  .Box-info,
+  .Box-subtitle {
+    margin-bottom: 0;
+		line-height: 1.35;
+		
+		@include md(down) {
+			font-size: 1em;
+		}
+  }
+
+  .Box-title {
+		margin-bottom: 0;
+  }
+
+  .Box-image {
+    margin-bottom: 1.5em;
+    display: block;
+
+    img {
+			height: 150px;
+			width: 150px;
+      object-fit: cover;
+			
+			@include md(down) {
+				height: 120px;
+				width: 120px;
+			}
+    }
+  }
+	
+	.Box-body > a+.Box-subtitle {
+		margin-top: .5em;
+	}
+}
+
+// Ajuste automático de la imagen para diferentes alturas de módulo 3x3
+.Module--sm,
+.Module--md .Module-item--2of3 {
+	.Box--destacado4 .Box-image img {
+		height: 120px;
+		width: 120px;
+	}
+}
+
+// Ajuste por prevención
+.Box--destacado4 .Box-subtitle:empty {
+    display: none;
+}
+
+// Ajustes versión mobile first
+.Box--mf.Box--destacado4 {
+	
+	padding: 1.5rem;
+	
+	@include md(down) {
+		padding: 2.5rem 1.5rem;
+	}
+	
+	.Box-image > img {
+    border-radius: 50%;
+	}
+	
+	.Box-title + .Box-subtitle {
+		margin-top: .5rem;
+	}
+	
+	/* Modificador alineación izquierda */
+	&.Box--destacado4-left {
+		text-align: left;
+		padding: 1.5rem 2rem;
+		
+		@include md(down) {
+			padding: 2.5rem 2rem;
+		}
+	}
+}
+
+a.Box--mf.Box--destacado4 {	
+	&:hover,
+	&:focus {
+		text-decoration: none;
+		
+		.Box-title {
+			text-decoration: underline;
+		}
+	}
+}

@@ -1,0 +1,103 @@
+.Search {
+  position: relative;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  padding: 2px;
+  background-color: #fff;
+}
+
+.Search:after,
+.Search:before {
+  display: table;
+  content: '';
+}
+
+.Search:after {
+  clear: both;
+}
+
+$Search-input-vertical-padding: .75em;
+
+.Search-input {
+  background-color: #fff;
+  border-radius: 3px;
+  border: 0;
+  color: #000;
+  float: left;
+  font-family: inherit;
+  font-weight: 400;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  padding: $Search-input-vertical-padding;
+	padding-right: 3.75em;
+  line-height: 1.5;
+}
+
+$Search-button-size: ($Search-input-vertical-padding * 2) + 1.5em;
+
+.Search-button {
+  position: absolute;
+  z-index: 2;
+  right: 2px;
+  width: $Search-button-size;
+  text-indent: -9999px;
+  height: $Search-button-size;
+  border: 0;
+	color: $white;
+  background-color: $blue;
+  background-image: url('../assets/icon-search.svg');
+	background-size: 1.25em;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  border-radius: 2px;
+}
+
+.Search-checkboxLabel {
+  max-width: 14em;
+  display: inline-block;
+  margin: -3px -1px -3px 0;
+	padding: 1em 3.85em 1em .75em;
+  background: #f7f7f8;
+  border-radius: 0 3px 3px 0;	
+  border: 1px solid #dddddd;
+  position: absolute;
+  right: 0;
+  z-index: 2;
+  line-height: 1.25em;
+  font-size: 1em;
+  color: #6d6e70;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.Search-checkboxLabel input {
+  margin-right:5px;
+}
+
+// TODO: Eliminar modifier de custom-tramites.css
+.Search--small {
+  font-size: .875em;
+}
+
+.Search--big {
+  font-size: 1.25em;
+}
+
+.Search--borderless {
+  border: 0;
+}
+
+/* Ajuste para clase Form automatica en Portal-Base */
+.Search .Form input[type=search] {
+	border-radius: 3px;
+  border: 0;
+  font-family: inherit;
+  padding: .75em;
+	padding-right: 3em;
+  width: 100%;
+  max-width: 100%;
+}

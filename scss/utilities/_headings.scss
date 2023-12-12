@@ -1,0 +1,39 @@
+/** @define utilities */
+/* stylelint-disable declaration-no-important */
+
+.u-h1,
+.u-h2,
+.u-h3,
+.u-h4,
+.u-h5,
+.u-h6 {
+  font-family: inherit !important;
+  font-weight: 600 !important;
+  line-height: 1.1 !important;
+}
+
+.u-h1 {
+  font-size: 2.5rem !important;
+}
+
+.u-h2 {
+  font-size: 2rem !important;
+}
+
+.u-h3 {
+  font-size: 1.75rem !important;
+}
+
+.u-h4 {
+  font-size: 1.5rem !important;
+}
+
+.u-h5 {
+  font-size: 1.25rem !important;
+  line-height: 1.15 !important;
+}
+
+.u-h6 {
+  font-size: 1.15rem !important;
+  line-height: 1.35 !important;
+}

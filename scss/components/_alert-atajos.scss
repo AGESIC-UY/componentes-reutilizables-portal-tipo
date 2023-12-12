@@ -1,0 +1,50 @@
+/**
+	Utiliza como base estilos de Alert y comportamientos de Button
+	
+	<div class="Container--alerts">
+		<a href="#" class="Button Alert Alert--info Alert--atajos"><strong>Censo 2023:</strong> cómo censarte</a>
+	</div>
+ */
+
+.Container--alerts {
+	margin-top: 1.45rem;
+	
+	&:empty {
+		display: none;
+	}
+	
+	@include md(down) {
+		margin-top: 1.5rem;
+	}
+}
+
+.Alert--atajos {
+	display: inline-block;
+	border-radius: 20px;
+	border: solid 1px transparent;
+	padding: .5rem 1rem;
+	margin: 0rem;
+	box-shadow: 1px 1px 1px #ddd, 0 0 1px #ddd;
+	font-weight: 400;
+	
+	&:hover {
+		background-color: #e2e9f1;
+		text-decoration: underline;
+	}
+	
+	+ .Alert--atajos  {
+		margin-left: 1rem;
+	}
+	
+	@include md(down) {
+		font-size: .9375rem;
+	}
+}
+
+/* Fixes para la ubicación en el maquetado */
+.messages__block {
+	margin-bottom: 0;
+}
+.messages__block > .Alert {
+	margin-bottom: .5rem;
+}

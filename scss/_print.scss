@@ -1,0 +1,150 @@
+.u-printOnly {
+  display: none !important;
+}
+
+@media print {
+  *,
+  *:before,
+  *:after {
+    background: transparent !important;
+    color: #000 !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  body {
+    zoom: .75;
+  }
+
+  .u-noPrint,
+  .Search,
+  .Page-actions,
+  .Feedback,
+  .Nav,
+  .Page-nav,
+  .Filters,
+  .Footer-list,
+  .Footer-links,
+  .Header-menuTrigger,
+  .Box--event .Box-name,
+  .Box--event .Box-image,
+  .Box--event .Box-footer {
+    display: none;
+  }
+
+  .u-printOnly {
+    display: block !important;
+  }
+
+  .Page {
+    padding: 1.5rem;
+    margin-bottom: 0 !important;
+  }
+
+  .Page--hasNav .Page-body {
+    border-left: 0;
+  }
+  
+  .u-main, 
+  .Page, 
+  .Page-body {
+    margin-top: 0 !important;
+    padding-top: 0 !important;  
+  }
+  
+  .Page-title, 
+  .Page-info {
+    margin-bottom: 1.25rem;
+  }
+	
+	.Group--header {
+		padding-top: 1rem;
+		padding-bottom: 2rem;
+	}
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  // abbr[title]:after {
+  //   content: " (" attr(title) ")";
+  // }
+
+  /*
+  * Don't show links that are fragment identifiers,
+  * or use the `javascript:` pseudo protocol
+  */
+  
+  /* URL visible al imprimir */
+  /* 
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+  a[href^="#"]:after,
+  a[href^="./"]:after,
+  a[href^="javascript:"]:after {
+    content: "";
+  }
+  */
+  
+  pre {
+    white-space: pre-wrap !important;
+  }
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  /*
+  * Printing Tables:
+  * http://css-discuss.incutio.com/wiki/Printing_Tables
+  */
+
+  thead {
+    display: table-header-group;
+  }
+
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+  
+  /* Líneas de formatos autoridades */
+  
+  .Tree li div.itemContent {
+    background: #FFFFFF !important;
+  }
+  
+  .Tree ul>li>ul>li:after, 
+  .Tree ul>li>ul>li:before {
+    background-color: #ccc !important;
+  }
+  
+  .Tree li.Tree-hasRightLink:after, 
+  .Tree li.Tree-hasRightLink:before {
+    background-color: #09f !important;
+  }
+  
+  .Tree-hasRightLink ul:before, 
+  .Tree li.Tree-rightLink>.itemContent:before,
+  .Tree .Tree-rightLink div.itemContent:after {
+    background-color: #1d90ff !important;
+  }
+  
+}

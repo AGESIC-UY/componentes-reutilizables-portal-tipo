@@ -1,0 +1,114 @@
+
+.Totales-box {
+  background: $color-1;
+  border-radius: 3px;
+  padding: 1em;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.18);
+  color: #fff;
+}
+
+.Totales-box .Grid-item:not(:last-child) {
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.Totales-box .Grid-item:not(:first-child) {
+  padding-left: 2em;
+}
+
+.Totales-info {
+  margin-top: 0.3em;
+}
+
+.Totales-info p {
+  font-size: 0.85em;
+  margin-bottom: 0;
+  display: inline;
+}
+
+@include md(down) {
+  .Totales-box .Grid-item:not(:last-child) {
+    border-right: none;
+  }
+
+  .Totales-info p.u-right {
+    float: none !important;
+    display: block;
+  }
+
+  .Totales-box .Grid-item:not(:first-child) {
+    padding-left: 12px;
+  }
+
+  .Totales-box .Grid-item {
+    margin: 0.5em 0;
+    text-align: center;
+  }
+}
+
+/* Tabla */
+
+.Table--collapse td:not(:first-child) {
+  text-align: right;
+}
+
+.Table--collapse td {
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+tr[data-toggle] {
+  cursor: pointer;
+}
+
+@include md(down) {
+  .Table--collapse td:not(:first-child) {
+    text-align: left;
+  }
+
+  .Table--collapse td {
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+  }
+}
+
+.js-collapseStatus {
+  display: inline-block;
+  transition: transform .3s ease;
+  transform-origin: center;
+}
+
+.js-collapseStatus.is-open {
+  transform: rotate(45deg);
+}
+
+.hiddenRow {
+  padding: 0 !important;
+}
+
+@include md(down) {
+  .Table--responsive tr.Table-rowTarget {
+    padding: 0 !important;
+  }
+
+  .Table-rowTarget {
+    border-top: 0 !important;
+  }
+
+  .Table .Table tr {
+    border: 0 !important;
+    border-bottom: 1px solid #ccc !important;
+  }
+
+  .Table-target {
+    border-left: 3px solid $color-1;
+    background-color: #f9f9f9;
+  }
+
+  .Table-target table,
+  .Table-target tr,
+  .Table-target td {
+    background-color: transparent;
+  }
+}
+
+

@@ -1,0 +1,129 @@
+
+.Popover {
+  display: inline-block;
+
+  // @include md(up) {
+    position: relative;
+  // }
+}
+
+.Popover .Popover-inner {
+  display: none;
+}
+
+.Popover.isOpen .Popover-inner {
+  display: block;
+}
+
+.Popover-inner {
+  border-radius: 6px;
+  position: absolute;
+  top: -152px;
+  left: -125px;
+  z-index: 9999;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 28px rgba(0, 0, 0, .15);
+  min-width: 280px;
+  width: 100vw;
+  max-width: 360px;
+  font-size: 16px;
+
+  @include md(down) {
+    // top: 50%;
+    // left: 50%;
+    top: -570%;
+
+    left: 0;
+    max-width: 300px;
+    // transform: translate(-50%, -50%);
+  }
+}
+@include md(up) {
+
+.Results .Popover-inner {
+  top: -158px;
+  left: -70px;
+}
+}
+
+@include md(down) {
+  .Results .Popover-inner {
+    top: -460%;
+  }
+}
+// @include md(up) {
+  .Popover-inner:before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: calc(50% - 18px);
+    display: inline-block;
+    height: 0;
+    width: 0;
+    border-left: 9px solid transparent;
+    border-right: 9px solid transparent;
+    border-top: 9px solid #ccc;
+  }
+
+  .Popover-inner:after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: calc(50% - 17px);
+    display: inline-block;
+    height: 0;
+    width: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 8px solid #fff;
+  }
+// }
+
+@include md(down) {
+  .Popover-inner:before {
+    left: 19px;
+  }
+  .Popover-inner:after {
+    left: 20px;
+  }
+}
+
+.Popover-body .List-item {
+  display: flex;
+  align-items: center;
+}
+.Popover-body .List-item:before {
+  margin-right: 8px;
+  display: inline-block;
+  content: "";
+  width: 22px;
+  height: 22px;
+  background-repeat: no-repeat;
+  background-image: url("data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='%233155a6' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-arrow-right-circle'%3E%3Ccircle cx='12' cy='12' r='10'%3E%3C/circle%3E%3Cpolyline points='12 16 16 12 12 8'%3E%3C/polyline%3E%3Cline x1='8' y1='12' x2='16' y2='12'%3E%3C/line%3E%3C/svg%3E");
+}
+
+.Popover-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  padding: .825rem 1rem;
+  background-color: #f3f3f3;
+  border-bottom: 1px solid #eee;
+  font-weight: 500;
+}
+
+.Popover-close {
+  font-size: 10px;
+  cursor: pointer;
+}
+
+.Table--responsive {
+  overflow: visible !important;
+
+  tr, td, tbody {
+    overflow: visible !important;
+  }
+}

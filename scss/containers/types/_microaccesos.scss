@@ -1,0 +1,193 @@
+/* Microaccesos
+   ========================================================================== */
+/*
+	<div class="Box Box--mf Box--microaccesos">
+		<div class="Box-header">
+			<h3 class="Box-name">Lista de microaccesos</h3>
+		</div>
+		<div class="Box-body">
+			<div class="Microaccesos-item">
+			 <a href="#">	
+					<div class="Flag">
+						<div class="Flag-image">
+								<img src="./img/60x60.png" alt="">
+						</div>
+						<div class="Flag-body">
+								<span class="Box-title">Microacceso destacado</span>
+						</div>
+					</div>
+				</a>
+			</div>
+			<div class="Microaccesos-item">
+			 <a href="#">	
+					<div class="Flag">
+						<div class="Flag-image">
+								<img src="./img/60x60.png" alt="">
+						</div>
+						<div class="Flag-body">
+								<span class="Box-title">Microacceso 2</span>
+						</div>
+					</div>
+				</a>
+			</div>
+			<div class="Microaccesos-item">
+			 <a href="#">	
+					<div class="Flag">
+						<div class="Flag-image">
+								<img src="./img/60x60.png" alt="">
+						</div>
+						<div class="Flag-body">
+								<span class="Box-title">Acceso 3</span>
+						</div>
+					</div>
+				</a>
+			</div>
+		</div>
+	</div>
+*/
+
+/*
+ * Clases modificadoras
+	 - De diseño: Box--microaccesos-fewItems (cuando son menos de 4 items), Box--microaccesos-noTitle (se elimina el título)
+*/
+
+.Box--microaccesos {
+	background: none;
+	box-shadow: none;
+	padding: 1rem 0;
+	border-radius: 0;
+	margin-bottom: 0;
+	
+	@include md(down) {
+		margin-left: -12px;
+    margin-right: -12px;
+		padding: .75rem;
+		margin-bottom: .75rem;
+	}
+	
+	.Box-name {
+		font-size: 1.25em;
+		
+		@include md(up) {
+			padding-top: 0;
+		}
+	}
+	
+	.Box-header {
+		margin-bottom: 1em;
+	}
+	
+	.Box-body {
+		display: grid;
+		grid-auto-flow: column;
+		text-align: center;
+		grid-template-columns: repeat(auto-fit, minmax(0,1fr));
+		
+		@include md(down) {
+			overflow: auto;
+			grid-template-columns: unset;
+			margin-left: -0.75rem;
+			margin-right: -0.75rem;
+				
+			> .Microaccesos-item:first-child {
+				padding-left: .75rem;
+			}
+			
+			> .Microaccesos-item:last-child {
+				padding-right: .75rem;
+			}
+		}	
+	}
+	
+	.Microaccesos-item {
+		padding: .25rem .5rem;
+		
+		@include md(down) {
+			margin-bottom: 1rem;
+		}
+	}
+	
+	a {
+		display: inline-block;
+		padding: .25rem 0;
+		
+		@include md(down) {
+			width: 20vw;
+		}
+		
+		@include sm(down) {
+			width: 25vw;
+		}
+	}
+	
+	.Flag {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.75rem;
+		word-break: break-word;
+	}
+	
+	.Flag-image {
+		padding-right: 0;
+		
+		> img {
+			border-radius: 50%;
+			height: 60px;
+			box-shadow: $Box-mf-shadow;
+		}
+	}
+	
+	.Box-title {
+		font-size: .875rem;
+		margin-bottom: 0;
+		
+		@include md(down) {
+			font-size: .825em;
+		}
+	}
+
+	/* Variante sin título */
+	&.Box--microaccesos-noTitle {
+		 
+		.Box-header {
+				display: none;
+		 }
+	}
+	
+	/* Variante menos de 4 items */
+	&.Box--microaccesos-fewItems {
+		
+		@include md(down) {
+			
+			.Box-body {
+				grid-template-columns: repeat(auto-fit, minmax(0,1fr));
+			}
+			
+			.Microaccesos-item {
+				margin-bottom: 0;
+			}
+			
+			a { 
+				width: 100%;
+			}
+		}
+	}
+}
+
+/* Dentro de Group--color2 */
+.Group--color2 .Box--microaccesos {
+	.Box-name {
+		color:$white;
+	}
+	a {
+		color:$white;
+		text-decoration: underline;
+		
+		&:hover,
+		&:focus {
+			text-decoration: none;
+		}
+	}
+}

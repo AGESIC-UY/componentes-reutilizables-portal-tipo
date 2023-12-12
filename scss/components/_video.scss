@@ -1,0 +1,75 @@
+/** @define Video; weak */
+
+.Video {
+  margin: 2rem 0;
+  position: relative;
+}
+
+.Video-title {
+    font-size: 1.125em;
+    font-weight: 500;
+    margin-bottom: .25em;
+}
+
+.Video-signLanguage {
+  background-image: url('../assets/icons/icon-sign-language.svg');
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: 75%;
+  width: 38px;
+  height: 38px;
+  background-color: $color-1;
+  position: absolute;
+  bottom: 3.25rem;
+  right: 2.5rem;
+  border-radius: 4px;
+  z-index: 1000;
+  box-shadow: 0 6px 6px rgba(0,0,0,.15);
+  color: #fff;
+}
+
+.Video-signLanguage--only {
+  background-color: $color-3;
+  background-position: 92% 50%;
+  background-size: auto 75%;
+  width: 242px;
+  height: 60px;
+  background-color: #33236a;
+  padding: 10px 10px 10px 20px;
+  display: flex;
+  align-items: center;
+
+  @include md(down) {
+    background-position: 92% 50%;
+    background-size: auto 55%;
+    font-size: 0.85rem;
+    width: 190px;
+    height: 45px;
+    right: 1.5rem;
+  }
+}
+
+.Media-image .Video-signLanguage {
+  top: 0.5rem;
+	left: 0.5rem;
+  width: 32px;
+  height: 32px;
+}
+
+.Media-image .Video-signLanguage--only {
+  width: 171px;
+  background-position: 94% 50%;
+  background-size: auto 54%;
+  height: 40px;
+  line-height: 1;
+  font-size: 0.85rem;
+  padding: 10px;
+}
+
+.Box-video .Video {
+  margin: 1.5rem 0;
+}
+
+.Media-image .Video {
+  margin: 0;
+}

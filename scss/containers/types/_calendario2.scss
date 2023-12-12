@@ -1,0 +1,147 @@
+/* Calendario
+   ========================================================================== */
+
+/**
+ * @dependencies Box, Date, Media
+ *
+ * 1. Puede tener listado o ser solo un evento destacado.
+ */
+
+/*
+  <div class="Box Box--event2">
+    <h3 class="Box-name">Proximas actividades</div>
+    <img class="Box-image" src="./img/evento.jpg" alt="">
+
+    <div class="Box-inner">
+      <div class="Media">
+        <div class="Media-image">
+          <div class="Box-date Date">
+            <span class="Date-month">Nov</span>
+            <span class="Date-day">28</span>
+          </div>
+        </div>
+
+        <div class="Media-body">
+          <span class="Box-subtitle">Proximo evento</span>
+          <h3 class="Box-title">
+            <a href="#">Lorem ipsum</a>
+          </h3>
+        </div>
+      </div>
+
+      <p class="Box-text">Dirigido a quienes trabajan en la ayuda de personas que consumen drogas. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ac gravida augue. Aenean cursus, velit vitae gravida dictum.</p>
+    </div>
+
+    <div class="Box-body">
+      <ul class="Box-mediaList Box-mediaList--small">
+        <li class="Media">
+          <div class="Media-image">
+            <div class="Date">
+              <span class="Date-month">Feb</span>
+              <span class="Date-day">28</span>
+            </div>
+          </div>
+          <div class="Media-body">
+            <h4 class="Box-title"><a href="#">Lorem ipsum blandit incorrupte</a></h4>
+            <span class="Box-info">Aperiam laudantium possimus</span>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="Box-footer">
+      <a href="#" class="Box-more">Ver calendario completo</a>
+    </div>
+  </div>
+ */
+
+.Box--event2 {
+  overflow: hidden;
+  padding: 0;
+  border-radius: 2px;
+
+  .Box-title {
+    font-size: 1.25em;
+    margin-bottom: .25em;
+  }
+
+  .Box-subtitle {
+    font-size: .7em;
+    color: $base-link-color;
+    margin-bottom: .65em;
+    margin-top: .25em;
+    text-transform: uppercase;
+  }
+
+  .Box-info {
+    text-transform: uppercase;
+    color: #555;
+    font-size: .7em;
+  }
+
+  .Box-inner > p, // unsafe
+  .Box-text {
+    margin-bottom: 0;
+    margin-top: 1em;
+    font-size: .9375em;
+  }
+
+  .Box-image {
+    // border-top-left-radius: 2px;
+    // border-top-right-radius: 2px;
+    width: 100%;
+    height: auto;
+  }
+
+  .Box-inner {
+    background-color: #f3f3f3;
+    border-radius: 3px;
+    margin: 0 1em;
+    // position: relative;
+    // top: -4.25em;
+    padding: 1.25em;
+
+    .Media-image {
+      margin-right: 1rem;
+    }
+  }
+
+  .Box-date {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .15);
+    // z-index: 100;
+    // right: 1em;
+    // top: -3.25em;
+  }
+
+  .Box-body {
+    padding: 1.5rem;
+    padding-bottom: 0;
+    padding-top: 1rem;
+    top: -4.25em;
+    position: relative;
+  }
+
+  .Box-footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    margin: 0;
+  }
+}
+
+.Box-time {
+  font-size: 1.125em;
+  line-height: 1.25;
+  margin-bottom: .5em;
+  display: block;
+}
+
+// .Box--event2 .Box-name {
+//   font-size: 1rem;
+//   font-weight: 500;
+//   padding: .875rem 1.25rem;
+//   text-align: center;
+//   width: 100%;
+//   color: #000;
+//   background-color: #f3f3f3;
+// }

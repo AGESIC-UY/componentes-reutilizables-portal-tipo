@@ -1,0 +1,54 @@
+/**
+ * Sobreescribe la paleta de colores predeterminada de Portal Base
+ */
+
+.Box--color1 .Box-name:before { background-color: #003DA5; }
+.Box--color2 .Box-name:before { background-color: #0099FF; }
+.Box--color3 .Box-name:before { background-color: #470A68; }
+.Box--color4 .Box-name:before { background-color: #93117E; }
+.Box--color5 .Box-name:before { background-color: #FF6900; }
+.Box--color6 .Box-name:before { background-color: #FF0000; }
+.Box--color7 .Box-name:before { background-color: #28A745; }
+.Box--color8 .Box-name:before { background-color: #007D8A; }
+
+/* Destacado 3 */
+
+.Box--destacado3.Box--color1 .Box-title:before { background-color: #3155a6; }
+.Box--destacado3.Box--color2 .Box-title:before { background-color: #0099FF; }
+.Box--destacado3.Box--color3 .Box-title:before { background-color: #470A68; }
+.Box--destacado3.Box--color4 .Box-title:before { background-color: #93117E; }
+.Box--destacado3.Box--color5 .Box-title:before { background-color: #FF6900; }
+.Box--destacado3.Box--color6 .Box-title:before { background-color: #FF0000; }
+.Box--destacado3.Box--color7 .Box-title:before { background-color: #28A745; }
+.Box--destacado3.Box--color8 .Box-title:before { background-color: #007D8A; }
+
+/* Acceso */
+
+.Box--acceso.Box--color1 { border-left-color: #3155a6; }
+.Box--acceso.Box--color2 { border-left-color: #0099FF; }
+.Box--acceso.Box--color3 { border-left-color: #470A68; }
+.Box--acceso.Box--color4 { border-left-color: #93117E; }
+.Box--acceso.Box--color5 { border-left-color: #FF6900; }
+.Box--acceso.Box--color6 { border-left-color: #FF0000; }
+.Box--acceso.Box--color7 { border-left-color: #28A745; }
+.Box--acceso.Box--color8 { border-left-color: #007D8A; }
+
+/* Destacado 1 (convertir color a rgb) */
+
+.Box--destacado1.Box--color8 .Box-overlay {background-color: rgba(0, 125, 138, .9);}
+
+/* Hero */
+
+.Hero.Box--color8 > .Grid { background-color: #007D8A; }
+
+/* Fondo de grupos de contenedores y libros */
+
+/* Repite color secundario seleccionado */
+.Group--color2 {
+  background-color: #007D8A;
+}
+
+/* Color personalizado seleccionado */
+.Group--color3 {
+	background-color: #CCE5E8;
+}

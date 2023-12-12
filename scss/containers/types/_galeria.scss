@@ -1,0 +1,119 @@
+/* Galeria multimedia
+   ========================================================================== */
+
+/* Se utiliza el Carusel preexistente y se adaptan estilos */
+
+.Box--galeria {
+	display: flex;
+	flex-direction: column;
+	padding-bottom: 0;
+	
+	.Box-multimedia {
+		flex: 1;
+		margin-left: -1.5rem;
+		margin-right: -1.5rem;
+		position: relative;
+		
+		@include md(down) {
+			padding-bottom: 3px;
+		}
+		
+		.Box-info.Box-info--absolute {
+				margin: 0.5rem!important;
+				position: absolute;
+				top: 0;
+				right: 0;
+				padding: 0.2rem 0.4rem;
+				border-radius: 4px;
+				color: #000!important;
+				font-size: .6875em;
+				background-color: #fff;
+				background-color: hsla(0,0%,100%,.85);
+				z-index: 10;
+				height: auto !important;
+		}
+	}
+	
+	.Carousel {
+		 margin: 0;
+		
+		.Carousel-caption {
+			line-height: 1.4;
+			font-size: .825em;
+			height: 52px;
+			bottom: 0px;
+		}
+
+		.owl-item {
+			padding-bottom: 0px;
+			margin: 0;
+			
+			 iframe {
+				height: 100%;
+				width: 100%;
+			}
+			
+			> div {
+				padding-bottom: 52px;
+				
+				@include md(down) {
+					height: 300px;
+				}
+				
+				&.no-caption {
+					padding-bottom: 0;
+					
+					.Carousel-caption {
+						display: none;
+					}
+				}
+			}
+		}
+		
+		/* Botones de navegación */
+		.owl-nav {
+			margin-right: .75rem;
+			margin-top: 0.275rem;
+			margin-bottom: 0rem;
+			float: right;
+			
+			[class*=owl-] {
+				margin: 10px 4px;
+				padding: 6px 12px;
+			}
+		}
+		
+		/* Puntos indicadores */
+		.owl-dots {
+			margin-left: .75rem;
+			margin-top: 0.25rem;
+			display: flex;
+			align-items: center;
+			height: 54px;
+			float: left;
+			
+			.owl-dot {
+				
+				span {
+					margin-right: 3px;
+					margin-left: 3px;
+					width: 6px;
+					height: 6px;
+				}
+
+				&.active span {
+					background: $color-1;
+					height: 12px;
+					width: 12px;
+					margin: 10px 2px;
+				}
+
+				&:hover span {
+					background: $gray-1;
+					height: 12px;
+					width: 12px;
+				}
+			}
+		}	
+	}
+}

@@ -1,0 +1,219 @@
+/* Destacado 1
+   ========================================================================== */
+/*
+	<div class="Box Box--mf Box--destacado1">
+		<div class="Box-cover">
+			<img class="Box-image" src="./img/ruta.jpg" alt="">
+		</div>
+		<div class="Box-overlay">
+			<span class="Box-info">Información adicional</span>
+			<a class="Box-title" href="#">Lorem ipsum dolor sit amet</a>
+			<p class="Box-text">Lorem ipsum dolor sit amet, consectetur aicing elit eos eveniet, repellat, vero rerum hic reiciendis recusandae debitis est fugit tempore.</p>
+		</div>
+	</div>
+*/
+
+/*
+ * Clases modificadoras
+	 - De diseño: Box--solid
+	 - De color: Box--color8, Box--colorWhite
+*/
+
+
+.Box--destacado1 {
+  a {
+    color: $white;
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  .Box-image {
+    margin-bottom: 0;
+    object-fit: cover;
+  }
+
+  .Box-overlay {
+    color: $white;
+    height: auto;
+    left: 0;
+    padding: 2rem;
+    position: absolute;
+    bottom: 8%;
+    width: auto;
+    max-width: 85%;
+		
+		@include rgba-background($color-1, 0.9);
+  }
+
+	.Box-info {
+    color: $white;
+		margin-top: -0.25rem;
+  }
+	
+  .Box-title {
+    margin-bottom: 0;
+    font-size: 1.75rem;
+		
+	  + .Box-text {
+			margin-top: .75rem;
+		}
+	}
+
+	.Box-text {
+		margin-bottom: 0
+	}
+
+  @include md(down) {
+    padding: 0;
+
+    .Box-title {
+      font-size: 1.25em;
+			line-height: 1.35;
+      margin-bottom: .25em;
+    }
+
+    .Box-cover {
+      margin: 0;
+    }
+	
+		.Box-image {
+			object-fit: fill;
+		}
+
+    .Box-overlay {
+      position: static;
+      max-width: 100%;
+      border-bottom-right-radius: 2px;
+      border-bottom-left-radius: 2px;
+      background: $color-1;
+      padding: 1.25rem;
+    }
+  }
+}
+
+.Box--destacado1.Box--solid {
+  padding: 0;
+
+  .Box-overlay {
+    position: static;
+    max-width: 100%;
+    background-color: $color-1;
+  }
+
+  .Box-cover {
+    margin: 0;
+    height: auto;
+  }
+
+  .Box-image {
+    height: auto;
+  }
+}
+
+.Module-item {
+  .Box--destacado1.Box--solid {
+    .Box-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      min-height: 25%;
+
+      @include md(down) {
+        position: static;
+      }
+			
+			@include md(up) {
+				display: flex;
+				align-items: flex-start;
+				flex-direction: column;
+				justify-content: center;
+			}	
+    }
+
+    .Box-image {
+      height: 100% !important;
+    }
+
+    .Box-cover {
+      height: 75% !important;
+    }
+  }
+}
+
+.Box--mf.Box--destacado1 {
+	position: relative;
+		
+	.Box-overlay {
+    border-radius: 0 4px 4px 0;
+		
+		@include md(down) {
+			border-radius: 0;
+		}
+	}
+	
+	.Box-info {
+		margin-top: -0.5rem;
+		
+		@include md(down) {
+			font-size: .75em;
+		}
+	}
+	
+	&.Box--solid {
+		.Box-overlay {
+			border-radius: 0;
+		}
+	}
+	
+	@include md(down) {
+		.Box-title {
+    	font-size: 1.375rem;
+		}
+	}
+}
+
+
+/* Versión en blanco */
+.Box--destacado1.Box--colorWhite {
+	color:#000000;
+	
+	.Box-info {
+		color: $black;
+	}
+	
+	a {
+		color: $color-1;
+		text-decoration: none;
+		
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+	
+	.Box-overlay {
+    background-color: rgba(255, 255, 255, .85);
+		color: #000;
+		
+		@include md(down) {
+			background-color: $white;
+		}
+	}
+	
+	&.Box--solid {
+		.Box-overlay {
+			background-color: $white;
+		}
+	}
+}
+
+/* Ajustes para prevenir vacíos */
+.Box--destacado1 {
+	.Box-info:empty,
+	.Box-text:empty {
+    display: none;
+	}
+}

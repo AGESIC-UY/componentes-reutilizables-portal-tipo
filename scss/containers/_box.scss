@@ -1,0 +1,624 @@
+/** @define Box; weak */
+
+/**
+ * Reglas generales para definir un contenedor
+ *
+ * Un contenedor puede contener los siguientes elementos:
+ *   * .Box-title
+ *   * .Box-info
+ *   * .Box-text
+ *   * .Box-subtitle
+ *   * .Box-video
+ *   * .Box-image
+ *   * .Box-footer
+ *   * .Box-header
+ *   * .Box-name
+ *
+ *   * .Box-button
+ *   * .Box-cover
+ *   * .Box-overlay
+ *   * .Box-inner
+ *   * .Box-more
+ *   * .Box-date
+ *   * .Box-mediaList
+ *
+ * Cada tipo de contenedor se define con una clase modificadora,
+ * p.e.: .Box--destacado3
+ *
+ *
+ * Se agrega una nueva clase modificadora para los ajustes en contenedores Mobile first, haciendo que puedan diferenciarse y convivir con los actuales en el desarrollo
+ * .Box--mf
+ *
+ */
+
+.Box {
+  background: #fff;
+  display: block;
+  padding: 1.5rem;
+  position: relative;
+	overflow: hidden;
+  border-radius: $Box-border-radius;
+  box-shadow: $Box-shadow;
+  margin-bottom: 1.5rem;
+	outline: solid 1px transparent; /* Mantiene el borde cuando hay alto contraste */
+	
+	&:focus {
+		outline: 3px solid orange  !important; /* Se pone el foco con important en el Box */
+    outline-offset: 0.05rem;
+	}
+	
+	&.Box--mf {
+		border-radius: $Box-mf-border-radius;
+	}
+
+  @include clearfix;
+
+  @include ie8 {
+    border: 1px solid #ddd;
+  }
+}
+
+.Box-header {
+  @include clearfix;
+
+  margin-bottom: 1.5em;
+  padding: 0;
+  border-bottom: 0;
+}
+
+.Box-name {
+  float: left;
+  padding-top: .325em;
+  margin-bottom: 0;
+	font-size: 1.625em;
+	line-height: 1.25;
+	font-weight: 600;
+	color: #555;
+	
+	@include md(down) {
+		font-size: 1.5em;
+		padding-top: .25em;
+	}
+}
+
+.Box-link {
+  float: right;
+  color: $gray-text;
+  position: relative;
+  top: .375em;
+  font-weight: 400;
+}
+
+.Box-title {
+  display: block;
+  font-size: 1.625em;
+	line-height: 1.25;
+  font-weight: 600;
+  margin-bottom: .75em;
+  word-wrap: break-word;
+	
+	@include md(down) {
+		font-size: 1.375em;
+		line-height: 1.25;
+	}
+}
+
+.Box-subtitle {
+  color: $gray-text;
+  display: block;
+  font-size: 1.125em;
+  line-height: 1.15;
+  margin-bottom: 1em;
+}
+
+.Box-info {
+  color: #000;
+  display: block;
+  font-size: .875em;
+  margin-bottom: .5em;
+	
+	&.Box-info--absolute {
+		
+		@include md(down) {
+			margin: 0.5rem !important;
+			position: absolute;
+			top: 0;
+			right: 0;
+			padding: 0.2rem 0.4rem;
+			border-radius: 4px;
+			color:$black !important;
+			font-size: .6875em;
+			
+			@include rgba-background($white, 0.85);
+		}
+	}	
+}
+
+.Box-video,
+.Box-image {
+  margin-bottom: 1.25em;
+}
+
+.Box-text {
+  margin-bottom: 1em;
+	
+	@include md(down) {
+		font-size: .9375em;
+	}
+}
+
+.Box-definitions {
+  dt {
+    font-size: 95%;
+    font-style: italic;
+  }
+
+  dd {
+    padding-left: .5em;
+  }
+}
+
+.Box-footer {
+  border-top: 1px solid $gray-3;
+  font-size: .875em;
+  margin: 0 -1.5rem -1.5rem -1.5rem;
+	padding: .75rem 1.5rem .925rem;
+  text-align: center;
+  background: #fff;
+  border-bottom-left-radius: $Box-border-radius;
+  border-bottom-right-radius: $Box-border-radius;
+
+  > a {
+    color: $gray-text;
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+.Box-footerLink {
+  color: $gray-text;
+}
+
+.Box-cover {
+  margin: -1.5rem;
+}
+
+.Box-cover img,
+.Box-coverImage {
+  width: 100%;
+  height: auto;
+}
+
+.Box-gridList {
+  .Box-title a:hover {
+    text-decoration: underline;
+  }
+}
+
+.Box-gridList {
+  @include reset-list;
+
+  a {
+    display: block;
+    text-decoration: none;
+
+    &:hover .Box-title {
+      text-decoration: underline;
+    }
+  }
+
+  li {
+    margin-bottom: 2.5rem;
+  }
+	
+	// Achica márgen al último elemento para que en móvil no quede tanto espacio en blanco
+	> li:last-child {
+		margin-bottom: 1rem;
+	}
+
+  img {
+    width: 100%;
+    height: auto;
+
+    // @include md {
+    //   width: auto;
+    // }
+  }
+
+  .Box-title {
+    margin-bottom: .375em;
+    font-size: 1.5em;
+  }
+
+  .Box-image {
+    display: block;
+    margin-bottom: .75em;
+  }
+
+  p,
+  .Box-text,
+  .Box-info,
+  .Box-subtitle {
+    margin-bottom: 0;
+  }
+
+  p,
+  .Box-text {
+    color: #000;
+  }
+}
+
+.Box-mediaList {
+  @include reset-list;
+
+  li,
+  > .Media {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    border-top: 1px solid #eee;
+
+    &:first-child {
+      padding-top: .5rem;
+      border-top: 0;
+    }
+  }
+	
+	/* Ajustes Presidencia */
+	.Media-title, 
+	h3 {
+		margin-bottom: 1rem;
+		font-size: 1.5rem;		
+		line-height: 1.25;
+		display: inline-block;
+	  font-weight: 600;
+	  word-wrap: break-word;
+		
+		@include md(down) {
+			font-size: 1.375em;
+		}
+		
+	}
+	
+	.Box-subtitle {
+    margin-bottom: .5rem;
+	}
+
+	.Media-image img, 
+	.Media-image video {
+    width: 100%;
+    max-width: 250px;
+		border-radius: 2px;
+	}
+	.Audio {
+		margin-top: 1rem;
+		margin-bottom: .5rem;
+	}
+  /* ----------------- */
+	
+  @include md(down) {
+    .Media {
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+    }
+
+    .Media-image {
+      float: none;
+      margin-right: 0;
+      margin-bottom: .5em;
+    }
+	
+		.Download .Media-image {
+			float: left;
+			margin-right: 1em;
+		}
+  }
+	
+	@include sm(down) {
+		.Media-image img,
+	  .Media-image video {
+			width: 100%;
+			max-width: none;
+		}
+	}
+	
+}
+
+/* Videos más grandes en listados de páginas */
+.Page .Box-mediaList .Media-image video {
+	max-width: 350px;
+	
+	@include sm(down) {
+		max-width: none;
+		width: 100%;
+	}
+}
+
+
+.Box-mediaList--small {
+  .Media-image {
+    margin-right: 1rem;
+  }
+
+  .Media {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+}
+
+/* Types
+   ========================================================================== */
+
+@import "types/acceso";
+@import "types/atencionCiudadania";
+@import "types/calendario";
+@import "types/destacado1";
+@import "types/destacado2";
+@import "types/destacado3";
+@import "types/destacado4";
+@import "types/listadoEnlaces";
+@import "types/listadoAccesos";
+@import "types/listadoDescargas";
+@import "types/listadoHorizontal";
+@import "types/listadoTramites";
+@import "types/listadoVertical";
+@import "types/login";
+@import "types/navLocal";
+@import "types/timeline";
+@import "types/video";
+@import "types/hero";
+@import "types/banner";
+@import "types/encuesta";
+@import "types/sinae";
+@import "types/stats";
+@import "types/topic";
+@import "types/totales";
+@import "types/redes";
+@import "types/microaccesos";
+@import "types/formatoCompleto";
+@import "types/galeria";
+@import "types/combinado";
+@import "types/listadoD4";
+@import "types/destacadoFondo";
+
+/* Modifiers
+   ========================================================================== */
+
+.Box--small {
+  font-size: .875rem;
+}
+
+.Box--center {
+  text-align: center;
+}
+
+.Box--mobileWide {
+	@include md(down) {
+		margin-left: -12px;
+		margin-right: -12px;
+		border-radius: 0!important;
+	}
+}
+
+
+/* Colors Modifiers
+   ========================================================================== */
+
+// .Box--color1,
+// .Box--color2,
+// .Box--color3,
+// .Box--color4 {
+//   .Download {
+//     text-decoration: none;
+//   }
+
+//   .Download-title {
+//     color: inherit;
+//     text-decoration: underline;
+//   }
+
+//   .Download-description {
+//     color: inherit;
+//   }
+
+//   .Box-mediaList li,
+//   .Box-mediaList > .Media {
+//     border-top-color: rgba(255, 255, 255, .25);
+//   }
+
+//   &.Box--listadoHorizontal {
+//     a {
+//       text-decoration: none;
+//     }
+
+//     .Box-title {
+//       text-decoration: underline;
+//     }
+//   }
+
+//   .Box-footer {
+//     background-color: transparent;
+//     border-top-color: rgba(255, 255, 255, .25);
+
+//     a {
+//       text-decoration: underline;
+//     }
+//   }
+// }
+
+// .Box--color1 {
+//   background-color: $color-1;
+//   color: contrast($color-1);
+
+//   a:not(.Button) {
+//     color: contrast($color-1);
+//     text-decoration: underline;
+//   }
+
+//   p,
+//   .Box-text {
+//     color: contrast($color-1);
+//   }
+
+//   .Box-subtitle,
+//   .Box-info {
+//     color: contrast($color-1);
+//   }
+
+//   .Box-name {
+//     color: contrast($color-1);
+//   }
+
+//   &.Box--event {
+//     .Box-inner {
+//       background-color: lighten($color-1, 8%);
+//     }
+//   }
+// }
+
+// .Box--color2 {
+//   background-color: $color-2;
+//   color: contrast($color-2);
+
+//   a:not(.Button) {
+//     color: contrast($color-2);
+//     text-decoration: underline;
+//   }
+
+//   p,
+//   .Box-text {
+//     color: contrast($color-2);
+//   }
+
+//   .Box-subtitle,
+//   .Box-info {
+//     color: contrast($color-2);
+//   }
+
+//   .Box-name {
+//     color: contrast($color-2);
+//   }
+
+//   &.Box--event {
+//     .Box-inner {
+//       background-color: lighten($color-2, 8%);
+//     }
+//   }
+// }
+
+// .Box--color3 {
+//   background-color: $color-3;
+//   color: contrast($color-3);
+
+//   a:not(.Button) {
+//     color: contrast($color-3);
+//     text-decoration: underline;
+//   }
+
+//   p,
+//   .Box-text {
+//     color: contrast($color-3);
+//   }
+
+//   .Box-subtitle,
+//   .Box-info {
+//     color: contrast($color-3);
+//   }
+
+//   .Box-name {
+//     color: contrast($color-3);
+//   }
+
+//   &.Box--event {
+//     .Box-inner {
+//       background-color: lighten($color-3, 8%);
+//     }
+//   }
+// }
+
+// .Box--color4 {
+//   background-color: $color-4;
+//   color: contrast($color-4);
+
+//   a:not(.Button) {
+//     color: contrast($color-4);
+//     text-decoration: underline;
+//   }
+
+//   p,
+//   .Box-text {
+//     color: contrast($color-4);
+//   }
+
+//   .Box-subtitle,
+//   .Box-info {
+//     color: contrast($color-4);
+//   }
+
+//   .Box-name {
+//     color: contrast($color-4);
+//   }
+
+//   &.Box--event {
+//     .Box-inner {
+//       background-color: lighten($color-4, 8%);
+//     }
+//   }
+// }
+
+/**
+ * Clases para Modulos
+ */
+
+.Box--fit {
+  height: 100%;
+  width: 100%;
+}
+
+.Box--alignMiddle {
+  display: table;
+  width: 100%;
+}
+
+.Box--alignMiddle .Box-cell {
+  width: 100%;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+/** 
+ * Grilla simplificado MF 
+ */
+
+.Box--mf {
+	&.Box--listadoAccesos,
+	&.Box--listadoTramites,
+	&.Box--stats {
+		
+		@include md {
+
+			.Box-gridList {
+
+				&.Grid--rowSize4 {
+					> .Grid-item {
+						width: 25% !important;
+					}
+				}
+
+				&.Grid--rowSize3 {
+					> .Grid-item {
+						width: 33.33333% !important;
+					}
+				}
+
+				&.Grid--rowSize2 {
+					> .Grid-item {
+						width: 50% !important;
+					}
+				}
+			}
+		}
+	}
+}	

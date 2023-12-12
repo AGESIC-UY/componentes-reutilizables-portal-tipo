@@ -1,0 +1,117 @@
+/** @define Breadcrumb; weak */
+
+/**
+  <div class="Breadcrumb">
+    <div class="Container">
+      <ul>
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Institucional</a></li>
+        <li><a href="#">Formato documento</a></li>
+      </ul>
+    </div>
+  </div>
+ */
+
+$Breadcrumb-items-gutter: 12px;
+
+.Breadcrumb {
+  background-color: #fff;
+  font-size: .875em;
+  padding: .675em 0;
+
+  @include clearfix;
+
+  a {
+    // color: #000;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  ul {
+    @include reset-list;
+
+    li {
+      display: inline-block;
+      margin-left: $Breadcrumb-items-gutter;
+
+      &:before {
+        padding-right: $Breadcrumb-items-gutter;
+        color: #555;
+        content: '\00bb';
+      }
+
+      &:first-child:before {
+        display: none;
+      }
+
+      &:first-child {
+        padding-left: 0;
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+/**
+ * Breadcrumb con scroll horizontal en moviles [EXPERIMENTO]
+ *
+ * En pantallas tactiles el Breadcrumb permanece horizontal y se puede desplazar
+ * En pantallas que no son tactiles y md(down) desaparece el Breadcrumb
+ */
+
+@include md(down) {
+  @include touch {
+    .Breadcrumb {
+      overflow: scroll;
+      position: relative;
+			background-color: unset;
+			margin-top: .125rem;
+			font-size: .85em;
+
+      &:before {
+        background: linear-gradient(to left, #eee, transparent);
+        content: '';
+        display: none; // TODO: Pasar a block cuando se solucionen los problemas
+        width: 3rem;
+        height: 1 + (.675 * 2) + .35em; // 1 del texto, mas paddings, mas scroll
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: 10;
+      }
+
+      ul {
+        white-space: nowrap;
+      }
+
+      ul li:last-child {
+        padding-right: 2rem;
+      }
+			
+			+ .u-main {
+				margin-top: .25rem;
+			}
+    }
+  }
+}
+
+@include md(down) {
+  @include no-touch {
+    .Breadcrumb {
+      display: none;
+    }
+  }
+}
+
+// NOTE: Problema de FOUC con Breadcrumb por el uso de .touch
+
+// Eliminar borde superior del Breadcrumb en este contexto
+
+@include md(down) {
+  .touch .Page .Breadcrumb {
+    border-top: 0;
+  }
+}

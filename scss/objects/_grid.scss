@@ -1,0 +1,92 @@
+/** @define Grid */
+
+.Grid {
+  margin-right: -$Grid-gutter-size;
+  margin-left: -$Grid-gutter-size;
+
+  @include clearfix;
+}
+
+.Grid-item {
+  float: left;
+  position: relative;
+  padding-right: $Grid-gutter-size;
+  padding-left: $Grid-gutter-size;
+  width: 100%;
+}
+
+.Grid-item--center {
+  margin-left: auto;
+  margin-right: auto;
+  float: none;
+}
+
+.Grid--noGutter {
+  margin-left: 0;
+  margin-right: 0;
+
+  > .Grid-item {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+.Grid--rowSize5 {
+  .Grid-item:nth-child(5n+1) {
+    clear: left;
+  }
+}
+
+.Grid--rowSize4 {
+  .Grid-item:nth-child(4n+1) {
+    clear: left;
+  }
+}
+
+.Grid--rowSize3 {
+  .Grid-item:nth-child(3n+1) {
+    clear: left;
+  }
+}
+
+.Grid--rowSize2 {
+  .Grid-item:nth-child(2n+1) {
+    clear: left;
+  }
+}
+
+@include md(down) {
+	.Grid--sm-rowSize5 {
+		.Grid-item:nth-child(5n+1) {
+			clear: left;
+		}
+	}
+
+	.Grid--sm-rowSize4 {
+		.Grid-item:nth-child(4n+1) {
+			clear: left;
+		}
+	}
+
+	.Grid--sm-rowSize3 {
+		.Grid-item:nth-child(3n+1) {
+			clear: left;
+		}
+		&.Grid--rowSize2 {
+			.Grid-item:nth-child(2n+1) {
+				clear: none;
+			}
+		}
+	}
+
+	.Grid--sm-rowSize2 {
+		.Grid-item:nth-child(2n+1) {
+			clear: left;
+		}
+		&.Grid--rowSize3 {
+			.Grid-item:nth-child(3n+1) {
+				clear: none;
+			}
+		}
+	}
+}

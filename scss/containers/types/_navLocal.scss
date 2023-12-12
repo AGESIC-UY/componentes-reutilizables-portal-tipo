@@ -1,0 +1,27 @@
+.Box--navLocal {
+  padding: 0 1em 1.25em;
+}
+
+.Box--navLocal .Page-navTitle,
+.Box--navLocal .Page-navList li a {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.Box--navLocal ul.Page-navList li:last-child {
+  border-bottom: none;
+}
+
+@media screen and (max-width: $md) {
+  .Box--navLocal .Page-navList {
+    display: block;
+  }
+
+  .Box--navLocal .Page-navTitle {
+    font-weight: 700;
+    font-size: 1.15rem;
+    display: block;
+    padding: 2rem 1rem 1rem;
+    border-bottom: none;
+  }
+}

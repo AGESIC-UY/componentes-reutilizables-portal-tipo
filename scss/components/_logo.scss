@@ -1,0 +1,64 @@
+.Header-logo a:hover {
+  text-decoration: none;
+}
+
+.Logo {
+  display: flex;
+  align-items: center;
+}
+
+.Logo-abbr {
+  font-weight: 400;
+  font-size: .875rem;
+  color: $blue;
+  display: block;
+}
+
+.Logo-abbr + .Logo-title,
+.Logo-title + .Logo-abbr {
+  margin-top: .325rem;
+}
+
+.Logo-text {
+	color: $blue;
+}
+
+.Logo-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.4rem;	
+  display: block;
+	margin-bottom: 0;
+
+  @include md(down) {
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+  }
+
+  > span {
+	display: block;
+	
+	@include md(down) {
+      display: inline;
+    }    
+  }	
+	
+}
+
+.Logo-role {
+	font-weight: 400;
+	display: block !important;
+}
+
+.Logo-image {
+  height: 98px;
+  width: auto;
+  margin-right: 0.8em;
+
+  @include md(down) {
+    height: auto;
+    max-width: 4rem !important;
+    margin-right: 0.5em;
+    margin-left: 0;
+  }
+}

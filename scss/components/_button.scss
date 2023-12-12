@@ -1,0 +1,170 @@
+/** @define Button */
+
+.Button {
+  display: inline-block;
+  background-color: #eee;
+  border-color: currentcolor;
+  border-radius: 3px;
+  border-style: solid;
+  border-width: 0;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, .15);
+  box-sizing: border-box;
+  color: inherit;
+  font: inherit;
+  font-weight: 600;
+  margin: 0;
+  padding: .5em 1.5em;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: box-shadow .35s, background-color .35s;
+  user-select: none;
+  vertical-align: middle;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #ddd;
+  }
+}
+
+/**
+ * Remove excess padding and border in Firefox 4+
+ */
+
+/* stylelint-disable selector-pseudo-element-no-unknown */
+
+// NOTE: No valida css
+// .Button::moz-focus-inner {
+//   bottom: 0;
+//   padding: 0;
+// }
+
+/**
+ * Work around a Firefox/IE bug where the transparent `button` background
+ * results in a loss of the default `button` focus styles.
+ */
+
+// .Button:focus {
+//   outline: 1px dotted;
+//   outline: 5px auto -webkit-focus-ring-color;
+// }
+
+.Button {
+  border: 1px solid transparent;
+}
+.Button:focus {
+  border: 1px solid $focus-color !important;
+  outline: none;
+  box-shadow: inset 0 1px 2px rgba(255, 190, 70, 0.075), 0 0 0 0.2em rgba(255, 190, 70, 0.3);
+}
+
+/**
+ * UI states
+ */
+
+.Button:hover,
+.Button:focus,
+.Button:active {
+  text-decoration: none;
+}
+
+.Button:disabled,
+.Button.is-disabled {
+  // cursor: default;
+  cursor: not-allowed;
+  opacity: .4;
+  box-shadow: none;
+}
+
+.Button:active {
+  box-shadow: inset 0 0 .15em rgba(0, 0, 0, .35);
+}
+
+/**
+ * Modifiers
+ */
+
+.Button--small {
+  font-size: 0.85rem;
+}
+
+$Button-primary-bg-color: $color-1;
+$Button-secondary-bg-color: $gold /*darken(#fde17b, 5%)*/;
+
+
+.Button--primary {
+  background-color: $Button-primary-bg-color;
+  color: #fff;
+
+  &:hover {
+    background-color: darken($Button-primary-bg-color, 8%);
+  }
+	
+	&.u-outerLink:after {
+		background-image: url(../assets/outerLink-white.svg);
+	}
+}
+
+.Button--secondary {
+  //background-color: darken($Button-secondary-bg-color, 5%);
+  //color: darken($Button-secondary-bg-color, 70%);
+  //color: darken($Button-secondary-bg-color, 55%);
+  background-color: $gold;
+  color: #1E1700;
+
+  &:hover {
+    //background-color: darken($Button-secondary-bg-color, 12%);
+    background-color: #fcce26;
+  }
+	
+	&.u-outerLink:after {
+		background-image: url(../assets/outerLink-black.svg);
+	}
+}
+
+.Button--inverse {
+  border: 1px solid $Button-primary-bg-color;
+  background-color: #fff;
+  color: $Button-primary-bg-color;
+
+  &:hover {
+    color: #fff;
+    background-color: darken($Button-primary-bg-color, 8%);
+		
+		&.u-outerLink:after {
+	  	background-image: url(../assets/outerLink-white.svg);
+		}
+  }
+
+  &:disabled:hover,
+  &.is-disabled:hover {
+    background-color: #fff;
+    color: $Button-primary-bg-color;
+  }
+}
+
+.Button--white {
+  background-color: #fff;
+  color: #000;
+}
+
+.Button--link {
+  color: $color-1;
+  background-color: transparent;
+  // border: 0;
+  box-shadow: none;
+
+  padding-left: 0;
+  padding-right: 0;
+  font-weight: normal;
+
+  &:hover {
+    background-color: inherit;
+    text-decoration: underline;
+  }
+}
+
+.Button--block {
+  display: block;
+  width: 100%;
+}

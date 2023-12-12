@@ -1,0 +1,23 @@
+/** @define SkipLink */
+
+.SkipLink {
+  position: absolute;
+  top: -40px;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  padding: 1em 1.5em;
+  overflow: hidden;
+  transition: top .3s;
+  color: #fff;
+  background: #000;
+}
+
+.SkipLink:focus {
+  color: #fff;
+  top: 0;
+  left: 0;
+  z-index: index($elements, skip-nav);
+  width: auto;
+  height: auto;
+}

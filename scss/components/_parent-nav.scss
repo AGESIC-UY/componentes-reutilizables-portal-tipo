@@ -1,0 +1,340 @@
+/* Parent Nav (menu lateral de gub.uy)
+   ========================================================================== */
+
+/**
+<div class="ParentNav js-parentNav [is-open]">
+  <div class="ParentNav-header">
+    <div class="ParentNav-logo"></div>
+    <div class="ParentNav-tagline"></div>
+    <div class="ParentNav-close"></div>
+    <div class="ParentNav-search"></div>
+  </div>
+
+  <div class="ParentNav-body">
+    <div class="ParentNav-item has-submenu" tabindex="0"></div>
+    <div class="ParentNav-item has-submenu" tabindex="0"></div>
+    <div class="ParentNav-item has-submenu" tabindex="0"></div>
+    <a class="ParentNav-item" href="#"></a>
+    <a class="ParentNav-item" href="#"></a>
+    <a class="ParentNav-item" href="#"></a>
+  </div>
+</div>
+ */
+
+$ParentNav-wrap-width: 33em;
+$ParentNav-aside-width: 37em;
+
+.ParentNav {
+  color: #fff;
+  position: absolute;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 95%;
+  height: 100%;
+  max-width: $ParentNav-wrap-width;
+  transform: translateX(-101%); // 1% extra por el box-shadow
+  transition: transform .5s ease-in-out, width .5s ease-in-out;
+
+  a {
+    color: #fff;
+  }
+
+  &.is-open {
+    transform: translateX(0);
+  }
+
+  @include xs(down) {
+    font-size: .85em;
+  }
+}
+
+.ie8 .ParentNav {
+  display: none;
+}
+
+.ie8 .ParentNav.is-open {
+  display: block;
+}
+
+/**
+ * Wrap
+ */
+
+.ParentNav-wrap {
+  overflow: auto;
+  height: 100%;
+  background-color: $dark-blue;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, .75);
+  z-index: 6000; // que pise la sombra del aside
+  position: relative;
+}
+
+/**
+ * Header
+ */
+
+.ParentNav-header {
+  padding: 1.25em;
+  position: relative;
+}
+
+.ParentNav-logo {
+  max-width: 8em;
+	
+  a {
+	&:hover {
+      text-decoration: none;
+  	}
+	&:focus {
+      text-decoration: none;
+  	}
+  }
+
+  img {
+    height: auto;
+    width: 70%;
+  }
+}
+
+.ParentNav-tagline {
+  margin-top: .5em;
+  margin-bottom: 1em;
+  color: #fff;
+}
+
+.ParentNav-close {
+  position: absolute;
+  top: 1.25em;
+  right: 1.25em;
+
+  button {
+    line-height: 1;
+		color: $white;
+  }
+}
+
+/**
+ * Body
+ */
+
+.ParentNav-body {
+  font-size: 1.25em;
+
+  .ParentNav-item {
+    > span {
+      width: 100%;
+    }
+  }
+
+  .has-submenu > span:after {
+    content: '';
+    width: 1rem;
+    height: 1rem;
+    background: transparent url('../assets/arrow.svg') no-repeat center;
+    display: block;
+    float: right;
+    position: relative;
+    top: 8px;
+		
+		@include xs(down) {
+			top: 5px;
+		}
+	}
+}
+
+.ParentNav-item {
+  display: block;
+  width: 100%;
+  position: relative;
+
+  > span {
+    display: block;
+    cursor: pointer;
+    z-index: 9999;
+    position: relative;
+  }
+
+  &.is-selected {
+    background-color: $base-background-color;
+  }
+
+  &.is-open {
+    background-color: $base-background-color;
+    color: #000;
+  }
+}
+
+.ParentNav-item > span,
+a.ParentNav-item {
+  padding: .75em 1.5em;
+}
+
+.ParentNav-item.has-submenu.is-open {
+  > span:after {
+    background-image: url('../assets/arrow-black.svg');
+  }
+}
+
+.ParentNav-subNav {
+  padding: .5em 1.5em 0;
+  background-color: $base-background-color;
+  width: 100%;
+  display: none;
+
+  @include xs(down) {
+    font-size: 1rem;
+		padding: 0rem 1.5rem 1rem;
+  }
+
+  a {
+    color: $color-1;
+  }
+
+  &.is-open {
+    display: block;
+  }
+}
+
+.ParentNav-subNav--temas {
+  padding: 2em 2em 0 2em;
+
+  @include md(down) {
+    padding: 1em 1em 0 1em;
+  }
+
+  ul {
+    li + li {
+      margin-top: .5em;
+    }
+  }
+}
+
+.ParentNav-more {
+  text-align: center;
+  margin-top: 2em;
+  padding-top: 1em;
+  border-top: 1px solid #ccc;
+  padding-bottom: 1em;
+}
+
+.ParentNav-subNav--tramites {
+  padding: 2em 2em 0;
+
+  @include md(down) {
+    padding: 1em 1em 0;
+  }
+}
+
+/**
+ * Aside
+ */
+
+@include md {
+  .ParentNav-wrap,
+  .ParentNav-aside {
+    float: left;
+    width: 100%;
+  }
+
+  .ParentNav-aside {
+    transition: width .35s ease-in-out;
+  }
+
+  .ParentNav-aside {
+    padding: 1.5em;
+    overflow-x: hidden;
+    overflow-y: auto;
+    width: 0;
+    background-color: $base-background-color;
+    color: #000;
+    height: 100%;
+
+    a {
+      color: $blue;
+    }
+  }
+
+  body.has-parentNavAside {
+    .ParentNav {
+      max-width: $ParentNav-wrap-width + $ParentNav-aside-width;
+
+      @include clearfix;
+    }
+
+    .ParentNav-wrap {
+      box-shadow: 0 0 0 transparent;
+      width: $ParentNav-wrap-width;
+      float: left;
+    }
+
+    .ParentNav-aside {
+      box-shadow: 0 4px 4px rgba(0, 0, 0, .75);
+      width: $ParentNav-aside-width;
+      float: left;
+    }
+  }
+}
+
+/**
+ * Capa que se muestra al abrir el menu lateral
+ */
+
+body:after {
+  opacity: 0;
+  content: '';
+  transition: opacity .5s ease-in-out;
+}
+
+body.has-menu {
+  overflow: hidden;
+
+  &:after {
+    content: '';
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #000;
+    opacity: .5;
+    z-index: 9998;
+  }
+}
+
+/**
+ * Detalles dentro del submenu
+ */
+
+.Stats {
+  margin-top: 1.5em;
+}
+
+.Stats-item {
+  text-align: center;
+  margin-bottom: 3.5em;
+
+  a {
+    font-size: 5em;
+    line-height: 1.15;
+  }
+}
+
+.Nav-flagList {
+  li {
+    list-style: none;
+  }
+
+  margin-left: 1em;
+  padding-left: 0;
+
+  li + li {
+    margin-top: .5em;
+  }
+}
+
+/* Ajuste del padding en el buscador */
+.ParentNav-search input.Search-input {
+	 padding-right: 3.85em !important;
+}
+	

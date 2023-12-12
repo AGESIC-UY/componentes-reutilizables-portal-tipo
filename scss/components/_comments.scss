@@ -1,0 +1,116 @@
+.Comment-avatar {
+  border-radius: 50%;
+  background-color: #555;
+  color: #fff;
+  width: 3.75em;
+  height: 3.75em;
+  display: inline-block;
+  position: relative;
+
+  span {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    font-size: 1.5em;
+    font-weight: bold;
+    letter-spacing: -1px;
+    line-height: 1;
+  }
+
+  @include sm(down) {
+    width: 2.75em;
+    height: 2.75em;
+
+    span {
+      font-size: 1.125em;
+    }
+  }
+}
+
+.Comments-textarea {
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  background-color: #fff;
+  font-family: inherit;
+  font-size: inherit;
+  padding: .625rem .825rem;
+  width: 100%;
+  height: 80px;
+}
+
+.Comment-avatar--small {
+  font-size: .625em;
+}
+
+.Comments-list,
+.Comments-sublist {
+  li {
+    margin-top: 2rem;
+  }
+}
+
+.Comments-sublist {
+  list-style: none;
+  margin-bottom: 2rem;
+}
+
+.Comments-list {
+  padding-left: 76px;
+  list-style: none;
+
+  @include sm(down) {
+    padding-left: 54px;
+  }
+
+  @include xs(down) {
+    padding-left: .825rem;
+  }
+}
+
+.Comment-header {
+  .Flag {
+    width: auto;
+  }
+
+  .Flag-image {
+    padding-right: .625rem;
+  }
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.Comment {
+  margin-top: 2rem;
+}
+
+.Comment-info {
+  font-size: .825em;
+  color: #555;
+}
+
+.Comment-body {
+  margin-top: .25rem;
+  margin-bottom: .625rem;
+}
+.Comment-actions {
+  font-size: .95em;
+  overflow: hidden;
+
+  a {
+    clear: both;
+    float: left;
+  }
+
+  > a + a {
+    margin-top: .5em;
+  }
+
+  .Icon--small {
+    font-size: .625em;
+    margin-right: .625em;
+  }
+}
+

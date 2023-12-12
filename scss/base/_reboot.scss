@@ -1,0 +1,107 @@
+/**
+ * Reset the box-sizing
+ * Prevent margin and border from affecting element width.
+ * @link https://css-tricks.com/?p=175473
+ */
+
+html {
+  box-sizing: border-box;
+  min-height: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-font-smoothing: antialiased;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/**
+ * Simple page-level setup
+ */
+
+body {
+  background-color: $base-background-color;
+  color: $base-text-color;
+  font-family: $base-font-stack;
+  font-size: $base-font-size;
+  font-weight: $base-font-weight;
+  line-height: $base-line-height;
+}
+
+/**
+ * Removes the default spacing and border for appropriate elements.
+ */
+
+blockquote,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+figure,
+p,
+pre {
+  margin: 0;
+}
+
+button {
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  padding: 0;
+}
+
+/**
+ * Work around a Firefox/IE bug where the transparent `button` background
+ * results in a loss of the default `button` focus styles.
+ */
+
+button:focus {
+  outline: 1px dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+}
+
+iframe {
+  border: 0;
+}
+
+table {
+  border-collapse: collapse;
+  background-color: transparent;
+}
+
+/**
+ * Suppress the focus outline on elements that cannot be accessed via keyboard.
+ * This prevents an unwanted focus outline from appearing around elements that
+ * might still respond to pointer events.
+ */
+
+[tabindex="-1"]:focus {
+  outline: none !important; /* stylelint-disable-line declaration-no-important */
+}
+
+/**
+ * By default, `<img>`s are `inline-block`. This assumes that, and vertically
+ * centers them. This won't apply should you reset them to `block` level.
+ */
+
+img {
+  vertical-align: middle;
+}
+
+/**
+ * Fixed-width elements are responsive
+ */
+
+img,
+embed,
+object,
+video,
+iframe {
+  max-width: 100%;
+}

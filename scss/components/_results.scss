@@ -1,0 +1,74 @@
+/**
+ * Ejemplo:
+
+  <div class="Results">
+    <h3 class="Results-heading">
+      Resultados de busqueda para <strong>query</strong>
+    </h3>
+
+    <div class="u-cfx">
+      <p class="Results-details">Resultados <strong>1 - 10</strong> de aproximadamente <strong>2670</strong></p>
+    </div>
+
+    <ul class="Results-list">
+      <li class="Results-item">
+        <h4 class="Results-title"><a href="#"></a></h4>
+        <p class="Results-url"></p>
+        <p class="Results-summary"></p>
+      </li>
+    </ul>
+
+    <!-- .Pagination -->
+  </div>
+ */
+
+.Results-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.Results-item {
+  margin-top: 2.5em;
+}
+
+.Results-title {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: .125em;
+}
+
+.Results-url {
+  color: #008000;
+  font-size: .85em;
+  word-wrap: break-word;
+  margin-bottom: 0;
+}
+
+.Results-summary {
+  margin-bottom: 0;
+  font-size: .9375em;
+  margin-top: .25em;
+}
+
+.Results-details {
+  float: right;
+  margin-bottom: 0;
+}
+
+.Results-heading {
+  font-weight: 400;
+
+  strong {
+    font-weight: 700;
+  }
+}
+
+.Results-button {
+  margin-top: .75em;
+}
+
+.Results-search {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}

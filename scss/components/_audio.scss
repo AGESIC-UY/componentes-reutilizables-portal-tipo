@@ -1,0 +1,42 @@
+/** @define Audio; weak */
+
+/**
+  <div class="Audio">
+    <audio src="https://archive.org/download/testmp3testfile/mpthreetest.mp3" preload="none" controls>
+      Su navegador no permite reproducir este archivo de audio.
+    </audio>
+    <a href="#" class="Audio-link">Ver transcripcion</a>
+  </div>
+ */
+
+.Audio {
+  margin: 2rem 0;
+
+  audio {
+    width: 100%;
+    display: block;
+  }
+}
+
+.Audio-link {
+  font-style: italic;
+  font-size: .875em;
+  margin-bottom: .625em;
+  display: inline-block;
+
+  &:not(.collapsed) {
+    > span:first-child {
+      display: none;
+    }
+
+    &:before {
+      content: 'Ocultar transcripci\00F3n'
+    }
+  }
+}
+
+.Audio-title {
+  font-size: 1.125em;
+  font-weight: 500;
+  margin-bottom: .25em;
+}

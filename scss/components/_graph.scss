@@ -1,0 +1,24 @@
+.Graph {
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.Graph-controls {
+  margin-top: 10px;
+  text-align: center;
+
+  > * + * {
+    margin-left: 8px;
+  }
+
+  > .Button {
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: #f3f3f3;
+  }
+}

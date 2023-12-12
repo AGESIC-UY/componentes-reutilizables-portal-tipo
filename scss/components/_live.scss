@@ -1,0 +1,72 @@
+/* @define Live; weak */
+
+/**
+ * Indicador de Transmision en Vivo
+ */
+
+/* En vivo en este momento:  */
+
+/**
+  <a href="#" class="Live Live--now">
+    <span class="Live-icon Icon Icon--live"></span>
+    Transmision en vivo
+  </a>
+ */
+
+/* En vivo proximamente: */
+
+/**
+  <span class="Live">
+    <span class="Live-icon Icon Icon--live"></span>
+    Transmision en vivo
+  </span>
+ */
+
+.Live {
+  font-size: .85em;
+  margin-top: .5em;
+	margin-bottom: 0.25em;
+  background-color: #f3f3f3;
+  display: inline-block;
+  border-radius: 2px;
+  color: #333;
+  padding: .2rem .625rem;
+}
+
+.Live-icon {
+  margin-right: .5em;
+  float: left;
+  width: 1.25em;
+  height: 1.25em;
+  top: .075rem;
+}
+
+.Live--now {
+  background-color: #ffe3e3;
+  font-weight: 700;
+}
+
+.Live--now .Live-icon {
+  display: none;
+}
+
+.Live--now:before {
+  content: ' ';
+  display: inline-block;
+  border-radius: 50%;
+  background-color: firebrick;
+  width: 10px;
+  height: 10px;
+  margin-right: .625em;
+  animation: live-now infinite 1.25s linear;
+}
+
+@keyframes live-now {
+  50% {
+    opacity: 0;
+  }
+}
+
+.Event .Live:not(.Live--now) {
+  background-color: #fff;
+}

@@ -1,0 +1,74 @@
+/** @define Flag; weak */
+
+.Flag {
+  display: table;
+  width: 100%;
+}
+
+.Flag-image,
+.Flag-body {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.Flag-image {
+  padding-right: 1rem;
+
+  > img {
+    display: block;
+    max-width: none;
+  }
+}
+
+.Flag-body {
+  width: 100%;
+}
+
+/**
+ * Modifiers
+ *
+ * --rev: invierte la posicion de la imagen de izq a der
+ * --top: vertical align top
+ * --bottom: vertical align bottom
+ */
+
+.Flag--rev {
+  direction: rtl;
+
+  > .Flag-image,
+  > .Flag-body {
+    direction: ltr;
+  }
+
+  > .Flag-image {
+    padding-right: 0;
+    padding-left: 1.5rem;
+  }
+}
+
+.Flag--top {
+  .Flag-image,
+  .Flag-body {
+    vertical-align: top;
+  }
+}
+
+.Flag--bottom {
+  .Flag-image,
+  .Flag-body {
+    vertical-align: bottom;
+  }
+}
+
+@include md(down) {
+  .Flag--mdStack {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .Flag-image {
+      padding-right: 0;
+      margin-bottom: 1.5rem;
+    }
+  }
+}

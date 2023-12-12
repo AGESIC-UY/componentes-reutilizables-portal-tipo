@@ -1,0 +1,39 @@
+.busquedaVacia-title {
+  font-size: 2.5em !important;
+  padding: .75em .75em .6em;
+  white-space: normal;
+}
+
+.busquedaVacia-listItem {
+  font-size: 1.25em;
+  padding:.25em 0em;
+}
+
+.errorPage {
+  margin: 7.25rem 0 8rem;
+}
+
+.errorPage-nombre {
+  margin-bottom:.6rem;
+  line-height: 1;
+  color: #ba3a25;
+  font-weight: 700;
+  font-size: 2.05em;
+}
+
+.errorPage-mensaje {
+  margin-bottom: .9rem;
+  line-height: 1.2;
+  font-weight: 700;
+  font-size: 3.2em;
+}
+
+.errorPage-texto {
+  margin-bottom: 2.5rem;
+  font-size: 1.8em;
+}
+
+.Button--errorPage {
+  padding: 0.4em 1em .5em 1em;
+  font-size: 1.75em !important;
+}

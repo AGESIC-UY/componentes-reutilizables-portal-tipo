@@ -1,0 +1,77 @@
+/* Listado Destacados 4
+   ========================================================================== */
+
+.Box--listadoD4 {
+	padding-inline: .25rem;
+	background: none;
+	box-shadow: none;
+	
+	@include md {
+		margin-bottom: 0;
+	}
+	
+	.Box-name {
+		float: none;
+		text-align: center;
+	}
+	
+	> .Box-body {
+		display: flex;
+		gap: 1rem;
+	}
+	
+	.Box--destacado4 {
+		background: none;
+		box-shadow: none;
+		margin-bottom: 0;
+		padding-inline: .75rem;
+		
+		.Box-image img {
+			height: 120px;
+			width: 120px;
+		}
+		.Box-title {
+    	font-size: 1.25em;
+		}
+		.Box-subtitle {
+    	font-size: 1em;
+		}
+	}
+	
+	@include md(down) {
+		 > .Box-body {
+			flex-wrap: wrap;
+		}
+		.Box--destacado4 {
+			padding: 1rem .25rem;
+			flex-basis: calc(50% - 0.5rem);
+			margin-inline: auto;
+			
+			.Box-image img {
+				height: 90px;
+				width: 90px;
+			}
+			.Box-title {
+				font-size: 1.125em;
+			}
+			.Box-subtitle {
+				font-size: .9375em;
+			}
+		}
+	}
+}
+
+/* Fixes para uso dentro de un Grupo */
+.Group .Module:last-child {
+	margin-bottom: 1rem;
+}
+.Group .Box--listadoD4 {
+	padding: 0.25rem;
+}
+.Group--color2 .Box--listadoD4 {
+	.Box-name,
+	.Box-subtitle,
+	a {
+    color: #fff;
+	}
+}

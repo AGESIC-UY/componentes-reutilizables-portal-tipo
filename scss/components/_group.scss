@@ -1,0 +1,139 @@
+.Group {
+  background-color: $light-blue;
+  padding-top: 4rem;
+  padding-bottom: 3rem;
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.Group + .Group {
+  margin-top: -2.5rem;
+}
+
+// Color celeste claro por defecto, .u-bgLightBlue
+.Group--color1 {
+  background-color: $light-blue;
+}
+
+// Repite color secundario seleccionado, .u-bgColor8
+.Group--color2 {
+  background-color: $color-8;
+	color: $white;
+	
+	.Group-title, 
+	.Group-footer a {
+		color: $white;
+	}
+	
+	.Group-footer {
+		border-top: 1px solid rgba(255,255,255,.15);
+	}
+	
+	.Box {
+		// Mantiene el negro por defecto en textos dentro de contenedores
+		color: $black;
+	}
+	
+}
+
+// Color personalizado seleccionado
+.Group--color3 {
+	background-color: #CCE5E8;
+}
+
+.Group-title {
+  margin-bottom: 3rem;
+  font-weight: 400;
+  font-size: 32px;
+}
+
+.Group-footer {
+  margin-top: 2.5rem;
+  border-top: 1px solid rgba(0, 0, 0, .05);
+  text-align: center;
+  padding-top: 1.5rem;
+  font-size: 1.5rem;
+}
+
+@include md(down) {
+  .Group-footer {
+    font-size: 1.125em;
+  }
+}
+
+/**
+ * Header similar a UN en gub.uy
+ * Usar .u-nt6 para sobreponer el contenido con el cabezal
+ */
+
+.Group--header {
+  padding: 3.25rem 0 6.25rem;
+}
+
+@media screen and (min-width: 768px) {
+  .Group-inner .Dropdown {
+      margin-top: -40px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .Group--header .Group-title {
+      width: calc(100% - 240px);
+  }
+}
+
+@include md(down) {
+	.Group--bookHeader {
+	
+		&.Group--header {
+			padding: 2.5rem 0 5.5rem;
+		}
+	
+		.Group-title {
+			font-size: 1.75rem;
+			font-weight: 600;
+			line-height: 1.25;
+			text-align: center;
+		}
+
+		.Group-inner {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+	}
+}
+
+/* Grupo con fondo + Grilla con contenedores */
+.Group--fondo {
+	position: relative;
+	overflow: hidden;
+	
+	.Group-cover {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		display: flex;
+		
+		> img,
+		> video {
+			width: 100%;
+			margin-bottom: 0;
+			object-fit: cover;
+		}
+	}
+	
+	.Module {
+		margin-bottom: 1rem;
+	}
+	
+	.Grid-item > .Module-item:last-child .Box {
+		margin-bottom: 0rem;
+	}
+}
+
+/* Fix de convivencia entre Containers y Grupos */
+.Container + .Group {
+	margin-top: 1rem;
+}

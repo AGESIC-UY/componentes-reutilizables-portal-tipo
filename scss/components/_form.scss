@@ -1,0 +1,596 @@
+/** @define Form; weak */
+
+$Form-widget-max-width: 28em;
+
+/**
+ * Clases disponibles:
+ *
+ * .Form (aplicar sobre <form>)
+ * .Form-widget
+ *    .Form-widget--small
+ *    .Form-widget--medium
+ *    .Form-widget--read (para campos solo lectura, no usar <input>, solo <div>)
+ * .Form-radio
+ * .Form-select (REVISAR NOMBRE) (se debe agregar junto con .Form-widget)
+ * .Form-textarea (no es obligatorio)
+ * .Form-label (usar siempre para <label> o el elemento que se quiera simular)
+ * .Form-subLabel (NO USAR)
+ * .Form-group
+ *    .Form-group--disabled
+ *    .Form-group--aligned
+ *    .Form-group--error
+ * .Form-checkboxes
+ * .Form-options (REVISAR)
+ * .Form-option (REVISAR)
+ * .Form-option-color (REVISAR)
+ * .Form-error (texto con el detalle del error para el campo)
+ * .Form-actions (agrupar botones al final del formulario)
+ * .Form-hint (texto de ayuda para el campo)
+ * .Form-grid (usar en conjuncion con .Grid)
+ * .Form-fieldset (no es obligatorio)
+ * .Form-legend (no es obligatorio)
+ * .Form-title (NO USAR)
+ * .Form-subtitle (NO USAR)
+ * .Form-note (para la nota de "Todos los campos indicados con * son obligatorios")
+ *
+ * Los Widgets Nativos de Formularios:
+ * https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms/The_native_form_widgets
+ */
+
+.Form-widget {
+  display: table-cell;
+  vertical-align: top;
+  border-radius: 2px;
+  border: 1px solid #bbb;
+  font-family: inherit;
+  padding: .5em;
+  width: 100%;
+  max-width: $Form-widget-max-width;
+
+  &:disabled {
+    opacity: .35;
+    background-color: #eee;
+  }
+
+  &:focus {
+    border-color: $focus-color !important;
+    outline: none;
+    box-shadow: inset 0 1px 2px rgba(255, 190, 70, 0.075), 0 0 0 0.2em rgba(255, 190, 70, 0.3);
+  }
+
+  &[type="file"] {
+    border: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  @include md(down) {
+    width: 100%;
+    display: block;
+    padding-top: .5em;
+    padding-left: .75em;
+  }
+}
+
+.Form-widget--read {
+  font-weight: 600 !important;
+  padding-top: .5em;
+  padding-bottom: .5em;
+  border-color: transparent;
+
+  @include md(down) {
+    padding-top: 0;
+  }
+
+  > *:first-child {
+    margin-bottom: 0;
+  }
+
+  > * + * {
+    margin-bottom: 0;
+    margin-top: 1em;
+  }
+}
+
+.Form-widget--medium {
+  max-width: 16rem !important;
+}
+
+.Form-widget--small {
+  max-width: 8rem !important;
+}
+
+.Form-radio {
+  display: block;
+
+  & + .Form-radio {
+    margin-top: .5em;
+  }
+}
+
+.Form-select,
+.Form select {
+  height: 2.625em;
+  background-color: #fff;
+
+  width: 100%;
+
+  // Si no tiene .Form-widget--select (las siguientes lineas sacar)
+  // border-radius: 2px;
+  // border: 1px solid #bbb;
+  // font-family: inherit;
+  // padding: .5em;
+  // width: 100%;
+  // max-width: $Form-widget-max-width;
+}
+
+.Form-textarea,
+.Form textarea {
+  min-height: 7.5em;
+}
+
+.Form-label {
+  padding: 8px 0;
+  margin: 0;
+  display: table-cell;
+  vertical-align: top;
+  width: 35%;
+  text-align: right;
+  padding-right: .75em;
+
+  @include md(down) {
+    width: 100%;
+    display: block;
+    text-align: left;
+
+    padding-top: .25em;
+    padding-bottom: .25em;
+  }
+}
+
+.Form-subLabel {
+  padding-top: .5em;
+  // display: block;
+
+  padding-bottom: .5em;
+}
+
+.Form-group {
+  border: 1px solid transparent; // evitar salto cuando tiene error
+  margin-bottom: 2px;
+  padding-bottom: .75em;
+  padding-top: .75em;
+  display: table;
+  vertical-align: top;
+  width: 100%;
+}
+
+// Cuando no tiene label agregar esta clase a .Form-group
+.Form-group--aligned {
+  @include md {
+    padding-left: 35%;
+  }
+}
+
+.Form-group--disabled {
+  .Form-label {
+    opacity: .35;
+  }
+}
+
+.Form-group--error {
+  background-color: lighten(#c33, 47%);
+  border: 1px solid lighten(#c33, 40%);
+  border-radius: 3px;
+
+  .Form-widget {
+    border-color: #c33 !important;
+  }
+
+  @include md(down) {
+    margin-left: -.625em;
+    margin-right: -.625em;
+    padding-left: .625em;
+    padding-right: .625em;
+    width: calc(100% + 1.25em);
+  }
+}
+
+.Form-checkboxes {
+  padding-left: .25rem;
+
+  > * {
+    margin-bottom: .45rem;
+    position: relative;
+  }
+
+  > * > label {
+    line-height: 22px;
+  }
+
+  > * > label > span {
+    padding-left: 20px;
+    display: inline-block;
+    // line-height: 22px;
+  }
+
+  > * > label > input {
+    position: absolute;
+    top: 5px;
+  }
+}
+
+.Form-options {
+  margin-top: .5rem;
+
+  @include md(down) {
+    margin-left: 1em;
+  }
+}
+
+.Form-option {
+  display: flex;
+  // align-items: center;
+  margin-bottom: .75em;
+  // line-height: 1.25;
+  text-align: left; // override de FT1
+  width: 100%; // Override de FT1
+
+  > * + * {
+    margin-left: .5em;
+  }
+
+  [type="radio"],
+  [type="checkbox"] {
+    margin: 4px 0;
+  }
+}
+
+.Form-option-color {
+	border-radius: 2px;  
+	padding-right: 21px; 
+	margin-right:.4rem;
+ }
+
+.Form-error {
+  color: darken(#c33, 12%);
+  font-size: .825em;
+}
+
+.Form-actions {
+  display: flex;
+
+  > :last-child {
+    justify-self: flex-end;
+  }
+
+  @include md {
+    justify-content: space-between;
+    align-items: center;
+
+    .Button + .Button {
+      margin-left: 1rem;
+    }
+  }
+
+  @include md(down) {
+    flex-direction: column;
+    text-align: center;
+
+    > *:first-child {
+      order: 2;
+      margin-top: 1.5rem;
+    }
+
+    > *:last-child {
+      order: 1;
+    }
+
+    .Button + .Button {
+      margin-top: 1rem;
+    }
+
+    .Button {
+      display: block;
+      width: 100%;
+    }
+  }
+}
+
+.Form-hint {
+  color: $gray-text-soft;
+  font-size: .875em;
+  margin-top: .25em;
+}
+
+.Form-grid {
+  max-width: calc(28em + 16px);
+  margin-left: -8px;
+  margin-right: -8px;
+
+  > .Grid-item {
+    padding-right: 8px;
+    padding-left: 8px;
+  }
+}
+
+.Form-fieldset,
+.Form fieldset {
+  border-color: #ddd;
+  padding: 1.25em;
+  margin: 0;
+  margin-bottom: 1.5em;
+
+  @include md(down) {
+    border: 0;
+    padding: 0;
+  }
+
+  & + a {
+    position: relative;
+    top: -.5rem
+  }
+}
+
+.Form-legend,
+.Form legend {
+  padding-left: .75em;
+  padding-right: .75em;
+
+  @include md(down) {
+    position: relative;
+    overflow: hidden;
+    padding-left: 0;
+    width: 100%;
+
+    > * {
+      display: inline-block;
+      background-color: #fff;
+      position: relative;
+      z-index: 2;
+      padding-right: 1em;
+    }
+
+    &:before {
+      display: block;
+      height: 1px;
+      width: 100%;
+      background-color: #ccc;
+      content: '';
+      top: 50%;
+      position: absolute;
+      z-index: 1;
+    }
+  }
+}
+
+// Fieldset anidado (hasta segundo nivel)
+.Form fieldset fieldset .Form-label {
+  width: 34%;
+
+  @include md(down) {
+    width: 100%;
+  }
+}
+
+.Form fieldset fieldset .Form-group--aligned {
+	@include md {
+    padding-left: 34%;
+  }
+}
+
+// .Form-title {
+//   font-size: 1.25em;
+// }
+
+// .Form-subtitle {
+//   margin-top: 3rem;
+//   margin-bottom: 2rem;
+//   font-weight: 500;
+//   font-size: 1.375em;
+//   border-bottom: 1px solid #ddd;
+//   padding-bottom: .75rem;
+//   color: #555;
+// }
+
+.Table--form {
+  .Form-widget {
+    border-radius: 2px;
+    border: 1px solid #bbb;
+    font-family: inherit;
+    padding: .3em .5em;
+    width: 100%;
+    max-width: $Form-widget-max-width;
+  }
+
+  tbody td {
+    vertical-align: middle;
+  }
+
+  select {
+    height: 2rem;
+    background-color: #fff;
+  }
+}
+
+.Table--responsive tr td .Form-widget {
+  font-weight: normal;
+}
+
+// .Form .Form-group:last-child {
+//   margin-bottom: 0;
+// }
+
+// .Form .Form-group:first-child {
+//   margin-top: 0;
+// }
+
+.Form--stacked .Form-label {
+  width: 100%;
+  display: block;
+  text-align: left;
+  padding-right: 0;
+  padding-bottom: 0;
+}
+
+.Form--stacked .Form-widget {
+  display: block;
+  margin-top: .25em;
+
+  max-width: 100%;
+}
+
+// .Form-control {
+//   display: flex;
+//   align-items: center;
+//   justify-content: space-between
+// }
+
+.Form > fieldset > legend,
+.Form-title {
+  font-size: 1.35em;
+  line-height: 1.125;
+
+  @include md(down) {
+    margin-bottom: 1.5rem;
+  }
+}
+
+.Form > fieldset > fieldset > legend,
+.Form-subtitle {
+  font-size: 1.125em;
+  line-height: 1.25;
+}
+
+.Form-note {
+  text-align: right;
+  font-size: .85em;
+  margin-bottom: 0;
+  margin-top: 0;
+  display: block;
+}
+
+.Form-content {
+  max-width: 780px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include md(down) {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+}
+
+/* Formulario usado para los filtros */
+
+.Form--filters {
+  padding: 0 1.5rem;
+
+  .Form-label {
+		@include md {
+  		font-weight: 600;
+  	}
+	}
+  
+  .Form-group {
+		padding-top: .5rem;
+		
+		@include md {
+  		padding-top: .15rem;
+		}
+  }
+   
+  > .Form-group:last-child {
+ 	 padding-top: 1.15rem;
+  }
+}
+
+/**
+ * REVISAR
+ */
+
+.Alert svg {
+  display: block;
+}
+
+.Form-valid {
+  height: 26px;
+  width: 26px;
+  border-radius: 50%;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  margin-top: .45rem;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%2328a745' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: calc(.75em + .375rem) calc(.75em + .375rem);
+}
+
+.Form-help {
+  height: 26px;
+  width: 26px;
+  border-radius: 50%;
+  background-color: $color-1;
+  color: #fff;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  margin-top: .45rem;
+}
+
+.Form-widget + .Form-valid,
+.Form-widget + .Form-help {
+  display: inline-flex;
+  margin-left: 1rem;
+
+  @include md(down) {
+    margin-left: 0;
+  }
+}
+
+// Tooltip
+// .Tooltip {
+//   position: relative;
+// }
+
+// .Tooltip-target {
+//   display: none;
+//   position: absolute;
+//   border: 1px solid #eee;
+//   border-radius: 4px;
+//   top: -64px;
+//   left: calc(-50% + 1.5rem);
+//   transform: translateX(-50%);
+
+//   width: 200px;
+//   background-color: #fff;
+//   color: #000;
+//   font-weight: normal;
+//   font-size: 1rem;
+//   box-shadow: 0 2px 10px rgba(0, 0, 0, .1);
+//   text-align: left;
+//   padding: 1rem;
+// }
+
+// .Tooltip:hover {
+//   .Tooltip-target {
+//     display: block;
+//   }
+// }
+
+::placeholder {
+  color: $gray-text-soft;
+  opacity: 1;
+  font-style: italic;
+}
+
+:-ms-input-placeholder,
+::-ms-input-placeholder {
+	color: $gray-text-soft;	
+	font-style: italic;
+}

@@ -1,0 +1,194 @@
+/* Calendario
+   ========================================================================== */
+
+/**
+ * @dependencies Box, Date, Media
+ *
+ * 1. Puede tener listado o ser solo un evento destacado.
+ */
+
+/* */
+
+.Box--event {
+  overflow: hidden;
+
+  .Box-title {
+    font-size: 1.25em;
+    margin-bottom: .25em;
+		
+		@include md(down) {
+			font-size: 1.125em;
+		}	
+  }
+
+  .Box-subtitle {
+    font-size: .7em;
+    color: $base-link-color;
+    margin-bottom: 1.25em;
+    text-transform: uppercase;
+		
+		// Fix para que no aparezca espacio vacío 
+		&:empty {
+			display: none;
+		}
+  }
+
+  .Box-info {
+    text-transform: uppercase;
+    color: $gray-text;
+    font-size: .7em;
+  }
+
+  .Box-inner > p, // unsafe
+  .Box-text {
+    margin-bottom: 0;
+    margin-top: .5em;
+    font-size: .9375em;
+  }
+
+  .Box-image {
+    width: 100%;
+    height: auto;
+  }
+	
+	.Media-image {
+		float: left;
+		margin-bottom: 0;
+	}
+
+  .Box-inner {
+    background-color: #f3f3f3;
+    border-radius: $Box-border-radius-inner;
+    padding: 1.25em;
+    margin-bottom: 1.5rem;
+		
+		.Box-subtitle {
+			margin-top: 0em;
+		}
+
+    .Media-image {
+      margin-right: 1rem;
+			
+			@include md(down) {
+				margin-right: .75rem;
+			}
+    }
+		
+		.Date, .Fecha {
+			box-shadow: 0 2px 5px rgba(0, 0, 0, .15);
+		}
+  }
+
+  .Box-date {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .15);
+    z-index: 100;
+    right: 1em;
+    top: -3.25em;
+  }
+
+  .Box-body {
+    padding: 1.25rem;
+    padding-bottom: 0;
+    padding-top: 0;
+    padding-bottom: 1rem;
+		
+		@include md(down) {
+			padding-top: 0.5rem;
+			
+			&.u-textCenter {
+				padding-top: 0rem;
+    		padding-bottom: 1.15rem;
+			}
+		}	
+  }
+	
+	.Date {
+		@include md(down) {
+			// Se duplican los estilos de la clase modificadora Date--small
+			font-size: .75rem;
+			width: 3.75em;
+			
+			.Date-day {
+    		padding-top: 0.15em;
+    		padding-bottom: 0.15em;
+			}
+		}
+	}
+	
+	.Fecha {
+		font-size: .85rem;
+		width: 3.75em;
+
+		.Fecha-dia {
+			padding-bottom: .15em;
+		}
+	}
+	
+	/* Ajustes MF */
+	&.Box--mf {
+		@include md(down) {
+			.Box-inner {
+				margin-left: -0.5rem;
+				margin-right: -0.5rem;
+			}
+			
+			.Box-body {
+				margin-left: -24px;
+				margin-right: -24px;
+				padding: 0;
+
+				.Box-mediaList {
+					scroll-snap-type: x mandatory;
+					display: flex;
+					overflow: auto;
+					margin-top: 2rem;
+
+					li {
+						border-top: none;
+						padding-top: 0;
+						padding-bottom: 0;
+						padding: 0 1.5rem;
+						scroll-snap-align: start;
+						overflow: unset;
+						padding-left: 1.5rem!important;
+						margin-bottom: 2rem;
+
+						&:first-child {
+							padding-left: 2.25rem!important;
+						}
+
+						+ li:last-child {
+							padding-right: 1.5rem!important;
+						}
+
+						> .Media-inner {
+							width: 72vw;
+						}
+						
+						&:only-child {
+							padding-left: 2.25rem!important;
+							padding-right: 2.25rem!important;
+							margin-bottom: 2rem;
+							
+							> .Media-inner {
+								width: 100%;
+							}
+						}
+					}
+				}
+			}
+			
+			.Box-text {
+				display: inline-block;
+				font-size: .875em;
+			}
+		}
+	}
+}
+
+.Box-time {
+  font-size: 1.125em;
+  line-height: 1.25;
+  margin-bottom: .5em;
+  display: block;
+}

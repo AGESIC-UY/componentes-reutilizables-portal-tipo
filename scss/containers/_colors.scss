@@ -1,0 +1,230 @@
+$border-decoration-width: 5px;
+$border-decoration-height: 1.5em;
+$border-decoration-radius: 3px;
+
+// $color-1: $blue; // azul es el color por defecto
+// $color-2: #36cfc9;
+// $color-3: #ea4aaa;
+// $color-4: #fcd649;
+// $color-5: #6f42c1;
+// $color-6: #28a745;
+// $color-7: #ee6b1f;
+// $color-8: #198580; // para Destacado 1
+
+// $color-1: $color-1; // azul es el color por defecto
+// $color-2: $color-2;
+// $color-3: $color-3;
+// $color-4: $color-4;
+// $color-5: #36cfc9;
+// $color-6: #ea4aaa;
+// $color-7: #28a745;
+// $color-8: #198580; // para Destacado 1
+
+// .u-bgColorA { background-color: $color-1; }
+// .u-bgColorB { background-color: $color-2; }
+// .u-bgColorC { background-color: $color-3; }
+// .u-bgColorD { background-color: $color-4; }
+// .u-bgColorE { background-color: $color-5; }
+// .u-bgColorF { background-color: $color-6; }
+// .u-bgColorG { background-color: $color-7; }
+// .u-bgColorH { background-color: $color-8; }
+
+// :root {
+//   --color-1: #3155a6;
+//   --color-2: #36cfc9;
+//   --color-3: #ea4aaa;
+//   --color-4: #fcd649;
+//   --color-5: #6f42c1;
+//   --color-6: #28a745;
+//   --color-7: #ee6b1f;
+//   --color-8: #198580;
+// }
+
+.Box-name {
+  position: relative;
+
+  &:before {
+    content: '';
+    display: inline-block;
+    width: $border-decoration-width;
+    height: $border-decoration-height;
+    background-color: transparent;
+    position: absolute;
+    top: .1em;
+    left: -1.5rem;
+    border-top-right-radius: $border-decoration-radius;
+    border-bottom-right-radius: $border-decoration-radius;
+  }
+}
+
+.Box--color1 { .Box-name:before { background-color: $color-1; } }
+.Box--color2 { .Box-name:before { background-color: $color-2; } }
+.Box--color3 { .Box-name:before { background-color: $color-3; } }
+.Box--color4 { .Box-name:before { background-color: $color-4; } }
+.Box--color5 { .Box-name:before { background-color: $color-5; } }
+.Box--color6 { .Box-name:before { background-color: $color-6; } }
+.Box--color7 { .Box-name:before { background-color: $color-7; } }
+.Box--color8 { .Box-name:before { background-color: $color-8; } }
+.Box--color9 { .Box-name:before { background-color: $color-9; } }
+.Box--color10 { .Box-name:before { background-color: $color-10; } }
+.Box--color11 { .Box-name:before { background-color: $color-11; } }
+.Box--color12 { .Box-name:before { background-color: $color-12; } }
+
+/* Destacado 3 */
+
+.Box--destacado3 {
+  .Box-title:before {
+    content: '';
+    display: inline-block;
+    width: $border-decoration-width;
+    height: $border-decoration-height;
+    background-color: transparent;
+    position: absolute;
+    top: 1.2em;
+    left: 0;
+    border-top-right-radius: $border-decoration-radius;
+    border-bottom-right-radius: $border-decoration-radius;
+  }
+}
+
+.Box--destacado3 {
+  &.Box--color1 { .Box-title:before { background-color: $color-1; } }
+  &.Box--color2 { .Box-title:before { background-color: $color-2; } }
+  &.Box--color3 { .Box-title:before { background-color: $color-3; } }
+  &.Box--color4 { .Box-title:before { background-color: $color-4; } }
+  &.Box--color5 { .Box-title:before { background-color: $color-5; } }
+  &.Box--color6 { .Box-title:before { background-color: $color-6; } }
+  &.Box--color7 { .Box-title:before { background-color: $color-7; } }
+  &.Box--color8 { .Box-title:before { background-color: $color-8; } }
+	&.Box--color9 { .Box-title:before { background-color: $color-9; } }
+	&.Box--color10 { .Box-title:before { background-color: $color-10; } }
+	&.Box--color11 { .Box-title:before { background-color: $color-11; } }
+	&.Box--color12 { .Box-title:before { background-color: $color-12; } }
+}
+
+/* Acceso */
+
+.Box--acceso {
+  border-left: $border-decoration-width solid transparent;
+
+  &.Box--color1 { border-left-color: $color-1; }
+  &.Box--color2 { border-left-color: $color-2; }
+  &.Box--color3 { border-left-color: $color-3; }
+  &.Box--color4 { border-left-color: $color-4; }
+  &.Box--color5 { border-left-color: $color-5; }
+  &.Box--color6 { border-left-color: $color-6; }
+  &.Box--color7 { border-left-color: $color-7; }
+  &.Box--color8 { border-left-color: $color-8; }
+	&.Box--color9 { border-left-color: $color-9; }
+	&.Box--color10 { border-left-color: $color-10; }
+	&.Box--color11 { border-left-color: $color-11; }
+	&.Box--color12 { border-left-color: $color-12; }
+	
+	/* MOBILE FIRST 
+	Cambia elemento con color por redondeo de bordes
+	&.Box--mf {
+		border-left: none;
+	
+		&:before {
+			content: "";
+			display: inline-block;
+			width: 5px;
+			height: 100%;
+			background-color: transparent;
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+
+		&.Box--color1:before { background-color: $color-1;}
+		&.Box--color2:before { background-color: $color-2;}
+		&.Box--color3:before { background-color: $color-3;}
+		&.Box--color4:before { background-color: $color-4;}
+		&.Box--color5:before { background-color: $color-5;}
+		&.Box--color6:before { background-color: $color-6;}
+		&.Box--color7:before { background-color: $color-7;}
+		&.Box--color8:before { background-color: $color-8;}
+
+		&.Box--color1, &.Box--color2, &.Box--color3, &.Box--color4, &.Box--color5, &.Box--color6, &.Box--color7, &.Box--color8 {
+			padding-left: 1.8125rem;
+		}
+	}*/
+}
+
+/* Destacado 1 */
+
+.Box--destacado1 {
+  &.Box--color8 { 
+		.Box-overlay { 
+			@include rgba-background($color-8, 0.9); 
+			@include md(down) { background-color: $color-8; } 
+		}
+	}
+}
+
+.Box--destacado1.Box--solid {
+  &.Box--color8 { 
+		.Box-overlay { 
+			background-color: $color-8; 
+		} 
+	}
+}
+
+/* Listado enlaces */
+.Box--listadoEnlaces.Box--mf {
+	&.Box--color1 .u-bullet li:before { border-color: $color-1;}
+	&.Box--color2 .u-bullet li:before { border-color: $color-2;}
+	&.Box--color3 .u-bullet li:before { border-color: $color-3;}
+	&.Box--color4 .u-bullet li:before { border-color: $color-4;}
+	&.Box--color5 .u-bullet li:before { border-color: $color-5;}
+	&.Box--color6 .u-bullet li:before { border-color: $color-6;}
+	&.Box--color7 .u-bullet li:before { border-color: $color-7;}
+	&.Box--color8 .u-bullet li:before { border-color: $color-8;}
+}
+
+/* Listado accesos */
+.Box--listadoAccesos {
+	&.Box--color1 .Flag-body .Box-title:after { border-color: $color-1;}
+	&.Box--color2 .Flag-body .Box-title:after { border-color: $color-2;}
+	&.Box--color3 .Flag-body .Box-title:after { border-color: $color-3;}
+	&.Box--color4 .Flag-body .Box-title:after { border-color: $color-4;}
+	&.Box--color5 .Flag-body .Box-title:after { border-color: $color-5;}
+	&.Box--color6 .Flag-body .Box-title:after { border-color: $color-6;}
+	&.Box--color7 .Flag-body .Box-title:after { border-color: $color-7;}
+	&.Box--color8 .Flag-body .Box-title:after { border-color: $color-8;}
+}
+
+/* Hero */
+.Hero,
+.Box--hero {
+  &.Box--color8 { & > .Grid { background-color: $color-8; } }
+}
+
+/* Casos especiales */
+.Box--sinae .Box-name:before {
+  display: none;
+}
+
+/* Timeline */
+.Box--timeline {
+	&.Box--color1 {.Box-body, .timeline-mark, .timeline-mark span {border-color: $color-1;}}
+	&.Box--color2 {.Box-body, .timeline-mark, .timeline-mark span {border-color: $color-2;}}
+	&.Box--color3 {.Box-body, .timeline-mark, .timeline-mark span {border-color: $color-3;}}
+	&.Box--color4 {.Box-body, .timeline-mark, .timeline-mark span {border-color: $color-4;}}
+	&.Box--color5 {.Box-body, .timeline-mark, .timeline-mark span {border-color: $color-5;}}
+	&.Box--color6 {.Box-body, .timeline-mark, .timeline-mark span {border-color: $color-6;}}
+	&.Box--color7 {.Box-body, .timeline-mark, .timeline-mark span {border-color: $color-7;}}
+	&.Box--color8 {.Box-body, .timeline-mark, .timeline-mark span {border-color: $color-8;}}
+}
+
+/* Galería */
+.Box--galeria {
+	&.Box--color1 .Carousel .owl-dots .owl-dot.active span {background:$color-1;}
+	&.Box--color2 .Carousel .owl-dots .owl-dot.active span {background:$color-2;}
+	&.Box--color3 .Carousel .owl-dots .owl-dot.active span {background:$color-3;}
+	&.Box--color4 .Carousel .owl-dots .owl-dot.active span {background:$color-4;}
+	&.Box--color5 .Carousel .owl-dots .owl-dot.active span {background:$color-5;}
+	&.Box--color6 .Carousel .owl-dots .owl-dot.active span {background:$color-6;}
+	&.Box--color7 .Carousel .owl-dots .owl-dot.active span {background:$color-7;}
+	&.Box--color8 .Carousel .owl-dots .owl-dot.active span {background:$color-8;}
+}

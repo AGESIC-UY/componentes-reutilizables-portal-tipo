@@ -1,0 +1,49 @@
+.Card {
+  border-radius: 6px;
+  border: 1px solid #eee;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, .05);
+  padding: 1.25rem;
+  display: flex;
+
+  @include sm(down) {
+    flex-direction: column;
+  }
+}
+
+.Card-title {
+  font-weight: 400;
+  font-size: 24px;
+  padding-top: 0.325em;
+  margin-bottom: .625em;
+}
+
+.Card-image {
+  flex: 1;
+
+  @include sm {
+    margin-right: 1.25rem;
+  }
+
+  @include sm(down) {
+    margin-bottom: 1rem;
+  }
+
+  img {
+    border-radius: 2px;
+    width: 100%;
+    height: auto;
+  }
+}
+
+.Card-text {
+  color: #000;
+}
+
+.Card-body {
+  flex: 3;
+}
+
+.Card-source {
+  font-size: .9375em;
+  color: #555;
+}

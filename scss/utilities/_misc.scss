@@ -1,0 +1,305 @@
+/** @define utilities */
+/* stylelint-disable declaration-no-important */
+
+/* Clearfix
+   ========================================================================== */
+
+.u-cfx {
+  @include clearfix;
+}
+
+/* Floats
+   ========================================================================== */
+
+.u-left {
+  float: left !important;
+}
+
+.u-right {
+  float: right !important;
+}
+
+@include sm {
+  .u-sm-left {
+    float: left !important;
+  }
+
+  .u-sm-right {
+    float: right !important;
+  }
+}
+
+@include md {
+  .u-md-left {
+    float: left !important;
+  }
+
+  .u-md-right {
+    float: right !important;
+  }
+}
+
+@include lg {
+  .u-lg-left {
+    float: left !important;
+  }
+
+  .u-lg-right {
+    float: right !important;
+  }
+}
+
+/* Show & Hide
+   ========================================================================== */
+
+/**
+ * Mostrar y ocultar elementos de pantalla para RWD
+ */
+
+.u-hide {
+  display: none !important;
+}
+
+.u-show {
+  display: block !important;
+}
+
+@include sm {
+  .u-sm-show {
+    display: block !important;
+  }
+
+  .u-sm-hide {
+    display: none !important;
+  }
+}
+
+@include md {
+  .u-md-show {
+    display: block !important;
+  }
+
+  .u-md-hide {
+    display: none !important;
+  }
+}
+
+@include lg {
+  .u-lg-show {
+    display: block !important;
+  }
+
+  .u-lg-hide {
+    display: none !important;
+  }
+}
+
+/* Table displays
+   ========================================================================== */
+
+.u-table {
+  display: table !important;
+}
+
+.u-tableCell {
+  display: table-cell !important;
+}
+
+.u-alignMiddle {
+  vertical-align: middle !important;
+}
+
+/* Others
+   ========================================================================== */
+
+/**
+ * Se aplicar generalmente al contenedor <main id="contenido">
+ */
+
+.u-main {
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+/**
+ * Forzar posicionamiento
+ */
+
+.u-relative {
+  position: relative !important;
+}
+
+/**
+ * Hacer elementos redondos
+ */
+
+.u-circle {
+  border-radius: 50% !important;
+}
+
+/**
+ * Explicitar imagenes responsives
+ */
+
+.u-imgResponsive {
+  width: 100%;
+  height: auto;
+}
+
+/**
+ * Resetear estilos de listas
+ */
+
+.u-listReset {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/**
+ * Listas mejoradas con bullets personalizados
+ */
+
+.u-bullet {
+  padding-left: 1.5em;
+
+  li + li {
+    margin-top: .825em;
+  }
+
+  li {
+    line-height: 1.325;
+    list-style-type: none;
+    position: relative;
+
+    &:before {
+      content: '\2022';
+      font-size: .75em;
+      position: absolute;
+      top: .25em;
+      left: -1.25em;
+    }
+		
+		ul {
+			margin-top: .75rem;
+		}
+  }
+}
+
+/**
+ * Crear reglas horizontales <hr> sobre cualquier elemento
+ */
+
+.u-hr {
+  border: 0;
+  border-top: 1px solid #ccc;
+  display: block;
+  height: 1px;
+  margin: 2em 0;
+  padding: 0;
+}
+
+/**
+ * Invertir subrayado para links alternativos
+ */
+
+.u-alternativeLink {
+  text-decoration: underline;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.u-inlineBlock {
+  display: inline-block !important;
+}
+
+
+/**
+ * Links a URL externas
+ * 
+ * Referencia a imagen SVG de assets
+ * Modificadores de color para el ícono en blanco y negro
+ * En los botones este cambio es automático y está en button.scss
+ */
+
+.u-outerLink {
+}
+
+.u-outerLink:after {
+	content:"";
+	padding-left: 15px;
+	background: url(../assets/outerLink.svg) no-repeat top left;
+	margin-left: 3px;
+	background-size: 16px;
+}
+
+.u-outerLink--white:after {
+	background-image: url(../assets/outerLink-white.svg);
+}
+
+.u-outerLink--black:after {
+	background-image: url(../assets/outerLink-black.svg);
+}
+
+
+/**
+ * Border
+ */
+
+.u-border {
+  border: 1px solid #eee;
+}
+
+.u-borderBottom {
+  border-bottom: 1px solid #eee;
+}
+
+.u-borderTop {
+  border-bottom: 1px solid #eee;
+}
+
+.u-borderNone {
+	border: none;
+}
+
+.u-borderBottomNone {
+  border-bottom: none;
+}
+
+.u-borderTopNone {
+  border-bottom: none;
+}
+
+
+/**
+ * Border radius
+ */
+
+.u-imgBorderRadius,
+.u-innerBorderRadius {
+	border-radius: $Box-border-radius-inner;	
+}
+
+
+/**
+ * Flexbox
+ */
+
+.u-flex {
+  display: flex;
+}
+
+.u-itemsCenter {
+  align-items: center;
+}
+
+
+.u-w60 {
+  width: 60px;
+}
+
+.u-w24 {
+  width: 24px;
+}

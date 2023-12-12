@@ -1,0 +1,18 @@
+.Faq {
+  margin-bottom: 1.5em;
+}
+
+.Faq + .Faq {
+  border-top: 1px solid #eee;
+}
+
+.Faq-question {
+  padding-top: 1.5em;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1em;
+}
+
+.Faq-answer p {
+  margin-bottom: .5em;
+}

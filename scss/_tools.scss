@@ -1,0 +1,208 @@
+// ============================================================================
+// Mixins & Functions
+// ============================================================================
+
+// stylelint-disable
+
+@mixin blockquote {
+  padding: .5rem 1rem;
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+  border-left: .25rem solid #eee;
+  clear: both;
+}
+
+@mixin xs($direction: up) {
+  @if ($direction == down) {
+    @media screen and (max-width: $xs) {
+      @content;
+    }
+  } @else {
+    @media screen and (min-width: $xs) {
+      @content;
+    }
+  }
+}
+
+@mixin sm($direction: up) {
+  @if ($direction == down) {
+    @media screen and (max-width: $sm) {
+      @content;
+    }
+  } @else {
+    @media screen and (min-width: $sm) {
+      @content;
+    }
+  }
+}
+
+@mixin md($direction: up) {
+  @if ($direction == down) {
+    @media screen and (max-width: $md) {
+      @content;
+    }
+  } @else {
+    @media screen and (min-width: $md) {
+      @content;
+    }
+  }
+}
+
+@mixin lg($direction: up) {
+  @if ($direction == down) {
+    @media screen and (max-width: $lg) {
+      @content;
+    }
+  } @else {
+    @media screen and (min-width: $lg) {
+      @content;
+    }
+  }
+}
+
+
+//
+// Clearfix Mixin
+// (compatible con IE8)
+// @link http://nicolasgallagher.com/micro-clearfix-hack/
+//
+
+@mixin clearfix {
+  &:after,
+  &:before {
+    display: table;
+    content: '';
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+
+
+//
+// Reset List Mixin
+// @link https://ismamz.github.io/postcss-utilities/docs#reset-list
+//
+
+@mixin reset-list {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+
+  li {
+    list-style: none;
+  }
+}
+
+
+//
+// Truncate text with ellipsis
+//
+
+@mixin truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+//
+// Helpers Mixins for IE8, SVG, Touch, JS
+//
+
+@mixin ie8 {
+  @at-root .ie8 & {
+    @content;
+  }
+}
+
+@mixin no-touch {
+  //@at-root .no-touch & {
+  //  @content;
+  //}
+
+  .no-touch {
+    @content;
+  }
+}
+
+@mixin touch {
+  //@at-root .touch & {
+  //  @content;
+  //}
+
+  .touch {
+    @content;
+  }
+}
+
+@mixin no-svg {
+  @at-root .no-svg & {
+    @content;
+  }
+}
+
+@mixin no-js {
+  @at-root .no-js & {
+    @content;
+  }
+}
+
+
+//
+// Provides a concise, one-line method for setting `border-radius` on two
+// corners of a box
+//
+
+@mixin border-top-radius($radii) {
+  border-top-left-radius: $radii;
+  border-top-right-radius: $radii;
+}
+
+@mixin border-right-radius($radii) {
+  border-bottom-right-radius: $radii;
+  border-top-right-radius: $radii;
+}
+
+@mixin border-bottom-radius($radii) {
+  border-bottom-left-radius: $radii;
+  border-bottom-right-radius: $radii;
+}
+
+@mixin border-left-radius($radii) {
+  border-bottom-left-radius: $radii;
+  border-top-left-radius: $radii;
+}
+
+//
+// Color Contrast
+// get the contrast color for text
+//
+
+$dark-text-default: #000 !default;
+$light-text-default: #fff !default;
+
+// Calculate brightness of a given color.
+@function brightness($color) {
+  @return ((red($color) * .299) + (green($color) * .587) + (blue($color) * .114)) / 255 * 100%;
+}
+
+// Compares contrast of a given color to the light/dark arguments and returns whichever is most "contrasty"
+@function contrast($color, $dark: $dark-text-default, $light: $light-text-default) {
+  @if $color == null {
+    @return null;
+  } @else {
+    $color-brightness: brightness($color);
+    $light-text-brightness: brightness($light);
+    $dark-text-brightness: brightness($dark);
+
+    @return if(abs($color-brightness - $light-text-brightness) > abs($color-brightness - $dark-text-brightness), $light, $dark);
+  }
+}
+
+// https://newmediadenver.com/hexadecimal-to-rgba-conversion-with-sass/
+@mixin rgba-background($hexcolor, $opacity) {
+  background-color: $hexcolor;
+  background-color: rgba($hexcolor, $opacity);
+}

@@ -1,0 +1,112 @@
+/* Listado de Accesos
+   ========================================================================== */
+
+/*
+  <div class="Box Box--mf Box--listadoAccesos Box--color5">
+		<div class="Box-header">
+				<h3 class="Box-name">Listado de accesos</h3>
+		</div>
+		<div class="Box-body">
+				<p class="Box-text">Texto adicional de la variante con imagen en una columna.</p>
+				<ul class="Box-gridList Grid">
+						<li class="Grid-item">
+							<a href="#">
+								<div class="Flag">
+									<div class="Flag-image">
+											<img src="./img/60x60.png" alt="">
+									</div>
+									<div class="Flag-body">
+											<span class="Box-title">Lorem ipsum dolor</span>
+											<span class="Box-info">Dolor incorrupte</span>
+									</div>
+								</div>
+							</a>
+						</li>
+						// Se repite <li> por la cantidad de accesos que se quieran listar
+				</ul>
+		</div>
+		<div class="Box-footer">
+				<a href="#" class="Box-more">Ver todos</a>
+		</div>
+	</div>
+*/
+
+.Box--listadoAccesos {
+
+	.Box-gridList {
+		li {
+			margin-bottom: 1.5rem;
+		}
+	}
+	
+	/* Ajustes sobre el flag para alineación */
+	.Flag {
+		display: flex;
+		
+		.Flag-image > img {
+			width: 60px;
+			border-radius: 4px;
+		}
+		
+		.Flag-body {
+			display: flex;
+			width: 100%;
+			align-items: flex-start;
+			flex-direction: column;
+			justify-content: center;
+		}
+	}
+
+	.Box-text {
+		margin-bottom: 1.5rem;
+	}
+
+	.Box-title {
+		font-size: 1.25em;
+		margin-bottom: 0.125em;
+		
+		@include md(down) {
+			font-size: 1.125em;
+			margin-bottom: .25rem;
+		}
+		
+		&:last-child {
+			margin-bottom: 0;
+		}
+		
+	}
+	
+	.Box-info {
+    color: #444;
+	}
+	
+	.Box-body + .Box-footer {
+    margin-top: .5rem;
+	}
+
+	// Variante sin imagen 	
+	&.Box--listadoNoImage { 
+		.Flag-image {
+			display: none;
+		}
+		@include md(down) {
+			.Flag-body {
+				padding-right: 2rem;
+			}
+			.Flag-body .Box-title:after {
+				width: 0.5em;
+				height: 0.5em;
+				content: "";
+				border: 0.2em solid #555;
+				border-width: 0 0.2em 0.2em 0;
+				-webkit-transform: rotate(-45deg);
+				-ms-transform: rotate(-45deg);
+				transform: rotate(-45deg);
+				top: 0.65em;
+				right: 1rem;
+				font-size: .75em;
+				position: absolute;
+			}
+		}	
+	}
+}

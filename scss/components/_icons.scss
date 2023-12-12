@@ -1,0 +1,334 @@
+/** @define Icon */
+
+$Icons-path: '../assets/icons';
+
+.Icon {
+  width: 1.5em; // 24px
+  height: 1.5em; // 24px
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  top: -1px;
+}
+
+/**
+ * Modifiers
+ */
+
+.Icon--small {
+  font-size: .75rem;
+}
+
+.Icon--large {
+  font-size: 2rem;
+}
+
+/**
+ * Misc (black)
+ */
+
+.Icon--print {
+  background-image: url('#{$Icons-path}/icon-print.svg');
+
+  @include no-svg {
+    background-image: url('#{$Icons-path}/icon-print.png');
+  }
+}
+
+.Icon--share {
+  background-image: url('#{$Icons-path}/icon-share.svg');
+
+  @include no-svg {
+    background-image: url('#{$Icons-path}/icon-share.png');
+  }
+}
+
+.Icon--download {
+  background-image: url('#{$Icons-path}/icon-download.svg');
+
+  @include no-svg {
+    background-image: url('#{$Icons-path}/icon-download.png');
+  }
+}
+
+.Icon--phone {
+  background-image: url('#{$Icons-path}/icon-phone.svg');
+
+  @include no-svg {
+    background-image: url('#{$Icons-path}/icon-phone.png');
+  }
+}
+
+.Icon--search {
+  background-image: url('#{$Icons-path}/icon-search.svg');
+
+  @include no-svg {
+    background-image: url('#{$Icons-path}/icon-search.png');
+  }
+}
+
+/**
+ * Misc (Blue)
+ */
+
+.Icon--filtros {
+  background-image: url('#{$Icons-path}/icon-filtros.svg');
+}
+
+/**
+ * Social media (white)
+ */
+
+.Icon--facebook {
+  background-image: url('#{$Icons-path}/icon-facebook.svg');
+
+  @include no-svg {
+    background-image: url('#{$Icons-path}/icon-facebook.png');
+  }
+}
+
+.Icon--twitter {
+  background-image: url('#{$Icons-path}/icon-twitter.svg');
+
+  @include no-svg {
+    background-image: url('#{$Icons-path}/icon-twitter.png');
+  }
+}
+
+.Icon--google {
+  background-image: url('#{$Icons-path}/icon-google.svg');
+
+  @include no-svg {
+    background-image: url('#{$Icons-path}/icon-google.png');
+  }
+}
+
+.Icon--youtube {
+  background-image: url('#{$Icons-path}/icon-youtube.svg');
+
+  @include no-svg {
+    background-image: url('#{$Icons-path}/icon-youtube.png');
+  }
+}
+
+.Icon--instagram {
+  background-image: url('#{$Icons-path}/icon-instagram.svg');
+
+  @include no-svg {
+    background-image: url('#{$Icons-path}/icon-instagram.png');
+  }
+}
+
+.Icon--vera {
+  background-image: url('#{$Icons-path}/icon-vera.svg');
+
+  @include no-svg {
+    background-image: url('#{$Icons-path}/icon-vera.png');
+  }
+}
+
+.Icon--rss {
+  background-image: url('#{$Icons-path}/icon-rss.svg');
+
+  @include no-svg {
+    background-image: url('#{$Icons-path}/icon-rss.png');
+  }
+}
+
+.Icon--live {
+  background-image: url('#{$Icons-path}/icon-live.svg');
+
+  @include no-svg {
+    background-image: url('#{$Icons-path}/icon-live.png');
+  }
+}
+
+.Icon--reply {
+  background-image: url('#{$Icons-path}/icon-reply.svg');
+
+  @include no-svg {
+    background-image: url('#{$Icons-path}/icon-reply.png');
+  }
+}
+
+.Icon--linkedin {
+  background-image: url('#{$Icons-path}/icon-linkedin.svg');
+
+  @include no-svg {
+    background-image: url('#{$Icons-path}/icon-linkedin.png');
+  }
+}
+
+.Icon--tumblr {
+  background-image: url('#{$Icons-path}/icon-tumblr.svg');
+
+  @include no-svg {
+    background-image: url('#{$Icons-path}/icon-tumblr.png');
+  }
+}
+
+.Icon--spotify {
+  background-image: url(../assets/icons/icon-spotify.svg);
+	
+	@include no-svg {
+    background-image: url('#{$Icons-path}/icon-spotify.png');
+  }
+}
+
+/**
+ * Social media (black)
+ */
+
+.Icon--facebook-black {
+    background-image: url('#{$Icons-path}/icon-facebook-black.svg');
+}
+
+.Icon--twitter-black {
+    background-image: url('#{$Icons-path}/icon-twitter-black.svg');
+}
+
+.Icon--youtube-black {
+    background-image: url('#{$Icons-path}/icon-youtube-black.svg');
+}
+
+.Icon--linkedin-black {
+    background-image: url('#{$Icons-path}/icon-linkedin-black.svg');
+}
+
+.Icon--tumblr-black {
+    background-image: url('#{$Icons-path}/icon-tumblr-black.svg');
+}
+
+.Icon--instagram-black {
+    background-image: url('#{$Icons-path}/icon-instagram-black.svg');
+}
+
+.Icon--spotify-black {
+    background-image: url('#{$Icons-path}/icon-spotify-black.svg');
+}
+
+
+/**
+ * Tipos de archivo
+ */
+
+.File-icon {
+  text-align: center;
+  display: table-cell;
+  vertical-align: middle;
+  width: 2.25em;
+  height: 3.5em;
+}
+
+.File-icon .Icon {
+  width: 2.25em;
+  height: 3.5em;
+  top: -1px;
+  background-image: url(../assets/files/data.svg);
+}
+
+.Icon--json {
+  background-image: url(../assets/files/json.svg) !important;
+}
+
+.Icon--csv {
+  background-image: url(../assets/files/csv.svg) !important;
+}
+
+.Icon--html {
+  background-image: url(../assets/files/html.svg)!important;
+}
+
+.Icon--xls {
+  background-image: url(../assets/files/xls.svg) !important;
+}
+
+.Icon--pdf {
+  background-image: url(../assets/files/pdf.svg) !important;
+}
+
+.Icon--zip {
+  background-image: url(../assets/files/zip.svg) !important;
+}
+
+.Icon--rar {
+  background-image: url(../assets/files/rar.svg) !important;
+}
+
+.Icon--xml {
+  background-image: url(../assets/files/xml.svg) !important;
+}
+
+.Icon--txt {
+  background-image: url(../assets/files/txt.svg) !important;
+}
+
+.Icon--undefined {
+  background-image: url(../assets/files/data.svg) !important;
+}
+
+.Icon--code {
+  background-image: url(../assets/icons/icon-code.svg);
+}
+
+.Icon--move {
+  background-image: url(../assets/icons/icon-move.svg);
+}
+
+/**
+ * Icons Data Access
+ */
+
+.IconDataAccess {
+  background-image: url('../assets/data-access.gif');
+  background-repeat: no-repeat;
+	display: block;
+  height: 70px;
+  width: 70px;
+}
+
+.IconDataAccess--direct {
+  background-position: center 1%;
+}
+
+.IconDataAccess--public {
+  background-position: center 20%;
+}
+
+.IconDataAccess--licensed {
+  background-position: center 40%;
+}
+
+.IconDataAccess--remote {
+  background-position: center 59%;
+}
+
+.IconDataAccess--dataNa {
+  background-position: center 79%;
+}
+
+
+.Icon--success {
+  background-image: url('#{$Icons-path}/icon-success.svg');
+}
+
+
+/* Iconos usuario cabezal */
+.Icon--user--blue {
+    background-image: url(../assets/icons/icon-user-blue.svg);
+}
+
+.Icon--user--white {
+    background-image: url(../assets/icons/icon-user-white.svg);
+}
+
+.Icon--close--white {
+    background-image: url(../assets/icons/icon-close-white.svg);
+}
+
+.Icon--search--blue {
+    background-image: url(../assets/icons/icon-search-blue.svg);
+}

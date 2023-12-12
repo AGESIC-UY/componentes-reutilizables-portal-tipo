@@ -1,0 +1,40 @@
+/** @define Typeahead */
+
+.Typeahead {
+  background-color: #fff;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, .15);
+  border-radius: 3px;
+  position: absolute;
+  width: 100%;
+  z-index: 5;
+  top: 100%;
+  left: 0;
+  border: 1px solid #ccc;
+  display: none;
+  overflow-y: auto;
+  max-height: 20em;
+}
+
+.Typeahead-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.Typeahead-item {
+  border-bottom: 1px solid $gray-3;
+}
+
+.Typeahead-item a {
+  display: block;
+  padding: .75em 1em;
+}
+
+.Typeahead-title {
+  display: block;
+  padding: .75em 1em;
+  font-weight: 600;
+  border-bottom: 1px solid $gray-3;
+  color: #6d6e71;
+  background: $base-background-color;
+}

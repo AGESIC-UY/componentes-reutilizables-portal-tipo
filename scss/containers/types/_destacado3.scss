@@ -1,0 +1,80 @@
+/* Destacado 3
+   ========================================================================== */
+
+/*
+<div class="Box Box--mf Box--destacado3">
+	<a href="#" class="Box-title">Título del destacado 3</a>
+	<span class="Box-info">15/11/2022</span>
+	<p class="Box-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio deserunt officia tempore eius ab, est laboriosam sunt dolore in ipsa</p>
+</div>
+*/
+
+/*
+	* Clases modificadoras
+	 - De color: Box--color1, Box--color2, Box--color3, Box--color4, Box--color5, Box--color6, Box--color7, Box--color8
+*/
+
+.Box--destacado3 {
+  .Box-title {
+    margin-top: .75rem;
+    margin-bottom: .75rem;
+		
+		@include md(down) {
+			margin-top: 0.45rem;
+		}
+  }
+
+  p, // unsafe
+  .Box-text {
+    color: #000;
+		margin-top: 1rem;
+		margin-bottom: .5rem;
+		
+		+ .Box-text {
+			margin-top: 0;
+		}
+  }
+
+  .Box-info {
+		color: $gray-text;
+    margin-bottom: 1rem;
+		
+		&:empty {
+    	display: none;
+		}
+  }
+
+  &:hover {
+    text-decoration: none;
+
+    .Box-title {
+      text-decoration: underline;
+    }
+  }
+	
+	&.Box--mf {
+		padding: 1.5rem 1.5rem 1.5rem 1.75rem;
+		
+		.Box-title {
+    	margin-top: 0.5rem;
+    	margin-bottom: 0.5rem;
+			
+			@include md(down) {
+				margin-top: 0.25rem;
+			}
+			
+		&:before {
+			height: 102%;
+			top: -2px;
+		}
+	}
+		
+		&:hover .Box-title {
+				text-decoration: none;	
+		}
+
+		a.Box-title:hover {
+			text-decoration: underline;
+		}
+	}
+}

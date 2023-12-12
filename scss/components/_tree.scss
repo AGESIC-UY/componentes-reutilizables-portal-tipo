@@ -1,0 +1,435 @@
+/** @define Tree */
+// stylelint-disable
+
+.Tree {
+  h3 {
+    font-size: 1.625em;
+    margin-bottom: 0;
+  }
+
+  li {
+    list-style-type: none;
+    margin: 0;
+    padding: 10px 0 0 13%;
+    position: relative;
+    width: 87%;
+    margin-top: 20px;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+  }
+}
+
+.Tree ul:not([class]) li + li {
+  margin-top: 0 !important;
+}
+
+.Tree li.lvlOne {
+  padding-left: 0;
+  width: 100%;
+  height: auto;
+}
+
+.Tree li:before,
+.Tree li:after {
+  content: '';
+  left: 3%;
+  position: absolute;
+  right: auto;
+}
+
+.Tree li:before {
+  // border-left: 1px solid #ccc;
+  bottom: 50px;
+  height: 100%;
+  top: 0;
+  width: 0;
+}
+
+.Tree li:after {
+  // border-top: 1px solid #ccc;
+  top: 25px;
+  width: 12%;
+}
+
+.Tree li div.itemContent {
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, .15);
+  background-color: #fff;
+  position: relative;
+  z-index: 1;
+}
+
+.Tree li div.itemContent li:before,
+.Tree li div.itemContent li:after {
+  content: '';
+  position: static;
+  // border-top: none;
+}
+
+$tree-image-size: 70px;
+$tree-image-factor: 5px;
+
+/* Imagenes nivel 1 */
+.Tree ul > li div.itemContent img {
+  // float: left;
+  // width: 35%;
+  max-width: $tree-image-size;
+}
+
+/* Imagenes nivel 2 */
+.Tree ul > li > ul > li div.itemContent img {
+  max-width: $tree-image-size - $tree-image-factor * 1;
+}
+
+/* Imagenes nivel 3 */
+.Tree ul > li > ul > li > ul > li div.itemContent img {
+  max-width: $tree-image-size - $tree-image-factor * 2;
+}
+
+/* Imagenes nivel 4 */
+.Tree ul > li > ul > li > ul > li > ul > li div.itemContent img {
+  max-width: $tree-image-size - $tree-image-factor * 3;
+}
+
+/* Imagenes nivel 5 */
+.Tree ul > li > ul > li > ul > li > ul > li div.itemContent img {
+  max-width: $tree-image-size - $tree-image-factor * 3;
+}
+
+.Tree ul > li > ul > li {
+  margin-top: 0;
+  // width: 100%;
+}
+
+.Tree ul > li > ul > li:before {
+  top: 0;
+}
+
+.Tree ul > li > ul > li:last-child:before {
+  height: 25px;
+}
+
+.Tree li div.itemContent .contItem {
+  float: left;
+  margin-left: 3%;
+  width: 62%;
+  margin-top: .625rem;
+}
+
+.Tree li div.itemContent .noImage {
+  float: none;
+  margin-left: 0;
+  width: 100%;
+}
+
+.Tree li div.itemContent h2 {
+  display: block;
+  width: 100%;
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.Tree li div.itemContent ul {
+  padding-left: 15px;
+}
+
+.Tree li div.itemContent ul li {
+  list-style: disc;
+  list-style-position: outside;
+  padding-left: 5px;
+  margin-top: 0;
+  margin-left: 15px;
+  margin-bottom: 0;
+}
+
+.Tree li div.itemContent ul li a {
+  line-height: 18px;
+  padding-right: 10px;
+}
+
+.Tree li div.itemContent ul li {
+  border: none;
+  position: relative;
+  content: inherit;
+}
+
+.Tree li div.itemContent ul li:before {
+  content: '';
+  border: none;
+  height: auto;
+  width: auto;
+}
+
+.Tree li:before {
+  top: -20px;
+  padding-bottom: 20px;
+}
+
+.Tree li div.itemContent,
+.Tree li div.hasChilds {
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  display: block;
+  // overflow: hidden;
+  padding: 1em;
+  text-decoration: none;
+  width: 100%;
+}
+
+.Tree li.parent_li .hasChilds {
+  cursor: pointer;
+}
+
+.Tree > ul > li:before,
+.Tree > ul > li:after {
+  border: 0;
+}
+
+.Tree li:last-child:before {
+  height: 45px;
+}
+
+.Tree li.parent_li > .hasChilds:hover,
+.Tree li.parent_li > .hasChilds:hover + ul li .hasChilds {
+  background: #fbfbfb;
+  border: 1px solid #666;
+  color: #000;
+}
+
+.Tree {
+  h3 {
+    margin: 0;
+    font-size: 1.125rem;
+    font-weight: 400;
+    line-height: 1.25;
+  }
+
+  h4 {
+    margin: 0;
+    font-size: 1.0625rem;
+    font-weight: 600;
+  }
+
+  h5 {
+    margin: 0;
+    font-size: .925rem;
+    font-weight: 400;
+  }
+
+  h6 {
+    margin-top: .325em;
+    margin-bottom: 0;
+    font-size: .825rem;
+    font-weight: 400;
+  }
+}
+
+@include md(down) {
+  .Tree li {
+    width: 100%;
+    padding: 10px 0 0 26px;
+  }
+
+  .Tree li:after {
+    width: 17px;
+  }
+
+  .Tree h3 {
+    font-size: 96%;
+  }
+}
+
+.Tree .itemContent .Flag + .Flag {
+  margin-top: 1rem;
+}
+
+.Tree .itemContent > h3 {
+  margin-bottom: 1rem;
+  padding-bottom: .75rem;
+  border-bottom: 1px solid #eee;
+}
+
+.Flag-body h4 + h5 {
+  margin-top: .325rem;
+}
+
+
+
+.Tree li:after,
+.Tree li:before {
+  // border: 0;
+  background-color: #ccc;
+}
+
+.Tree li:after {
+  height: 2px;
+}
+
+.Tree li:before {
+  width: 2px;
+}
+
+.Tree li.lvlOne:after,
+.Tree li.lvlOne:before {
+  display: none;
+}
+
+/* Subdependencias */
+
+.Tree ul:not([class]) li.Tree-rightLink {
+  padding-left: 19% !important;
+  margin-top: 2rem !important;
+  width: 100%;
+}
+
+.Tree-rightLink:after,
+.Tree-rightLink:before {
+  display: none !important;
+}
+
+.Tree-prevRightLink:before {
+  height: 26px !important;
+}
+
+.Tree-hasRightLink {
+  position: relative;
+
+  ul {
+    margin-left: 40px;
+
+    &:before {
+      width: 2px;
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -14px;
+      z-index: 1;
+      height: calc(100% + 65px);
+    }
+  }
+}
+
+.Tree li.Tree-rightLink > .itemContent:before {
+  display: block !important;
+  position: absolute;
+  content: '';
+  z-index: 0;
+  height: 2px;
+  top: 16px;
+  left: -10%;
+  width: 10%;
+}
+
+
+.Tree li.Tree-rightLink > .itemContent:before,
+.Tree-hasRightLink ul:before {
+  background-color: #1D90FF;
+}
+.Tree-hasRightLink:not(.Tree-prevRightLink) ul:before {
+  background: linear-gradient(to bottom, #1D90FF 70%, white) !important;
+  height: calc(100% + 10px);
+}
+
+.Tree li.Tree-hasRightLink:before,
+.Tree li.Tree-hasRightLink:after {
+  background-color: $color-2;
+}
+
+.Tree ul > li > ul > li:before,
+.Tree ul > li > ul > li:after {
+  background-color: #ccc;
+}
+
+.Tree ul:not([class]) li.Tree-rightLink {
+  margin-top: 36px !important;
+  z-index: -1;
+
+  &:before {
+    height: 62px;
+    top: -36px;
+  }
+}
+
+.Tree ul > li > ul > li {
+  padding-left: 8% !important;
+}
+
+
+@include md(down) {
+  // .Tree-hasRightLink ul:before {
+  //   left: -4%;
+  // }
+
+  .Tree-hasRightLink ul {
+    margin-left: 28px;
+  }
+
+  .Tree ul {
+    width: auto;
+  }
+
+  .Tree li.Tree-rightLink > .itemContent:before {
+    left: -8%;
+    width: 8%;
+  }
+
+  .Tree ul:not([class]) li.Tree-rightLink {
+    padding-left: 20% !important;
+  }
+}
+
+@include sm(down) {
+  .Tree-hasRightLink ul:before {
+    left: -4%;
+  }
+}
+
+.Tree-rightLink {
+  &:before {
+    content: '';
+    width: 2px;
+    height: 100px;
+    background-color: red;
+    position: absolute;
+    left: -100px;
+    top: 0;
+  }
+}
+
+.Tree .Tree-rightLink div.itemContent {
+  &:after {
+    content: '';
+    display: block;
+    height: calc(100% + 100px);
+    width: 2px;
+    background-color: #1D90FF;
+    position: absolute;
+    bottom: 36px;
+    left: calc(-10% - 1px);
+
+    @include sm(down) {
+      bottom: 52px;
+      left: -20px;
+    }
+  }
+}
+
+
+.Tree-prevRightLink.Tree-hasRightLink {
+  &:before {
+    content: '';
+    height: calc(100% + 25px) !important;
+  }
+}
+
+.Tree-prevRightLink.Tree-hasRightLink + .Tree-prevRightLink.Tree-hasRightLink {
+  &:before {
+    height: 0 !important;
+  }
+}

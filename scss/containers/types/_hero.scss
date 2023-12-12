@@ -1,0 +1,124 @@
+/* Hero
+   ========================================================================== */
+/*
+	<div class="Box Box--mf Box--hero Hero">
+		<div class="Grid Grid--noGutter">
+			<div class="Grid-item u-md-size2of3">
+				<img class="Hero-image" src="./img/ruta.jpg" alt="Fotografía de una ruta vacía">
+			</div>
+			<div class="Grid-item u-md-size1of3">
+				<div class="Hero-body">
+					<span class="Box-info Box-info--absolute">Info. adicional</span>
+					<h3 class="Box-title">
+						<a href="#">Título del contenedor Hero lorem ipsum dolor sit amet, consectetur adipisicing elit</a>
+					</h3>
+					<p class="Box-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo corrupti velit voluptatum similique, doloribus temporibus cumque provident quis quia.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+*/
+
+/*
+ * Clases modificadoras
+	 - De color: Box--color8
+*/
+
+.Hero,
+.Box--hero {
+  border-radius: $Box-border-radius;
+  box-shadow: $Box-shadow;
+  position: relative;
+  background-clip: border-box;
+	padding: 0;
+}
+
+.Hero-body .Box-info {
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.Hero-body .Box-title {
+  font-size: 1.75em;
+  margin-bottom: .5em;
+  margin-top: .25em;
+
+  @include md(down) {
+    font-size: 1.375em;
+  }
+}
+
+.Hero-body .Box-info + .Box-title {
+	margin-top: .5em;
+}
+
+.Hero-body p,
+.Hero-body .Box-text {
+	color: #FFFFFF;
+	margin-bottom: 0.25em;
+}
+
+.Hero-body .Box-title a {
+  color: #fff;
+  text-decoration: underline;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.Hero-body {
+  padding: 1.5rem;
+  height: 100%;
+}
+
+.Hero > .Grid {
+  border-radius: $Box-border-radius;
+	background-color: $color-1;
+}
+
+.Hero-image {
+	width: 100%;
+  border-radius: $Box-border-radius $Box-border-radius 0 0;
+
+  @include md {
+    border-radius: $Box-border-radius 0 0 $Box-border-radius;
+  }
+}
+
+.Box--hero {
+	
+	> .Grid {
+		background-color: $color-1;
+	}
+	
+	@include md(down) {
+		margin-left: -12px;
+		margin-right: -12px;
+		border-radius: 0 !important;
+		
+		> .Grid {
+			border-radius: 0;
+		}
+		
+		.Hero-image {
+			border-radius: 0;
+		}
+		
+		.Grid-item.u-md-size1of3 {
+			position: unset;
+		}
+		
+		.Hero-body {
+
+			 .Box-title {
+				font-size: 1.5em;
+				margin-top: 0;
+			}
+
+			.Box-info + .Box-title {
+				margin-top: 0;
+			}
+		}
+	}
+}

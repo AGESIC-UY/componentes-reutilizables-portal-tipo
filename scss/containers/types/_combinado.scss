@@ -1,0 +1,36 @@
+/* Combinado
+   ========================================================================== */
+
+.Box--combinado {
+	padding: 0;
+	
+	.Hero-image {
+		border-radius: 0;
+	}
+	
+	.Box {
+		margin-bottom: 0;
+		border-radius: 0;
+		box-shadow: none;
+	}
+	
+	video,
+	iframe {
+		border-radius: 0;
+		width: 100%;
+		
+		@include md(down) {
+			min-height: 300px;
+		}
+	}
+	
+	@include md {
+		&.Box--combinadoReverse .Hero-image {
+			min-width: calc(100% + 1px);
+		}
+		
+		&:not(.Box--combinadoReverse) .Box-name:before {
+			background-color: transparent;
+		}
+	}
+}

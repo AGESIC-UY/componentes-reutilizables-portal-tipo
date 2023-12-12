@@ -1,0 +1,120 @@
+/** @define Download; weak */
+
+/**
+  <div class="Media">
+    <a class="Download" href="#" title="Descargar: Formulario para inscripcion (.pdf 354 KB)">
+      <div class="Media-image">
+        <span class="Download-icon">
+          <span class="Icon Icon--download"></span>
+        </span>
+      </div>
+      <div class="Media-body">
+        <div class="Download-title">Formulario para inscripcion (.pdf 354 KB)</div>
+        <div class="Download-description">Lorem ipsum dolor sit amet consectetur</div>
+      </div>
+    </a>
+  </div>
+ */
+
+.Download {
+  line-height: 1.35;
+  display: block;
+  color: #000;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+
+    .Download-icon {
+      background-color: #fff;
+      border: 2px solid #eee;
+    }
+
+    .Download-title {
+      text-decoration: underline;
+    }
+  }
+
+  .Media-image {
+    margin-right: 0.75rem !important;
+    width: auto;
+    float: left !important;
+		background-color: unset;
+  }
+}
+
+/**
+ * Icono descarga SVG
+ */
+
+.Download-icon {
+  border-radius: 4px;
+  background-color: #eee;
+  border: 2px solid transparent;
+  transition: background-color .35s, border-color .35s;
+  text-align: center;
+  display: table-cell;
+  vertical-align: middle;
+  width: 1.75em;
+  height: 1.75em;
+
+  .Icon {
+    top: 0;
+		width: 1.15em;
+		height: 1.15em;
+  }
+}
+
+.Download-title {
+  font-size: 1.25em;
+  font-weight: 600;
+  color: $base-link-color;
+  margin-bottom: .25em;
+	padding-top: 1px; /* Ajusta alineación con ícono */
+	
+	&:last-child {
+    margin-bottom: 0.2rem;
+	}
+}
+
+.Download-description {
+  color: $gray-text;
+  font-size: 1em;
+}
+
+.Download-text {
+	line-height: 1.5;
+}
+
+.Download-date {
+  font-size: .85em;
+  color: $gray-text;
+}
+
+/**
+ * Modifier
+ *
+ * Para agrandarlo todo proporcional alcanza con cambiar el font-size padre
+ * El modifier --large ademas de agrandar el texto agranda el icono
+ */
+
+.Download--large {
+  font-size: 1.125rem;
+
+  .Download-title {
+    font-size: 1.25em;
+  }
+
+  .Download-icon {
+    padding: 1em;
+
+    svg {
+      width: 2em;
+      height: 2em;
+    }
+  }
+}
+
+.Download--small {
+  font-size: .9em;
+}

@@ -1,0 +1,65 @@
+/** @define Pagination; weak */
+
+.Pagination {
+  text-align: center;
+  margin-top: 4rem;
+}
+
+.Pagination-text {
+  margin-bottom: 1rem;
+}
+
+.Pagination-links {
+  @include reset-list;
+
+  li {
+    display: inline-block;
+
+    a {
+      text-decoration: none;
+      display: block;
+      margin-left: 2px;
+      margin-right: 2px;
+      padding: .5rem 1rem;
+      background-color: #f3f3f3;
+      border-radius: 3px;
+      color: #000;
+      transition: background-color .35s, color .35s;
+      border-bottom: 1px solid #ddd;
+    }
+
+    a:hover {
+      background-color: $gray-2;
+    }
+
+    &.is-selected a {
+      background-color: $color-1;
+      color: #fff;
+    }
+  }
+}
+
+.Pagination-next a {
+  &:after {
+    padding-left: .5rem;
+    content: '\2192'; // arrow right
+  }
+}
+
+.Pagination-prev a {
+  &:before {
+    padding-right: .5rem;
+    content: '\2190'; // arrow left
+  }
+}
+
+@include md(down) {
+  .Pagination li {
+    display: none;
+  }
+
+  .Pagination-next,
+  .Pagination-prev {
+    display: inline-block !important;
+  }
+}

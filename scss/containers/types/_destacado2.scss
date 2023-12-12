@@ -1,0 +1,360 @@
+/* Destacado 2
+   ========================================================================== */
+
+/*
+<div class="Box Box--mf Box--destacado2">
+	<div class="Box-cover">
+		<img class="Box-image" src="./img/mural.jpg" alt="">
+	</div>
+	<div class="Box-overlay">
+		<a href="#" class="Box-title">Título del D2 variante normal</a>
+		<p class="Box-text">Lorem ipsum dolor sit amet, consectetur aicing elit eos eveniet, repellat, vero rerum hic reiciendis recusandae debitis est fugit tempore.</p>
+		<a href="#" class="Box-button Button Button--secondary">Acción principal</a>
+	</div>
+</div>
+ */
+
+.Box--destacado2 {
+  background: rgba(0, 96, 163, .9);
+	overflow: hidden;
+
+  .Box-image {
+    margin-bottom: 0;
+    object-fit: cover;
+  }
+
+  .Box-overlay {
+    background: rgba(20, 58, 151, .9);
+    background: linear-gradient(160deg, rgba(20, 58, 151, .9) 30%, transparent); 
+    color: #fff;
+    height: 100%;
+    left: 0;
+    padding: 2rem;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    text-shadow: $Global-text-shadow;
+
+    @include md(down) {
+			padding: 1.5rem;
+    }
+  }
+
+  .Box-title {
+    margin-bottom: .5em;
+    color: #fff;
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  .Box-info {
+    color: #fff;
+  }
+
+  .Box-button {
+    position: absolute;
+    right: 2rem;
+    bottom: 2rem;
+    text-shadow: none;
+  }
+}
+
+.Box--destacado2.Box--noImage {
+  padding: 0;
+
+  .Box-overlay {
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 6rem;
+		
+		@include md(down) {
+			position: static;
+		}
+  }
+}
+
+/**
+ * --solid es un modifier exclusivo de Destacado 2
+ */
+
+.Box--destacado2.Box--solid {
+  .Box-overlay {
+    background: $color-1;
+    height: auto;
+
+    @include border-bottom-radius(0);
+
+    :last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .Box-button {
+    position: static;
+    top: auto;
+    left: auto;
+    margin-top: .75em;
+  }
+
+  @include md(down) {
+    padding: 0;
+
+    .Box-cover {
+      margin: 0;
+    }
+
+    .Box-overlay {
+      position: static;
+    }
+  }
+}
+
+.Box--destacado2.Box--solid {
+  .Box-overlay {
+    background: #fff !important;
+    padding: 1.25rem;
+    margin: 5%;
+    width: 90%;
+    border-radius: 4px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, .18);
+
+    .Box-title {
+      text-shadow: none;
+      color: $blue;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    .Box-text,
+    .Box-info {
+      text-shadow: none;
+      color: #000;
+    }
+  }
+
+  .Box-button {
+    position: absolute !important;
+    right: 2rem;
+    bottom: 2rem;
+    text-shadow: none;
+  }
+
+  &.Box--noImage {
+    padding: 0;
+
+    .Box-overlay {
+      position: relative;
+      overflow: hidden;
+    }
+  }
+
+  &.Box--alignBottom {
+    
+		.Box-overlay {
+      background: #fff !important;
+     	padding: 1.25rem;
+			padding-bottom: 2.25rem;
+      margin: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 90%;
+      box-shadow: 0 2px 2px rgba(0,0,0,.18);
+      position: absolute;
+      bottom: 55px;
+      top: auto;
+			
+			@include md(down) {
+				padding: 1.25rem;
+				padding-bottom: 2.25rem;
+			}
+    }
+  }
+	
+	@include md(down) {
+		.Box-overlay {
+    	position: absolute;
+		}
+		&.Box--noImage {
+			.Box-overlay {
+				position: static;
+				margin-bottom: 6rem;
+			}
+			&.Box--alignBottom {
+				.Box-overlay {
+					margin: 0 auto;
+					margin-top: 5%;
+					margin-bottom: 55px;
+					transform: translateX(0%);
+					padding-bottom: 2.25rem;
+				}
+			}
+		}
+	}
+}
+
+/*Mobile first */
+.Box--mf.Box--destacado2 {
+	
+	.Box-cover {
+		&.Box-cover--left > img {
+			object-position: left;
+		}
+		&.Box-cover--right > img {
+			object-position: right;
+		}
+	}
+	
+	@include md(down) {
+		display: flex;
+		flex-direction: row-reverse;
+		background-color: $color-1;
+		padding: 1.5rem;
+		
+		.Box-cover {
+			margin: -1.5rem;
+			margin-left: 0;
+			border-top-left-radius: 50px;
+			overflow: hidden;
+			width: 120px;
+		}
+		
+		.Box-image {
+		  width: 100%;
+			height: 100%;
+			border-radius: 0;
+		}
+		
+		.Box-overlay {
+			padding: 0rem;
+			padding-right: 1.5rem;
+			position: initial;
+			background: none;
+		}
+			
+		.Box-title {
+			font-size: 1.25em;
+			text-decoration-thickness: max(0.05rem, 0.0625rem);
+			text-underline-offset: 0.15em;
+			line-height: 1.35;
+			margin-bottom: .75rem;
+		}
+			
+		.Box-text {
+			font-size: .875em;
+			margin-bottom: .25rem;
+			
+			+ .Box-button {	
+					margin-top: 1rem;
+			}
+		}
+		
+		.Box-button {
+			right: unset;
+			bottom: unset;
+			position: relative;
+			text-shadow: none;
+			margin-top: 1rem;
+			font-size: .9375rem;
+		}
+	}
+	
+	/* Modificador Sin imagen */
+	&.Box--noImage {
+		
+		.Box-image {
+			display: none;
+		}
+		.Box-cover {
+			display: none;
+		}
+		
+		@include md(down) {
+			.Box-overlay {
+				padding: 0;
+			}
+		}
+	}
+	
+	/* Modificador Bloque solido */
+	&.Box--solid {
+		
+		.Box-button {
+			bottom: -1.25rem;
+			right: 1.25rem;
+		}
+		
+		@include md(down) {
+			background-color: #FFF;
+
+			.Box-overlay {
+				position: static;
+				margin: 0;
+				box-shadow: none;
+				width: 100%;
+				border-radius: 0;
+			}
+
+			.Box-title { 
+				line-height: 1.25;
+			}
+
+			.Box-button {
+				position: static !important;
+			}
+		}
+		
+		&.Box--solidBottom {
+			
+			.Box-overlay {
+				bottom: 1.5rem;
+				top: auto;
+			}
+			
+			@include md(down) {
+				flex-direction: row;
+
+				.Box-cover {
+					margin: -1.5rem;
+					margin-right: 0;
+					border-radius: 0;
+					border-top-right-radius: 50px;
+				}
+				
+				 .Box-overlay	{
+					padding-right: 0rem;
+					padding-left: 1.5rem;
+				}
+			}
+		}
+		
+		/* Modificador Bloque solido y sin imagen */
+		&.Box--noImage {
+			
+			.Box-overlay {
+				overflow: initial;
+				padding-bottom: 1.25rem;
+			}
+			
+			@include md(down) {
+				padding: 1.5rem;
+				
+				.Box-overlay {
+					padding-bottom: 0;
+					padding-left: 0;
+				}
+			}
+			
+			&.Box--solidBottom .Box-overlay {
+				@include md {
+					position: absolute;
+				}
+			}
+		}
+	}
+}

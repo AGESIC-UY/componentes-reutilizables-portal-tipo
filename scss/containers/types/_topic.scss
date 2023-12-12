@@ -1,0 +1,75 @@
+.Box--topic .Box-header {
+  font-weight: 600;
+  margin: -1.5rem -1.5rem 1.5rem -1.5rem;
+  padding: .75rem 1.5rem;
+  word-wrap: break-word;
+  font-size: 1em;
+  border-bottom: 1px solid $gray-3;
+
+  padding: 0;
+  background-color: #555;
+  color: #fff;
+  border-top-right-radius: 3px;
+  border-top-left-radius: 3px;
+  position: relative;
+  overflow: hidden;
+  max-height: 9.5em;
+
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .5);
+    z-index: 2;
+  }
+
+  &:hover {
+    img {
+      transform: scale(1.15);
+    }
+  }
+}
+
+.Box--topic .Box-headerImage {
+  width: 100%;
+  height: auto;
+
+  img {
+    width: 100%;
+    transition: transform .5s ease-in-out;
+    z-index: 1;
+  }
+}
+
+.Box--topic .Box-header .Box-title {
+  font-family: $brand-font-stack;
+  z-index: 2;
+  position: absolute;
+  font-size: 2.25em;
+  font-weight: normal;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, .75);
+  text-align: center;
+  margin-bottom: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+}
+
+.Box--topic .Box-linkHeader .Box-title {
+  text-decoration: underline;
+  font-family: $brand-font-stack;
+  width: 100%;
+
+  @include xs(down) {
+    font-size: 1.625em;
+  }
+
+  &:hover {
+    text-decoration: none;
+  }
+}

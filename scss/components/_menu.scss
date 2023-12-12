@@ -1,0 +1,616 @@
+/** @define Menu; weak */
+
+/* Parent Nav (menu lateral de gub.uy)
+   ========================================================================== */
+
+/**
+<div class="Menu js-parentNav [is-open]">
+  <div class="Menu-header">
+    <div class="Menu-logo"></div>
+    <div class="Menu-tagline"></div>
+    <div class="Menu-close"></div>
+    <div class="Menu-search"></div>
+  </div>
+
+  <div class="Menu-body">
+    <div class="Menu-item has-submenu" tabindex="0"></div>
+    <div class="Menu-item has-submenu" tabindex="0"></div>
+    <div class="Menu-item has-submenu" tabindex="0"></div>
+    <a class="Menu-item" href="#"></a>
+    <a class="Menu-item" href="#"></a>
+    <a class="Menu-item" href="#"></a>
+  </div>
+</div>
+ */
+
+$Menu-wrap-width: 33em;
+$Menu-aside-width: 37em;
+
+.Menu {
+  color: #fff;
+  position: absolute;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 95%;
+  height: 100%;
+  max-width: $Menu-wrap-width;
+  transform: translateX(-101%); // 1% extra por el box-shadow
+  transition: transform .5s ease-in-out, width .5s ease-in-out;
+
+  a {
+    color: #fff;
+  }
+
+  &.is-open {
+    transform: translateX(0);
+  }
+
+  @include xs(down) {
+    font-size: .85em;
+  }
+}
+
+.ie8 .Menu {
+  display: none;
+}
+
+.ie8 .Menu.is-open {
+  display: block;
+}
+
+/**
+ * Wrap
+ */
+
+.Menu-wrap {
+  overflow: auto;
+  height: 100%;
+  background-color: $dark-blue;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, .75);
+  z-index: 6000; // que pise la sombra del aside
+  position: relative;
+}
+
+/**
+ * Header
+ */
+
+.Menu-header {
+  padding: 1.25em;
+  position: relative;
+}
+
+.Menu-logo {
+  margin-bottom: 1.625rem;
+
+  img {
+    width: 128px;
+    height: auto;
+    padding-top: 5px;
+  }
+}
+
+.Menu-tagline {
+  margin-top: .5em;
+  margin-bottom: 1em;
+  color: #fff;
+}
+
+.Menu-close {
+  position: absolute;
+  top: 1.25em;
+  right: 1.25em;
+
+  button {
+    line-height: 1;
+  }
+}
+
+/**
+ * Body
+ */
+
+.Menu-root {
+  font-size: 1.25em;
+
+  .Menu-item {
+    > span {
+      width: 100%;
+    }
+  }
+
+  .has-submenu > span:after {
+    content: '';
+    width: 1rem;
+    height: 1rem;
+    background: transparent url('../assets/arrow.svg') no-repeat center;
+    display: block;
+    float: right;
+    position: relative;
+    top: 8px;
+  }
+}
+
+.Menu-item {
+  display: block;
+  width: 100%;
+  position: relative;
+
+  > span {
+    display: block;
+    cursor: pointer;
+    z-index: 9999;
+    position: relative;
+  }
+
+  &.is-selected {
+    background-color: $base-background-color;
+  }
+
+  &.is-open {
+    background-color: $base-background-color;
+    color: #000;
+  }
+}
+
+.Menu-item > span,
+a.Menu-item {
+  padding: .75em 1.5em;
+}
+
+.Menu-item.has-submenu.is-open {
+  > span:after {
+    background-image: url('../assets/arrow-black.svg');
+  }
+}
+
+.Menu-subNav {
+  padding: .5em 1.5em 0;
+  background-color: $base-background-color;
+  width: 100%;
+  display: none;
+
+  @include xs(down) {
+    font-size: .85em;
+  }
+
+  a {
+    color: $color-1;
+  }
+
+  &.is-open {
+    display: block;
+  }
+}
+
+.Menu-subNav--temas {
+  padding: 2em 2em 0;
+
+  @include md(down) {
+    padding: 1em 1em 0;
+  }
+
+  ul {
+    li + li {
+      margin-top: .5em;
+    }
+  }
+}
+
+.Menu-more {
+  text-align: center;
+  margin-top: 2em;
+  padding-top: 1em;
+  border-top: 1px solid #ddd;
+  padding-bottom: 1em;
+  font-size: .85em;
+}
+
+.Menu-subNav--tramites {
+  padding: 2em 2em 0;
+
+  @include md(down) {
+    padding: 1em 1em 0;
+  }
+}
+
+/**
+ * Aside
+ */
+
+@include md {
+  .Menu-wrap,
+  .Menu-aside {
+    float: left;
+    width: 100%;
+  }
+
+  .Menu-aside {
+    transition: width .35s ease-in-out;
+  }
+
+  .Menu-aside {
+    padding: 1.5em;
+    overflow-x: hidden;
+    overflow-y: auto;
+    width: 0;
+    background-color: $base-background-color;
+    color: #000;
+    height: 100%;
+
+    a {
+      color: $blue;
+    }
+  }
+
+  body.has-parentNavAside {
+    .Menu {
+      @include clearfix;
+
+      max-width: $Menu-wrap-width + $Menu-aside-width;
+    }
+
+    .Menu-wrap {
+      box-shadow: 0 0 0 transparent;
+      width: $Menu-wrap-width;
+      float: left;
+    }
+
+    .Menu-aside {
+      box-shadow: 0 4px 4px rgba(0, 0, 0, .75);
+      width: $Menu-aside-width;
+      float: left;
+    }
+  }
+}
+
+/**
+ * Capa que se muestra al abrir el menu lateral
+ */
+
+body:after {
+  opacity: 0;
+  content: '';
+  transition: opacity .5s ease-in-out;
+}
+
+body.has-menu {
+  overflow: hidden;
+
+  &:after {
+    content: '';
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #000;
+    opacity: .5;
+    z-index: 9998;
+  }
+}
+
+/**
+ * Detalles dentro del submenu
+ */
+
+// .Stats {
+//   margin-top: 1.5em;
+// }
+
+// .Stats-item {
+//   text-align: center;
+//   margin-bottom: 3.5em;
+
+//   a {
+//     font-size: 5em;
+//     line-height: 1.15;
+//   }
+// }
+
+.Menu-flagList {
+  li {
+    list-style: none;
+  }
+
+  margin-left: 1em;
+  padding-left: 0;
+
+  li + li {
+    margin-top: .5em;
+  }
+}
+
+.Menu-wrap {
+  background-color: $blue;
+}
+
+.Menu-header {
+  background-color: $dark-blue;
+}
+
+.Menu-root {
+  font-size: 1.15em;
+}
+
+.Menu-breadcrumb {
+  background-color: #f2f2f2;
+  padding: .675em;
+}
+
+.Menu-breadcrumb a {
+  color: $base-link-color;
+  font-weight: 600;
+}
+
+.Menu-item {
+  border-bottom: solid 1px rgba(255, 255, 255, .25);
+}
+
+.Menu-item.is-open,
+.Menu-item.is-selected {
+  background-color: $blue;
+  color: #fff;
+}
+
+.Menu-item > span,
+a.Menu-item {
+  padding: .85em 1em;
+}
+
+.Menu-subNav {
+  color: #000;
+}
+
+.Menu-subNav .List .List-item {
+  padding: .85rem 2rem;
+  color: #000;
+  display: block;
+  cursor: pointer;
+}
+
+.Menu-subNav li.is-active {
+  box-shadow: inset 5px 0 0 $blue;
+}
+
+.Menu-item.has-submenu > span:after {
+  width: 1.45rem;
+  height: 1.45rem;
+  background: transparent url(../assets/plus.svg) no-repeat 50%;
+  top: 2px;
+}
+
+.Menu-item.has-submenu > span.is-open:after {
+  background-image: url(../assets/minus.svg);
+}
+
+.Menu-subNav li.has-submenu:after {
+  content: "";
+  width: .75rem;
+  height: .75rem;
+  background: transparent url(../assets/arrow-black.svg) no-repeat 50%;
+  display: block;
+  float: right;
+  position: relative;
+  top: 8px;
+}
+
+.Menu-body {
+  background: #fff !important;
+  color: #000 !important;
+}
+
+.Menu-body .List-item {
+  padding: .85rem 2rem;
+
+  @include md(down) {
+    padding: .85rem 1.125rem;
+  }
+}
+
+.Menu-heading {
+  display: flex;
+  align-items: center;
+  padding: 1rem 1.25rem;
+  margin-bottom: 0;
+  font-size: 1.375rem;
+
+  > span {
+    flex: 1;
+  }
+
+  @include md(down) {
+    font-size: 1rem;
+  }
+}
+
+.Menu-item--3 {
+  padding: 0 !important;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  > a {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    min-height: 5em;
+    color: $base-link-color;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex: 1;
+    line-height: 1.25;
+  }
+}
+
+.Menu-subitem {
+  display: flex !important;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+
+  > a {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 4.5em;
+    color: $base-link-color;
+    flex: 1;
+    line-height: 1.25;
+
+    @include md(down) {
+      > span {
+        font-size: .8125rem;
+        line-height: .875;
+        margin-top: 2px;
+      }
+    }
+  }
+
+  &.is-active {
+    box-shadow: rgb(49, 85, 166) 5px 0 0 inset;
+  }
+}
+
+.Menu .List-item.has-submenu {
+  &.is-active {
+    box-shadow: rgb(49, 85, 166) 5px 0 0 inset;
+  }
+}
+
+.Menu-badge {
+  border-left: 1px solid $gray-3;
+  margin-left: .5em;
+
+  > a {
+    margin-left: 1rem;
+    display: flex;
+    align-items: center;
+    background-color: $base-background-color;
+    color: $gray-text;
+    border-radius: 4px;
+    padding: .5em 1.25em;
+
+    &:hover span {
+      background-image: url('../assets/arrow.svg');
+    }
+
+    > span {
+      background-image: url('../assets/arrow-black.svg');
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: 100%;
+      width: 10px;
+      height: 10px;
+      display: inline-block;
+    }
+
+    &:hover {
+      text-decoration: none;
+      background-color: $color-1;
+      color: #fff;
+    }
+  }
+}
+
+.Menu-breadcrumb ul li,
+.Menu-subPage {
+  display: none;
+}
+
+.Menu .is-visible,
+.Menu-subPage.is-visible,
+.Menu-root.is-visible,
+.Menu-page.is-visible {
+  display: block !important;
+  // animation: fadeInLeft .35s ease-in-out;
+}
+
+// .Menu-subPage.is-visible {
+//   animation: fadeInRight .35s ease-in-out;
+// }
+
+// .Menu-page.is-visible {
+//   animation: fadeInRight .35s ease-in-out;
+// }
+
+.Menu-breadcrumb .is-visible {
+  display: inline-block !important;
+  animation: fadeInLeft .35s ease-in-out;
+}
+
+.Menu-subheading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  font-style: italic;
+  color: $gray-text;
+  background-color: $base-background-color;
+  font-weight: 400;
+  border-top: 3px solid $gray-3 !important;
+}
+
+.Menu-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Menu-link {
+  text-decoration: underline;
+  font-size: .875rem;
+  font-weight: 400;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.Menu-breadcrumb,
+.Menu-page,
+.Menu-root {
+  display: none;
+}
+
+.Menu-breadcrumb.is-visible {
+  // animation: fadeInLeft .35s ease-in-out;
+  display: block !important;
+}
+
+@keyframes fadeInLeft {
+  from {
+    transform: translateX(-20px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+
+@keyframes fadeInRight {
+  from {
+    transform: translateX(20px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInTop {
+  from {
+    // transform: translateY(-20px);
+    opacity: 0;
+  }
+
+  to {
+    // transform: translateY(0);
+    opacity: 1;
+  }
+}

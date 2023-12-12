@@ -1,0 +1,83 @@
+/** @define Event; weak */
+
+.Event {
+  background-color: #f1f1f1;
+  margin-bottom: 2rem;
+
+  iframe {
+    width: 100%;
+    vertical-align: middle;
+  }
+}
+
+.Event-info {
+  padding: 1.15rem;
+
+  @include clearfix;
+
+  @include md(down) {
+    padding: .75rem;
+  }
+
+  .Media-image {
+    margin-right: 1rem;
+  }
+}
+
+.Event-details {
+  font-size: .875em;
+
+  li {
+    margin-top: 0;
+  }
+
+  @include reset-list;
+}
+
+.Event-description {
+  margin-bottom: .25rem;
+  color: #555;
+}
+
+.Event-map {
+  position: relative;
+
+  &:after {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: block;
+    content: " ";
+    background-color: rgba(0, 0, 0, .1);
+    cursor: pointer;
+  }
+}
+
+.Event-map.is-visible {
+  &:after {
+    display: none;
+  }
+}
+
+@include md(down) {
+  .Event .Date {
+    font-size: .75rem;
+    width: 3.75em;
+
+    .Date-day {
+      padding-top: .15em;
+      padding-bottom: .15em;
+    }
+  }
+}
+
+.Event-name {
+  text-transform: uppercase;
+  font-size: .85em;
+  margin-bottom: 0.5rem;
+  color: #555;
+  display: inline-block;
+  line-height: 1.15;
+}

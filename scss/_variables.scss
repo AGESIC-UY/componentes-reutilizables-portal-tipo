@@ -1,0 +1,138 @@
+// ============================================================================
+// Variables
+// ============================================================================
+
+// stylelint-disable max-empty-lines, scss/dollar-variable-colon-space-after, indentation
+
+// Breakpoints
+
+$xs: 480px;
+$sm: 768px;
+$md: 992px;
+$lg: 1367px;
+
+
+// Colors
+
+$black: #000;
+$white: #FFF;
+$dark-blue: #042F62;
+$soft-blue: #87a5c0;
+$light-blue: #e2e9f1;
+$blue: #003DA5;
+$green: #00632e;
+//OLD $gold: #fcd649;
+$gold: #DAAA00;
+$purple: #470A68;
+
+$color-1: $blue;
+$color-2: #0099ff;
+$color-3: $purple;
+$color-4: #93117e;
+$color-5: #FF6900;
+$color-6: #FF0000;
+$color-7: #28a745;
+
+$color-8: #007D8A; // Para destacados y hero
+
+// Nuevos colores
+$color-9: #2B5CA8;
+$color-10: #F3A303;
+$color-11: #82368C;
+$color-12: #778A15;
+
+
+$gray-1: #bbb;
+$gray-2: #ddd;
+$gray-3: #eee;
+$gray-text: #444;
+$gray-text-soft: #555;
+
+
+// Focus
+$focus-color: #FFA500;
+$focus-ring: 3px solid #FFA500;
+$focus-offset: .05rem;
+
+// Base
+
+$base-background-color: #f9f9f9;
+$base-text-color: #000;
+$base-font-size: 1em;
+$base-font-stack: "Open Sans",
+				  -apple-system,
+                  BlinkMacSystemFont,
+                  "Segoe UI",
+                  Roboto,
+                  Oxygen-Sans,
+                  Ubuntu,
+                  Cantarell,
+                  "Helvetica Neue",
+                  Arial,
+                  sans-serif;
+$base-font-weight: normal;
+$base-line-height: 1.5;
+
+$base-link-color: $color-1;
+$base-link-decoration: none;
+$base-link-hover-color: $color-1;
+$base-link-hover-decoration: underline;
+
+$brand-font-stack: "Open Sans", sans-serif;
+
+// Modal
+
+$modal-content-bg: #fff;
+$modal-backdrop-bg: #000;
+$modal-backdrop-opacity: .6;
+$modal-title-line-height: 2.1;
+$modal-inner-padding: 16px 24px; // footer
+$modal-title-padding: 16px 24px; // title
+$modal-body-margin: 0 24px;
+$modal-body-padding: 8px 0;
+
+$modal-lg: 900px;
+$modal-md: 720px; // default width
+$modal-sm: 300px;
+
+$modal-center: true;
+
+
+// z-index
+
+// eg. z-index: index($elements, $name);
+$elements:
+  // back
+  search,
+  main,
+  nav,
+  modal-background,
+  skip-nav,
+  modal;
+  // front
+
+
+// Objects
+
+$Container-lg-width: 1304px;
+$Grid-gutter-size: 12px;
+
+
+// Box
+
+$Box-border-radius: 8px;
+$Box-border-radius-inner: 4px;
+$Box-shadow: 0 2px 2px rgba(0, 0, 0, .18);
+
+
+// Box Mobile first
+
+$Box-mf-border-radius: 8px;
+$Box-mf-border-radius-inner: 4px;
+
+$Box-mf-shadow: 0 3px 6px -1px rgba(0, 0, 0, .06);
+$Box-mf-shadow-upper: 0 3px 12px -1px rgba(0, 0, 0, .12);
+
+// Global
+
+$Global-text-shadow: 1px 1px 2px rgba(0, 0, 0, .5);

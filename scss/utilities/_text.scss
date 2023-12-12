@@ -1,0 +1,128 @@
+/** @define utilities */
+/* stylelint-disable declaration-no-important */
+
+/* Alignment
+   ========================================================================== */
+
+.u-textCenter {
+  text-align: center !important;
+}
+
+.u-textLeft {
+  text-align: left !important;
+}
+
+.u-textRight {
+  text-align: right !important;
+}
+
+@include sm {
+  .u-sm-textCenter {
+    text-align: center !important;
+  }
+
+  .u-sm-textLeft {
+    text-align: left !important;
+  }
+
+  .u-sm-textRight {
+    text-align: right !important;
+  }
+}
+
+@include md {
+  .u-md-textCenter {
+    text-align: center !important;
+  }
+
+  .u-md-textLeft {
+    text-align: left !important;
+  }
+
+  .u-md-textRight {
+    text-align: right !important;
+  }
+}
+
+@include lg {
+  .u-lg-textCenter {
+    text-align: center !important;
+  }
+
+  .u-lg-textLeft {
+    text-align: left !important;
+  }
+
+  .u-lg-textRight {
+    text-align: right !important;
+  }
+}
+
+/* Sizes
+   ========================================================================== */
+
+.u-textExtraLarge {
+  font-size: 1.75em !important;
+  line-height: 1.125 !important;
+}
+
+.u-textLarge {
+  font-size: 1.35em !important;
+  line-height: 1.125 !important;
+}
+
+.u-textMedium {
+  font-size: 1.125em !important;
+  line-height: 1.25 !important;
+}
+
+.u-textSmall {
+  font-size: .85em !important;
+}
+
+/**
+ * No relativo, estilo absoluto para textos
+ */
+
+.u-textLead {
+  font-size: 1.35rem !important;
+  font-weight: 400 !important;
+}
+
+/* Weight
+   ========================================================================== */
+
+.u-textNormal {
+  font-weight: 400 !important;
+}
+
+.u-textSemiBold {
+  font-weight: 600 !important;
+}
+
+.u-textBold {
+  font-weight: 700 !important;
+}
+
+/* Misc
+   ========================================================================== */
+
+.u-breakWord {
+  word-wrap: break-word !important;
+}
+
+.u-textUppercase {
+  text-transform: uppercase !important;
+}
+
+.u-textUnderline {
+  text-decoration: underline !important;
+}
+
+.u-textItalic {
+  font-style: italic !important;
+}
+
+.u-textRed {
+	color: #c33;
+}
