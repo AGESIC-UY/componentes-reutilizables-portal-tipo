@@ -18,7 +18,7 @@
   </div>
 	
 	<div class="Container">
-		<?php include "inc/alert-container.php"; ?>
+		<?php // include "inc/alert-container.php"; ?>
 	</div>
 
   <div id="contenido" class="Container u-main u-mb6">
@@ -98,7 +98,7 @@
 
     <h2 class="u-my4">Colores para decoración de contenedores</h2>
 
-    <p>Los siguientes colores son personalizables a excepción del Color 1 (azul gub.uy). <a href="formulario-colores.php">Ver formulario de personalización de paleta de colores</a></p>
+    <!-- <p>Los siguientes colores son personalizables a excepción del Color 1 (azul gub.uy). <a href="formulario-colores.php">Ver formulario de personalización de paleta de colores</a></p> -->
 
     <div class="Box">
       <div class="Box-body">
@@ -968,22 +968,26 @@
 
         <!-- Pestaña: Conformación -->
         <div role="tabpanel" class="Tabs-pane fade active in" id="tab-1">
-          <h4 class="u-mt4">Conformación</h4>
+          <h4 class="u-mt2">Conformación</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tristique erat ut malesuada varius. Ut scelerisque viverra lectus, nec hendrerit enim scelerisque quis. Donec laoreet semper est. Fusce at hendrerit nulla. Duis fermentum scelerisque malesuada. Aenean elit massa, aliquam sit amet finibus sed.</p>
         </div>
 
         <!-- Pestaña: Naturaleza -->
         <div role="tabpanel" class="Tabs-pane fade" id="tab-2">
-          <h4 class="u-mt4">Naturaleza</h4>
+          <h4 class="u-mt2">Naturaleza</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tristique erat ut malesuada varius. Ut scelerisque viverra lectus, nec hendrerit enim scelerisque quis. Donec laoreet semper est. Fusce at hendrerit nulla. Duis fermentum scelerisque malesuada. Aenean elit massa, aliquam sit amet finibus sed.</p>
         </div>
 
         <!-- Pestaña: Gestión -->
         <div role="tabpanel" class="Tabs-pane fade" id="tab-3">
-          <h4 class="u-mt4">Gestión</h4>
+          <h4 class="u-mt2">Gestión</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tristique erat ut malesuada varius. Ut scelerisque viverra lectus, nec hendrerit enim scelerisque quis. Donec laoreet semper est. Fusce at hendrerit nulla. Duis fermentum scelerisque malesuada. Aenean elit massa, aliquam sit amet finibus sed.</p>
         </div>
 
         <!-- Pestaña: Etapas -->
         <div role="tabpanel" class="Tabs-pane fade" id="tab-4">
-          <h4 class="u-mt4">Etapas</h4>
+          <h4 class="u-mt2">Etapas</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tristique erat ut malesuada varius. Ut scelerisque viverra lectus, nec hendrerit enim scelerisque quis. Donec laoreet semper est. Fusce at hendrerit nulla. Duis fermentum scelerisque malesuada. Aenean elit massa, aliquam sit amet finibus sed.</p>
         </div>
 
     </div>

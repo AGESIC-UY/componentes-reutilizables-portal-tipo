@@ -1,24 +1,22 @@
 <?php
   $title = 'Portal Tipo';
 ?>
-<?php include "../inc/head.php"; ?>
+<?php include "inc/head.php"; ?>
 
 <!-- Cabezal -->
-<?php // include "inc/header.php"; ?>
+<?php include "inc/header.php"; ?>
 
 <!-- Breadcrumb -->
 <div class="Breadcrumb">
   <div class="Container">
     <ul>
-      <li><a href="../index.php">Inicio</a></li>
+      <li><a href="index.php">Inicio</a></li>
       <li>Formatos</a></li>
     </ul>
   </div>
 </div>
 
-
-
-<div class="u-main">
+<main class="u-main" id="contenido">
 
     <div class="Container">
 
@@ -27,163 +25,184 @@
             <div class="Grid-item Grid-item--center u-md-size3of4 u-lg-size7of10">
 
                 <div class="Page">
-
-                    <h1 class="Page-title">Formatos</h1>
-
-                    <p class="Page-description">Es una lista de formatos web creados a partir de los requerimientos definidos para un portal del Estado uruguayo. Los formatos son responsivos y cumplen con las cláusulas de la normativa vigente en el cuidado de los datos personales, la privacidad y accesibilidad.</p>
-
-                    <ul class="List List--media u-mt4">
-
-                        <li class="Media">
-
-                            <div class="Media-body">
-
-                                <h3><a href="home.php">Home</a></h3>
-                                <p>Es el formato básico para iniciar un portal y acceder a sus demás páginas.</p>
-
-                                <p class="u-textSmall">Url Portal Tipo: <a href="https://www.gub.uy/ayuda/portal-tipo/institucionales/formatos/home.html">https://www.gub.uy/ayuda/portal-tipo/institucionales/formatos/home.html</a></p>
-
-                            </div>
-
-                        </li>
-
-                        <li class="Media">
-
-                            <div class="Media-body">
-
-                                <h3><a href="minisitio.php">Minisitio</a></h3>
-                                <p>Página autocontenida que amplía la funcionalidad de un portal primario.</p>
-
-                                <p class="u-textSmall">Url Portal Tipo: <a href="https://www.gub.uy/ayuda/portal-tipo/institucionales/formatos/minisitio.html">https://www.gub.uy/ayuda/portal-tipo/institucionales/formatos/minisitio.html</a></p>
-
-                            </div>
-
-                        </li>
-
-                        <li class="Media">
-
-                            <div class="Media-body">
-
-                                <h3><a href="formato-carpeta.php">Formato Carpeta</a></h3>
-                                <p>Listado de items con título, descripción, imagen, etiquetas y ubicación. Con navegación.</p>
-
-                                <p class="u-textSmall">Url Portal Tipo: <a href="https://www.gub.uy/ayuda/portal-tipo/institucionales/formatos/carpeta.html">https://www.gub.uy/ayuda/portal-tipo/institucionales/formatos/carpeta.html</a></p>
-
-                            </div>
-
-                        </li>
-
-                        <li class="Media">
-
-                            <div class="Media-body">
-
-                                <h3><a href="formato-carpeta-single.php">Formato Carpeta (Single)</a></h3>
-                                <p>Listado de items con título, descripción, imagen, etiquetas y ubicación. Sin navegación ni columna derecha.</p>
-
-                                <p class="u-textSmall">Url Portal Tipo: <a href="https://www.gub.uy/ayuda/portal-tipo/institucionales/formatos/carpeta-single.html">https://www.gub.uy/ayuda/portal-tipo/institucionales/formatos/carpeta-single.html</a></p>
-
-                            </div>
-
-                        </li>
-
-                        <li class="Media">
-
-                            <div class="Media-body">
-
-                                <h3><a href="formato-carpeta-aside.php">Formato Carpeta (Aside)</a></h3>
-                                <p>Listado de items con título, descripción, imagen, etiquetas y ubicación. Sin navegación pero con columna derecha.</p>
-
-                                <p class="u-textSmall">Url Portal Tipo: <a href="https://www.gub.uy/ayuda/portal-tipo/institucionales/formatos/carpeta-aside.html">https://www.gub.uy/ayuda/portal-tipo/institucionales/formatos/carpeta-aside.html</a></p>
-
-                            </div>
-
-                        </li>
-
-                        <li class="Media">
-
-                            <div class="Media-body">
-
-                                <h3><a href="formato-documento.php">Formato Documento</a></h3>
-                                <p>Artículo de texto con imagen principal, tablas, listas y links de interés. Con navegación.</p>
-
-                                <p class="u-textSmall">Url Portal Tipo: <a href="https://www.gub.uy/ayuda/portal-tipo/institucionales/formatos/documento.html">https://www.gub.uy/ayuda/portal-tipo/institucionales/formatos/documento.html</a></p>
-
-                            </div>
-
-                        </li>
-
-
-                        <li class="Media">
-
-                            <div class="Media-body">
-
-                                <h3><a href="formato-documento-single.php">Formato Documento (Single)</a></h3>
-                                <p>Artículo de texto con imagen principal, tablas, listas y links de interés. Sin navegación ni columna derecha.</p>
-
-                                <p class="u-textSmall">Url Portal Tipo: <a href="https://www.gub.uy/ayuda/portal-tipo/institucionales/formatos/documento-single.html">https://www.gub.uy/ayuda/portal-tipo/institucionales/formatos/documento-single.html</a></p>
-
-                            </div>
-
-                        </li>
-
-                        <li class="Media">
-
-                            <div class="Media-body">
-
-                                <h3><a href="formato-documento-aside.php">Formato Documento (Aside)</a></h3>
-                                <p>Artículo de texto con imagen principal, tablas, listas y links de interés. Sin navegación pero con columna derecha.</p>
-
-                                <p class="u-textSmall">Url Portal Tipo: <a href="https://www.gub.uy/ayuda/portal-tipo/institucionales/formatos/documento-aside.html">https://www.gub.uy/ayuda/portal-tipo/institucionales/formatos/documento-aside.html</a></p>
-
-                            </div>
-
-                        </li>
-
-                        <li class="Media">
-
-                            <div class="Media-body">
-
-                                <h3><a href="formato-descarga.php">Formato Descarga</a></h3>
-                                <p>Listado de descargas con nombre, texto descriptivo, imagen, y tamaño de archivo.</p>
-
-                                <p class="u-textSmall">Url Portal Tipo: <a href="https://www.gub.uy/ayuda/portal-tipo/institucionales/formatos/descarga.html">https://www.gub.uy/ayuda/portal-tipo/institucionales/formatos/descarga.html</a></p>
-
-                            </div>
-
-                        </li>
-
-                        <li class="Media">
-
-                            <div class="Media-body">
-
-                                <h3><a href="formato-agenda.php">Formato Agenda</a></h3>
-                                <p>Listado de eventos de un organismo.</p>
-
-                                <ul class="u-mb2">
-                                    <li><a href="https://concreta.com.uy/borradores/proyecto-gub-uy/portal-base/calendario-pasado.php">Actividades anteriores</a></li>
-                                </ul>
-
-                                <p class="u-textSmall">Url Portal Tipo: <a href="https://www.gub.uy/ayuda/portal-tipo/institucionales/formatos/agenda.html">https://www.gub.uy/ayuda/portal-tipo/institucionales/formatos/agenda.html</a></p>
-
-                            </div>
-
-                        </li>
-
-                        <li class="Media">
-
-                            <div class="Media-body">
-
-                                <h3><a href="formato-autoridades.php">Formato autoridades</a></h3>
-                                <p>Organización de items con imágenes y varios datos, en múltiples niveles de jerarquía.</p>
-
-                                <p class="u-textSmall">Url Portal Tipo: <a href="https://www.gub.uy/ayuda/portal-tipo/institucionales/formatos/jerarquico.html">https://www.gub.uy/ayuda/portal-tipo/institucionales/formatos/jerarquico.html</a></p>
-
-                            </div>
-
-                        </li>
-
-                    </ul>
-
+									
+									<div class="Page-document">
+
+                    <h2 class="Page-title">Formatos</h2>
+									
+										<p class="Page-description u-mb2">Listado de plantillas y formatos creados a partir de los requerimientos de diseño definidos por Agesic para un portal del Estado uruguayo.</p>
+
+										<p class="Page-description u-my2">Cada formato es responsivo y cumple con las cláusulas de la normativa vigente en el cuidado de los datos personales, la privacidad y la accesibilidad.</p>
+
+										<p class="Page-description u-mt2">Los formatos que se muestran en los ejemplos no contienen el cabezal ni el pie, sino únicamente el cuerpo de la página. Existe un apartado que muestra los <a href="cabezales-y-pies.php">ejemplos de cabezales y pies</a>.</p>
+									
+										<h3>Formatos especiales</h3>
+										
+										<ul class="List List--media List--medium u-mt3 u-mb6">
+											<li class="Media">
+												<div class="Media-body">
+													<h4 class="Media-title u-h5"><a href="home.php">Home</a></h4>
+													<p>Es el formato básico para iniciar un portal y acceder a sus demás páginas. Se muestran ejemplos de distintos contenedores que podrían incluirse en una página de inicio de un sitio.</p>
+												</div>
+											</li>
+											<li class="Media">
+												<div class="Media-body">
+													<h4 class="Media-title u-h5"><a href="subhome.php">Subhome ejemplo 2</a></h4>
+													<p>Es la herramienta para crear páginas de contenido destacado dentro del sitio del organismo. Se muestran ejemplos de distintos contenedores que podrían incluirse en una subhome.</p>
+												</div>
+											</li>
+											<li class="Media">
+												<div class="Media-body">
+													<h4 class="Media-title u-h5"><a href="home-2.php">Subhome ejemplo 2</a></h4>
+													<p>Es la herramienta para crear páginas de contenido destacado dentro del sitio del organismo. Se muestran ejemplos de distintos contenedores que podrían incluirse en una subhome.</p>
+												</div>
+											</li>
+										</ul>
+										
+										<h3>Formato Carpeta</h3>
+										
+										<ul class="List List--media List--medium u-mt3 u-mb6">
+											<li class="Media">
+												<div class="Media-body">
+													<h4 class="Media-title u-h5"><a href="carpeta-single.php">Carpeta básica con ejemplos combinados</a></h4>
+													<p>Listado de ítems en distintos formatos que pueden incluirse en una carpeta. Se muestran todas las variantes posibles de resumen de un documento (Noticia, Trámite, Descarga, Evento, etc.).</p>
+												</div>
+											</li>
+											<li class="Media">
+												<div class="Media-body">
+													<h4 class="Media-title u-h5"><a href="carpeta-ejemplo.php">Carpeta con ejemplos combinados y navegación secundaria</a></h4>
+													<p>Listado de ítems en distintos formatos que pueden incluirse en una carpeta. Se muestran todas las variantes posibles de resumen de un documento (Noticia, Trámite, Descarga, Evento, etc.), con navegación secundaria.</p>
+												</div>
+											</li>
+											<li class="Media">
+												<div class="Media-body">
+													<h4 class="Media-title u-h5"><a href="carpeta-filtros.php">Carpeta con ejemplos combinados y filtros </a></h4>
+													<p>Listado de ítems en distintos formatos que pueden incluirse en una carpeta. Se muestran todas las variantes posibles de resumen de un documento (Noticia, Trámite, Descarga, Evento, etc.), con navegación secundaria y filtros.</p>
+												</div>
+											</li>
+											<li class="Media">
+												<div class="Media-body">
+													<h4 class="Media-title u-h5"><a href="carpeta-aside.php">Carpeta con ejemplos combinados y columna a la derecha</a></h4>
+													<p>Listado de ítems en distintos formatos que pueden incluirse en una carpeta. Se muestran todas las variantes posibles de resumen de un documento (Noticia, Trámite, Descarga, Evento, etc.), sin navegación, pero con columna de contenedores a la derecha.</p>
+												</div>
+											</li>
+											
+											<li class="Media">
+												<div class="Media-body">
+													<h4 class="Media-title u-h5"><a href="calendario.php">Calendario con próximas actividades</a></h4>
+													<p>Listado de próximas actividades y/o eventos de un organismo.</p>
+												</div>
+											</li>
+											
+											<li class="Media">
+												<div class="Media-body">
+													<h4 class="Media-title u-h5"><a href="calendario-pasado.php">Calendario con actividades anteriores</a></h4>
+													<p>Listado de actividades y/o eventos ya ocurridos de un organismo con botón para ir a próximas actividades.</p>
+												</div>
+											</li>
+										</ul>
+										
+										
+										<h3>Formato Documento</h3>
+										
+										<ul class="List List--media List--medium u-mt3 u-mb6">
+											<li class="Media">
+												<div class="Media-body">
+													<h4 class="Media-title u-h5"><a href="documento-single.php">Documento básico</a></h4>
+													<p>Artículo de texto con los distintos elementos que pueden incluirse en un documento. Se muestran todas las variantes posibles (imagen principal, tablas, listas y links de interés).</p>
+												</div>
+											</li>
+											<li class="Media">
+												<div class="Media-body">
+													<h4 class="Media-title u-h5"><a href="documento.php">Documento básico con navegación secundaria</a></h4>
+													<p>Artículo de texto con los distintos elementos que pueden incluirse en un documento. Se muestran todas las variantes posibles (imagen principal, tablas, listas y links de interés), con navegación secundaria.</p>
+												</div>
+											</li>
+											<li class="Media">
+												<div class="Media-body">
+													<h4 class="Media-title u-h5"><a href="documento-aside.php">Documento básico con columna a la derecha</a></h4>
+													<p>Artículo de texto con los distintos elementos que pueden incluirse en un documento. Se muestran todas las variantes posibles (imagen principal, tablas, listas y links de interés), sin navegación secundaria, pero con columna de contenedores a la derecha.</p>
+												</div>
+											</li>
+											
+											<li class="Media">
+												<div class="Media-body">
+													<h4 class="Media-title u-h5"><a href="documento-iframe.php">Documento con iFrame</a></h4>
+													<p>Un iFrame es un componente que admite incrustar videos, documentos y otros medios interactivos en una página.</p>
+												</div>
+											</li>
+											
+											<li class="Media">
+												<div class="Media-body">
+													<h4 class="Media-title u-h5"><a href="documento-indice.php">Documento con índice</a></h4>
+													<p>Dentro del documento se muestra un formato “Índice”.</p>
+												</div>
+											</li>
+											
+											<li class="Media">
+												<div class="Media-body">
+													<h4 class="Media-title u-h5"><a href="documento-comentarios.php">Documento con comentarios</a></h4>
+													<p>Dentro de documento se incluye un campo para realizar comentarios y se muestran comentarios anteriores, si los hubiera.</p>
+												</div>
+											</li>
+											
+											<li class="Media">
+												<div class="Media-body">
+													<h4 class="Media-title u-h5"><a href="documento-grafica.php">Documento con gráfica</a></h4>
+													<p>Ejemplo de cómo se puede mostrar una gráfica. En este caso también incluye filtros y otros elementos adicionales como botones.</p>
+												</div>
+											</li>
+											
+											<li class="Media">
+												<div class="Media-body">
+													<h4 class="Media-title u-h5"><a href="documento-tabla.php">Documento con tabla y filtros</a></h4>
+													<p>Ejemplo de cómo se puede mostrar una tabla. En este caso también incluye filtros y otros elementos adicionales como botones y paginado.</p>
+												</div>
+											</li>
+										</ul>
+										
+										<h3>Resultados de búsqueda</h3>
+										
+										<ul class="List List--media List--medium u-mt3 u-mb6">
+											<li class="Media">
+												<div class="Media-body">
+													<h4 class="Media-title u-h5"><a href="busqueda.php">Resultados de búsqueda con éxito</a></h4>
+													<p>Cómo se muestran los resultados encontrados, el buscador y el paginado.</p>
+												</div>
+											</li>
+											<li class="Media">
+												<div class="Media-body">
+													<h4 class="Media-title u-h5"><a href="busqueda-vacia.php">Resultados de búsqueda sin éxito</a></h4>
+													<p>Elementos del mensaje que indica que no se han encontrado resultados para una búsqueda.</p>
+												</div>
+											</li>
+										</ul>	
+										
+										<h3>Libros</h3>
+										
+										<ul class="List List--media List--medium u-mt3 u-mb6">
+											<li class="Media">
+												<div class="Media-body">
+													<h4 class="Media-title u-h5"><a href="libro-indice.php">Índice de un libro</a></h4>
+													<p>Cómo se puede mostrar un índice. En este ejemplo incluye ficha del libro.</p>
+												</div>
+											</li>
+											<li class="Media">
+												<div class="Media-body">
+													<h4 class="Media-title u-h5"><a href="libro-cap-1.php">Capítulo 1</a></h4>
+													<p>Cómo se muestra el primer capítulo de un libro.</p>
+												</div>
+											</li>
+											<li class="Media">
+												<div class="Media-body">
+													<h4 class="Media-title u-h5"><a href="libro-cap-2.php">Capítulo 2 y siguientes</a></h4>
+													<p>Cómo se muestra el segundo y los siguientes capítulos de un libro.</p>
+												</div>
+											</li>
+										</ul>
+								
+										</div>
+									
                 </div>
 
             </div>
@@ -192,7 +211,7 @@
 
     </div>
 
-</div>
+</main>
 
 <!-- Footer -->
 <?php // include "inc/footer.php"; ?>

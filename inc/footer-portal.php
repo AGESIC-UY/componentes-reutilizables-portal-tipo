@@ -23,7 +23,7 @@
       <div class="Grid">
         <div class="Grid-item u-md-size1of3">
           <div class="Footer-info u-md-pr3">
-            <h3 class="Footer-title">Portal Tipo</h3>
+            <h3 class="Footer-title">Ministerio de Ganadería, Agricultura y Pesca</h3>
 
             <address>
               <p><span>Dirección:</span> Liniers 1324 piso 4</p>
@@ -32,8 +32,7 @@
               <p><span>Horario de atención:</span><br>Lunes a viernes de 9:30 a 17:30 hs.</p>
               <p><a href="#">Contacto</a></p>
             </address>
-						
-						<!--
+
             <p class="u-mb1">Suscribirse al boletín:</p>
             <div class="Suscribe u-mb2">
               <form action="./">
@@ -42,36 +41,39 @@
                 <button class="Suscribe-button">Suscribirse</button>
               </form>
             </div>
-						-->
           </div>
         </div>
         <div class="Grid-item u-md-size2of3">
           <div class="Grid">
             <div class="Grid-item u-md-size1of3">
               <div class="Footer-list u-md-pl3">
-                <h3>Sobre Portal Tipo</h3>
+                <h3>Institucional</h3>
 
                 <ul class="u-bullet">
                   <li><a href="#">Estructura del organismo</a></li>
                   <li><a href="#">Preguntas Frecuentes</a></li>
                   <li><a href="#">Transparencia</a></li>
+                  <li><a href="#">Información de gestión</a></li>
+                  <li><a href="#">Contacto</a></li>
                 </ul>
               </div>
             </div>
             <div class="Grid-item u-md-size1of3">
               <div class="Footer-list">
-                <h3>Componentes de diseño</h3>
+                <h3>Trámites y servicios</h3>
 
                <ul class="u-bullet">
                   <li><a href="#">Lorem ipsum dolor</a></li>
                   <li><a href="#">Perferendis suscipit</a></li>
                   <li><a href="#">Voluptates ratione</a></li>
+                  <li><a href="#">Impedit voluptatibus</a></li>
+                  <li><a href="#">Nostrum molestias</a></li>
                 </ul>
               </div>
             </div>
             <div class="Grid-item u-md-size1of3">
               <div class="Footer-list">
-                <h3>Formatos y contenidos</h3>
+                <h3>Acceso por perfiles</h3>
 
                 <ul class="u-bullet">
                   <li><a href="#">Personas</a></li>
@@ -95,13 +97,13 @@
 				</div>
 				<div class="Grid-item u-md-size2of3">
 					<div class="Footer-logos u-md-right">
-            <!---->
+            <!--
 						<div class="Footer-logo">
               <a href="https://agesic.gub.uy">
                 <img src="./assets/logo-agesic-blanco.png" alt="Agesic" style="margin-top: .25rem;">
               </a>
             </div>
-						
+						-->
 						<div class="Footer-logo">
               <a href="./">
                 <span class="Brand Brand--white Brand--md">

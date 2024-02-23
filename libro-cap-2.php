@@ -117,11 +117,11 @@
 
                                         <ul class="Index-nav">
                                             <li>
-                                                <a href="libro.php">Nombre del capítulo 1</a>
+                                                <a href="libro-cap-1.php">Nombre del capítulo 1</a>
                                                 <ul class="Index-subnav">
-                                                    <li><a href="#subcapitulo-1">Subcapítulo 1</a></li>
-                                                    <li><a href="#subcapitulo-2">Subcapítulo 2</a></li>
-                                                    <li><a href="#subcapitulo-3">Subcapítulo 3</a></li>
+                                                    <li><a href="libro-cap-1.php#subcapitulo-1">Subcapítulo 1</a></li>
+                                                    <li><a href="libro-cap-1.php#subcapitulo-2">Subcapítulo 2</a></li>
+                                                    <li><a href="libro-cap-1.php#subcapitulo-3">Subcapítulo 3</a></li>
                                                 </ul>
                                             </li>
                                             <li class="is-active"><a href="libro-cap-2.php">Nombre del capítulo 2</a></li>

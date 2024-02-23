@@ -12,7 +12,7 @@
       <div class="Grid">
         <div class="Grid-item Grid-item--center u-md-size3of4 u-lg-size7of10">
           <div class="Page">
-            <?php include "../portal-base/inc/resultados-busqueda.php"; ?>
+            <?php include "inc/resultados-busqueda.php"; ?>
           </div>
         </div>
       </div>

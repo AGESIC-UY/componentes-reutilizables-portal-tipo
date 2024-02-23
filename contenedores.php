@@ -4,13 +4,13 @@
 <?php include "inc/head.php"; ?>
 
 <!-- Cabezal -->
-<?php // include "inc/header.php"; ?>
+<?php include "inc/header.php"; ?>
 
 <!-- Breadcrumb -->
 <div class="Breadcrumb">
   <div class="Container">
     <ul>
-      <li><a href="../index.php">Inicio</a></li>
+      <li><a href="index.php">Inicio</a></li>
       <li>Contenedores</li>
     </ul>
   </div>
@@ -22,7 +22,7 @@
   <div class="Container">
     <h1 class="u-mt4 u-mb3">Listado de Contenedores</h1>
 
-    <p class="u-textLarge">Lista completa con todos los contenedores de Portal Unificado.</p>
+    <p class="u-textLarge">Lista completa con todos los contenedores de Portal Tipo.</p>
 
     <hr class="u-my6">
 
@@ -3047,6 +3047,5 @@
 
 
 <!-- Footer -->
-<?php // include "inc/footer.php"; ?>
-
+<?php include "inc/footer.php"; ?>
 <?php include "inc/foot.php"; ?>

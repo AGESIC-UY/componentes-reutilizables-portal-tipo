@@ -6,6 +6,16 @@
 <!-- Cabezal -->
 <?php include "inc/header.php"; ?>
 
+<div class="Breadcrumb">
+    <div class="Container">
+      <ul>
+        <li><a href="index.php">Inicio</a></li>
+				<li><a href="formatos.php">Formatos</a></li>
+        <li>Home</li>
+      </ul>
+    </div>
+</div>
+
 <!-- contenido -->
 <div id="contenido" class="u-main">
   <div class="Container">
