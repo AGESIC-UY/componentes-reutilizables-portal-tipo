@@ -15,38 +15,13 @@
 			<div class="Module Module--xl">
 				<div class="Grid">
 					<div class="Grid-item u-md-size1of3">
-						<div class="Module-item Module-item--1of3">
-							<div class="Box Box--mf Box--destacado2">
-									<div class="Box-cover">
-											<img class="Box-image" src="https://www.gub.uy/ayuda/portal-tipo/img/home/pattern.jpg" alt="">
-									</div>
-									<div class="Box-overlay">
-											<a href="acerca-de.php" class="Box-title">Sobre el Portal Tipo</a>
-											<p class="Box-text">Conjunto de elementos básicos, arquitectura de la información, modelo de interacción y diseño visual para portales del Estado uruguayo.</p>
-									</div>
-							</div>
-						</div>
-						<div class="Module-item Module-item--2of3">
-							<a href="https://github.com/AGESIC-UY/componentes-reutilizables-portal-tipo" class="Box Box--mf Box--destacado4">
-								<div class="Box-body">
-									<span class="Box-image">
-										<img src="./img/github-mark.png" alt="Descripción de la imagen">
-									</span>
-									<span class="Box-title">Repositorio de Github</span>
-									<span class="Box-subtitle">Acceso al portal en el que se aloja el código fuente del proyecto, dentro del entorno del software público.</span>
-								</div>
-							</a>
-						</div>
-					</div>
-
-					<div class="Grid-item u-md-size1of3">
-						<div class="Module-item Module-item--2of3">
-								<div class="Box Box--mf Box--listadoAccesos Box--color1">
+						<div class="Module-item Module-item--3of3">
+						<div class="Box Box--mf Box--listadoAccesos Box--color1">
 									<div class="Box-header">
 											<h3 class="Box-name">Estructura</h3>
 									</div>
 									<div class="Box-body">
-											<p class="Box-text">Herramientas que dan cohesión y orden al uso de los diferentes componentes del Portal.</p>
+											<p class="Box-text">Herramientas que dan contexto estructural para la creación de contenidos basados en formatos y páginas de salto utilizando contenedores.</p>
 											<ul class="Box-gridList Grid">
 													<li class="Grid-item">
 														<a href="grilla.php">
@@ -77,24 +52,10 @@
 											</ul>
 									</div>
 								</div>	
-							</div>	
-						<div class="Module-item Module-item--1of3">
-							<div class="Box Box--mf Box--color1 Box--formatoCompleto">
-								<div class="Box-header">
-									<h3 class="Box-name">Formularios</h3>
-								</div>
-								<div class="Box-body">
-									<div class="Box-description">
-										<p class="Box-text">El uso de formularios en Portal Tipo se realiza integrando los componentes y estilos de <a href="https://formulariotipo.agesic.gub.uy" class="u-outerLink">Formulario Tipo</a>.</p>
-									</div>
-								</div>
-								<div class="Box-footer">
-									<a href="https://formulariotipo.agesic.gub.uy" class="Box-more">Ir a Formulario Tipo</a>
-								</div>
-							</div>
 						</div>
+						
 					</div>
-
+					
 					<div class="Grid-item u-md-size1of3">
 							<div class="Module-item Module-item--3of3">
 								<div class="Box Box--mf Box--listadoAccesos Box--color1">
@@ -169,6 +130,40 @@
 								</div>
 							</div>
 					</div>
+
+					<div class="Grid-item u-md-size1of3">
+							
+						<div class="Module-item Module-item--1of3">
+							<div class="Box Box--mf Box--color1 Box--formatoCompleto">
+								<div class="Box-header">
+									<h3 class="Box-name">Formularios</h3>
+								</div>
+								<div class="Box-body">
+									<div class="Box-description">
+										<p class="Box-text">El uso de formularios en Portal Tipo se realiza integrando los componentes y estilos de <a href="https://formulariotipo.agesic.gub.uy" class="u-outerLink">Formulario Tipo</a>.</p>
+									</div>
+								</div>
+								<div class="Box-footer">
+									<a href="https://formulariotipo.agesic.gub.uy" class="Box-more">Ir a Formulario Tipo</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="Module-item Module-item--2of3">
+						<a href="https://github.com/AGESIC-UY/componentes-reutilizables-portal-tipo" class="Box Box--mf Box--destacado4">
+								<div class="Box-body">
+									<span class="Box-image">
+										<img src="./img/github-mark.png" alt="Github">
+									</span>
+									<span class="Box-title">Repositorio de Github</span>
+									<span class="Box-subtitle">Acceso al portal en el que se aloja el código fuente del proyecto, dentro del entorno del software público.</span>
+								</div>
+							</a>
+
+							</div>
+					</div>
+
+					
 
 				</div>
 			</div>
