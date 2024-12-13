@@ -23,11 +23,20 @@
     <div class="Container">
 
         <div class="Grid">
+		
 
             <div class="Grid-item Grid-item--center u-md-size3of4 u-lg-size7of10">
 
-                <div class="Page">
-									
+                <div class="Page" id="TTS">
+				<div class="Page-info">
+					<div class="Bar">
+						<div class="Bar-cell">
+							<div class="Page-actions">
+							<comp-texto-a-voz id="comp-texto-a-voz"></comp-texto-a-voz>
+							</div>
+						</div>		
+					</div>
+				</div>			
 									<div class="Page-document">
 
                     <h2 class="Page-title">Componente lector de textos</h2>

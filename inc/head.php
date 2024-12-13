@@ -8,6 +8,8 @@
   <meta name="googlebot" content="noindex">
 
   <title><?php echo $title; ?> | Portal Base</title>
+  <script src="js/wcfManage.js"></script>
+  <script src="js/texto-a-voz.js"></script>
 
   <link rel="stylesheet" href="css/portal-unificado.css">
 	<?php if (isset($form) && $form) : ?>
