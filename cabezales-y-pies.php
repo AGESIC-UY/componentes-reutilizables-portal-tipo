@@ -21,7 +21,6 @@
 
 <div class="Container">
 	<h3 class="u-mt2 u-mb4">Ejemplo de cabezal y pie de un portal</h4>
-	<p class="u-mb4">FALTA DESCRIPCIÓN Y/O EXPLICACIÓN - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sagittis justo et vehicula bibendum. Nulla a euismod neque, eget dapibus ipsum. Phasellus lobortis ante in orci sagittis aliquet.</p>
 </div>
 
 <!-- Cabezal Portal Base -->
@@ -36,7 +35,6 @@
 
 <div class="Container u-mt4">
 	<h3 class="u-mt6 u-mb4">Ejemplo de cabezal y pie de un minisitio</h4>
-	<p class="u-mb4">FALTA DESCRIPCIÓN Y/O EXPLICACIÓN - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sagittis justo et vehicula bibendum. Nulla a euismod neque, eget dapibus ipsum. Phasellus lobortis ante in orci sagittis aliquet.</p>
 </div>
 
 <!-- Cabezal Minisitio -->

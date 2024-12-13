@@ -125,6 +125,18 @@
 															</div>
 														</a>
 													</li>
+													<li class="Grid-item">
+														<a href="tts.php">
+															<div class="Flag">
+																<div class="Flag-image">
+																		<img src="./img/text-to-speech.jpg" alt="">
+																</div>
+																<div class="Flag-body">
+																		<span class="Box-title">Lector de texto (text to speech)</span>
+																</div>
+															</div>
+														</a>
+													</li>
 											</ul>
 									</div>
 								</div>

@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="css/formulario-tipo.css">
 	<?php endif; ?>
   <link rel="stylesheet" href="css/custom.css">
+  <link rel="stylesheet" href="css/darkmode.css">
 
   <!-- favicons -->
   <link rel="shortcut icon" type="image/ico" href="./assets/favicons/favicon.ico?v=4">

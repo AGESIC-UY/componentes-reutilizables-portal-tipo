@@ -3,12 +3,22 @@
     <div class="Header-top">
 
 			<div class="Container">
-
+				
 				<div class="Header-site">
-					<a href="./" class="Parent js-site-menu-trigger" role="button">
+					<a href="./" class="Parent">
 						<span>Ministerio de <b>Educación y Cultura</b></span>
 					</a>
-					<span class="arrow-down"></span>
+					<!-- Botón desplega menú sitio padre -->
+					<button class="Parent-menu js-site-menu-trigger" role="button">
+						<svg class="icono-menu" viewbox="0 0 60 40">
+							<g stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+								<path class="top-line" d="M14,7 L46,7 Z"></path>
+								<path class="middle-line" d="M14,20 L46,20 Z"></path>
+								<path class="bottom-line" d="M14,33 L46,33 Z"></path>
+							</g>
+						</svg>
+						<span class="u-hide u-md-show">Menú<span class="u-hideVisually"> del Ministerio de Educación y Cultura</span></span>
+					</button>
 				</div>
 
 				<div class="Header-login">
@@ -22,7 +32,7 @@
 
 					<!-- Usuario Móvil -->
 					<div class="user-access u-md-hide">
-						<button class="link-user-access js-gubuyMegamenu" title="Abrir menú de gubuy y usuario">
+              <button class="link-user-access js-gubuyMegamenu">
 
 							<?php if (isset($_GET['user'])) : ?>
 
@@ -152,6 +162,8 @@
 
 						<ul>
 							<li>
+								<!-- Ejemplo de item de menú seleccionado -->
+								<!-- <a href="#" id="item-1-minisitio" class="Nav-inside">Formato Carpeta</a> -->
 								<a href="#" id="item-1-minisitio">Formato Carpeta</a>
 							</li>
 							<li>
@@ -171,18 +183,18 @@
 					
 					<!-- Botón abrir buscador -->
 					<div class="searchButtonWrap-md" id="searchButtonWrap-md">
-						<button class="Button Button--inverse Button--w-icon">
+						<button class="Button Button--inverse Button--w-icon" aria-label="Abrir buscador y buscar">
 							<svg xmlns="http://www.w3.org/2000/svg" width="20.28" height="20.279" viewBox="0 0 20.28 20.279">
 								<path fill="#6D6E70" d="M8.361 16.722C3.75 16.722 0 12.971 0 8.361S3.75 0 8.361 0c4.611 0 8.363 3.75 8.363 8.361s-3.752 8.361-8.363 8.361zm0-15.222C4.578 1.5 1.5 4.578 1.5 8.361s3.078 6.861 6.861 6.861c3.784 0 6.863-3.078 6.863-6.861S12.145 1.5 8.361 1.5z"/>
 								<path fill="#6D6E70" d="M14.2 13.139l6.08 6.08-1.06 1.06-6.08-6.08z"/>
-							</svg> Buscar
+							</svg><span class="u-hideVisually">Abrir buscador y</span> Buscar
 						</button>
 					</div>
 
 					<!-- Buscador -->
 					<div class="Header-search">
 						<div class="navButtonWrap-md">
-							<button class="Button Button--primary Button--w-icon" id="navButtonWrap-md">
+							<button class="Button Button--primary Button--w-icon" id="navButtonWrap-md" aria-label="Abrir menú">
 							<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 20 21" xml:space="preserve">
 									<path d="M0,17.2v-1.7h20v1.7H0z M0,11.3V9.7h20v1.7H0z M0,5.5V3.8h20v1.7H0z"/>
 							</svg>
@@ -193,10 +205,10 @@
 						<div class="search-form" id="search-form">
 							<div class="Search">
 								<form action="./">
-									<label for="search" class="u-hideVisually">Buscar:</label>
+									<label for="search" class="u-hideVisually">Buscador:</label>
 									<input id="search" class="Search-input" type="search" placeholder="Buscar en INM">
 									<label for="Search-checkbox" class="Search-checkboxLabel"><input type="checkbox" id="Search-checkbox" value="INM" checked="">INM</label> 
-									<button class="Search-button">Buscar</button>
+									<button class="Search-button" type="submit">Buscar</button>
 								</form>
 							</div>
 						</div>
@@ -209,14 +221,14 @@
 
 				<!-- Usuario Escritorio -->  
 				<div class="user-access">
-					<button class="link-user-access js-gubuyMegamenu" title="Abrir menú de gubuy y usuario">
+					<button class="link-user-access js-gubuyMegamenu">
 						
 						<?php if (isset($_GET['user'])) : ?>
 							<span  class="Comment-avatar u-bgColor1"><span>MB</span></span>
 						<?php  else: ?>
 							<span class="Icon Icon--user--blue"></span>
 						<?php  endif; ?>
-						<span>gub.uy</span>
+						<span><span class="u-hideVisually">Desplegar menú de </span>gub.uy</span>
 						
 					</button>
 				</div>

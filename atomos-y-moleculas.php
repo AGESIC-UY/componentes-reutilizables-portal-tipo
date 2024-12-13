@@ -99,14 +99,14 @@
     <h2 class="u-my4">Colores para decoración de contenedores</h2>
 
     <!-- <p>Los siguientes colores son personalizables a excepción del Color 1 (azul gub.uy). <a href="formulario-colores.php">Ver formulario de personalización de paleta de colores</a></p> -->
-
-    <div class="Box">
+		
+		<div class="Box">
       <div class="Box-body">
         <div class="Grid u-mb3">
           <div class="Grid-item u-md-size1of4">
             <div class="u-p2 u-bgColor1 u-textWhite">
-              <p class="u-h1 u-textNormal"><strong>Aa</strong> Aa</p>
-              <p>El veloz murciélago hindú comía feliz cardillo y kiwi.</p>
+              <!-- <p class="u-h1 u-textNormal"><strong>Aa</strong> Aa</p>
+              <p>El veloz murciélago hindú comía feliz cardillo y kiwi.</p> -->
               <div class="u-textRight">
                 <div><code>.Box--color1</code></div>
                 <div><code>#003DA5</code></div>
@@ -115,8 +115,8 @@
           </div>
           <div class="Grid-item u-md-size1of4">
             <div class="u-p2 u-bgColor2 u-textBlack">
-              <p class="u-h1 u-textNormal"><strong>Aa</strong> Aa</p>
-              <p>El veloz murciélago hindú comía feliz cardillo y kiwi.</p>
+              <!-- <p class="u-h1 u-textNormal"><strong>Aa</strong> Aa</p>
+              <p>El veloz murciélago hindú comía feliz cardillo y kiwi.</p> -->
               <div class="u-textRight">
                 <div><code>.Box--color2</code></div>
                 <div><code>#0099FF</code></div>
@@ -125,8 +125,8 @@
           </div>
           <div class="Grid-item u-md-size1of4">
             <div class="u-p2 u-bgColor3 u-textWhite">
-              <p class="u-h1 u-textNormal"><strong>Aa</strong> Aa</p>
-              <p>El veloz murciélago hindú comía feliz cardillo y kiwi.</p>
+              <!-- <p class="u-h1 u-textNormal"><strong>Aa</strong> Aa</p>
+              <p>El veloz murciélago hindú comía feliz cardillo y kiwi.</p> -->
               <div class="u-textRight">
                 <div><code>.Box--color3</code></div>
                 <div><code>#470A68</code></div>
@@ -135,8 +135,8 @@
           </div>
           <div class="Grid-item u-md-size1of4">
             <div class="u-p2 u-bgColor4 u-textWhite">
-              <p class="u-h1 u-textNormal"><strong>Aa</strong> Aa</p>
-              <p>El veloz murciélago hindú comía feliz cardillo y kiwi.</p>
+              <!-- <p class="u-h1 u-textNormal"><strong>Aa</strong> Aa</p>
+              <p>El veloz murciélago hindú comía feliz cardillo y kiwi.</p> -->
               <div class="u-textRight">
                 <div><code>.Box--color4</code></div>
                 <div><code>#93117e</code></div>
@@ -148,8 +148,8 @@
         <div class="Grid u-mb3">
           <div class="Grid-item u-md-size1of4">
             <div class="u-p2 u-bgColor5 u-textBlack">
-              <p class="u-h1 u-textNormal"><strong>Aa</strong> Aa</p>
-              <p>El veloz murciélago hindú comía feliz cardillo y kiwi.</p>
+              <!-- <p class="u-h1 u-textNormal"><strong>Aa</strong> Aa</p>
+              <p>El veloz murciélago hindú comía feliz cardillo y kiwi.</p> -->
               <div class="u-textRight">
                 <div><code>.Box--color5</code></div>
                 <div><code>#FF6900</code></div>
@@ -159,8 +159,8 @@
 
           <div class="Grid-item u-md-size1of4">
             <div class="u-p2 u-bgColor6 u-textBlack">
-              <p class="u-h1 u-textNormal"><strong>Aa</strong> Aa</p>
-              <p>El veloz murciélago hindú comía feliz cardillo y kiwi.</p>
+              <!-- <p class="u-h1 u-textNormal"><strong>Aa</strong> Aa</p>
+              <p>El veloz murciélago hindú comía feliz cardillo y kiwi.</p> -->
               <div class="u-textRight">
                 <div><code>.Box--color6</code></div>
                 <div><code>#FF0000</code></div>
@@ -169,8 +169,8 @@
           </div>
           <div class="Grid-item u-md-size1of4">
             <div class="u-p2 u-bgColor7 u-textBlack">
-              <p class="u-h1 u-textNormal"><strong>Aa</strong> Aa</p>
-              <p>El veloz murciélago hindú comía feliz cardillo y kiwi.</p>
+              <!-- <p class="u-h1 u-textNormal"><strong>Aa</strong> Aa</p>
+              <p>El veloz murciélago hindú comía feliz cardillo y kiwi.</p> -->
               <div class="u-textRight">
                 <div><code>.Box--color7</code></div>
                 <div><code>#28a745</code></div>
@@ -179,8 +179,8 @@
           </div>
           <div class="Grid-item u-md-size1of4">
             <div class="u-p2 u-bgColor8 u-textWhite">
-              <p class="u-h1 u-textNormal"><strong>Aa</strong> Aa</p>
-              <p>El veloz murciélago hindú comía feliz cardillo y kiwi.</p>
+              <!-- <p class="u-h1 u-textNormal"><strong>Aa</strong> Aa</p>
+              <p>El veloz murciélago hindú comía feliz cardillo y kiwi.</p> -->
               <div class="u-textRight">
                 <div><code>.Box--color8</code></div>
                 <div><code>#007D8A</code></div>
@@ -192,8 +192,8 @@
 				<div class="Grid">
           <div class="Grid-item u-md-size1of4">
             <div class="u-p2 u-bgColor9 u-textWhite">
-              <p class="u-h1 u-textNormal"><strong>Aa</strong> Aa</p>
-              <p>El veloz murciélago hindú comía feliz cardillo y kiwi.</p>
+              <!-- <p class="u-h1 u-textNormal"><strong>Aa</strong> Aa</p>
+              <p>El veloz murciélago hindú comía feliz cardillo y kiwi.</p> -->
               <div class="u-textRight">
                 <div><code>.Box--color9</code></div>
                 <div><code>#2B5CA8</code></div>
@@ -203,8 +203,8 @@
 
           <div class="Grid-item u-md-size1of4">
             <div class="u-p2 u-bgColor10 u-textBlack">
-              <p class="u-h1 u-textNormal"><strong>Aa</strong> Aa</p>
-              <p>El veloz murciélago hindú comía feliz cardillo y kiwi.</p>
+              <!-- <p class="u-h1 u-textNormal"><strong>Aa</strong> Aa</p>
+              <p>El veloz murciélago hindú comía feliz cardillo y kiwi.</p> -->
               <div class="u-textRight">
                 <div><code>.Box--color10</code></div>
                 <div><code>#F3A303</code></div>
@@ -213,8 +213,8 @@
           </div>
           <div class="Grid-item u-md-size1of4">
             <div class="u-p2 u-bgColor11 u-textWhite">
-              <p class="u-h1 u-textNormal"><strong>Aa</strong> Aa</p>
-              <p>El veloz murciélago hindú comía feliz cardillo y kiwi.</p>
+              <!-- <p class="u-h1 u-textNormal"><strong>Aa</strong> Aa</p>
+              <p>El veloz murciélago hindú comía feliz cardillo y kiwi.</p> -->
               <div class="u-textRight">
                 <div><code>.Box--color11</code></div>
                 <div><code>#82368C</code></div>
@@ -223,8 +223,8 @@
           </div>
           <div class="Grid-item u-md-size1of4">
             <div class="u-p2 u-bgColor12 u-textBlack">
-              <p class="u-h1 u-textNormal"><strong>Aa</strong> Aa</p>
-              <p>El veloz murciélago hindú comía feliz cardillo y kiwi.</p>
+              <!-- <p class="u-h1 u-textNormal"><strong>Aa</strong> Aa</p>
+              <p>El veloz murciélago hindú comía feliz cardillo y kiwi.</p> -->
               <div class="u-textRight">
                 <div><code>.Box--color12</code></div>
                 <div><code>#778A15</code></div>
@@ -315,8 +315,10 @@
     <hr>
 
     <h2 class="u-mb3">Listas</h2>
+		
+		<h3 class="u-mt3">Lista de viñetas</h3>
 
-    <ul>
+    <ul class="List-text">
       <li>Lorem ipsum dolor sit amet.</li>
       <li>Esse necessitatibus, adipisci saepe laboriosam.
         <ul>
@@ -326,11 +328,19 @@
         </ul>
       </li>
       <li>Neque tempore est, natus ad!</li>
-      <li>Ex labore officiis, tempore nemo!</li>
+      <li>Ex labore officiis, tempore nemo!
+				<ol>
+          <li>Lorem ipsum dolor sit.</li>
+          <li>Assumenda cumque tenetur quidem.</li>
+          <li>Corrupti enim rem voluptate.</li>
+        </ol>
+			</li>	
       <li>Vitae libero, quae doloribus dignissimos?</li>
     </ul>
 
-    <ol>
+		<h3 class="u-mt4">Lista numerada</h3>
+		
+    <ol class="List-text">
       <li>Lorem ipsum dolor sit amet.</li>
       <li>Esse necessitatibus, adipisci saepe laboriosam.
         <ol>
@@ -340,23 +350,35 @@
         </ol>
       </li>
       <li>Neque tempore est, natus ad!</li>
-      <li>Ex labore officiis, tempore nemo!</li>
+      <li>Ex labore officiis, tempore nemo!
+				<ul>
+          <li>Lorem ipsum dolor sit.</li>
+          <li>Assumenda cumque tenetur quidem.</li>
+          <li>Corrupti enim rem voluptate.</li>
+        </ul>
+			</li>	
       <li>Vitae libero, quae doloribus dignissimos?</li>
     </ol>
 
-    <h3><code>.u-bullet</code></h3>
+    <h3 class="u-mt4">Lista modificada <code>.u-bullet</code></h3>
 
     <ul class="u-bullet">
       <li>Lorem ipsum dolor sit amet.</li>
       <li>Esse necessitatibus, adipisci saepe laboriosam.
-        <ul class="u-bullet">
+        <ul>
           <li>Lorem ipsum dolor sit.</li>
           <li>Assumenda cumque tenetur quidem.</li>
           <li>Corrupti enim rem voluptate.</li>
         </ul>
       </li>
       <li>Neque tempore est, natus ad!</li>
-      <li>Ex labore officiis, tempore nemo!</li>
+      <li>Ex labore officiis, tempore nemo!
+				<ol>
+          <li>Lorem ipsum dolor sit.</li>
+          <li>Assumenda cumque tenetur quidem.</li>
+          <li>Corrupti enim rem voluptate.</li>
+        </ol>
+			</li>
       <li>Vitae libero, quae doloribus dignissimos?</li>
     </ul>
 
