@@ -464,7 +464,7 @@ customElements.define("comp-boton-leer", boton_leer);
 		leer() {
 			this.estado = "leyendo"
 			let utterance = new SpeechSynthesisUtterance(this.partesDeTexto[this.parteActual]);
-			utterance.lang = "es-ES";
+			utterance.lang = "es-US";
 			utterance.pitch = 1;
 			utterance.volume = 1;
 			window.speechSynthesis.speak(utterance);  
