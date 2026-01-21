@@ -47,8 +47,9 @@
 										<h4>Funcionalidades Principales</h4>
 										<ul> 
 											<li>Leer texto: Divide el contenido en fragmentos y los reproduce utilizando la API SpeechSynthesis.</li> 
-											<li>Pausar y reanudar la lectura: Permite detener temporalmente la lectura y continuar desde el punto de pausa.</li> 
+											<li>Pausar y reanudar la lectura: Permite detener temporalmente la lectura y continuar desde el punto de pausa dentro de cada fragmento de texto.</li> 
 											<li>Reiniciar la lectura: Cancela cualquier lectura en progreso y reinicia desde el principio.</li> 
+											<li>Seleccionar el tipo de voz, de las disponibles dependiendo cada navegador.</li>
 											<li>Automatización del flujo de lectura: Al finalizar un fragmento, el sistema pasa automáticamente al siguiente después de una breve pausa.</li> 
 											<li>Manejo de navegación: Detiene la lectura si el usuario intenta abandonar la página.</li> 
 										</ul>
